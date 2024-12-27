@@ -437,3 +437,236 @@ org.apache.ibatis.binding.BindingException: Invalid bound statement (not found):
         WHERE email = 'minmin0426@naver.com'
  {executed in 1 msec}
 [2024-12-27 16:01:47 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserMapper.updatePassword] <==    Updates: 1
+[2024-12-27 16:20:48 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-27 16:20:48 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-27 16:20:51 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-27 16:20:51 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 11408 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-27 16:20:51 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-27 16:20:51 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-27 16:20:52 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-27 16:20:52 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 751 ms
+[2024-12-27 16:20:52 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-27 16:20:53 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-27 16:20:53 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.636 seconds (process running for 1.962)
+[2024-12-27 16:21:00 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-27 16:21:00 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 0 ms
+[2024-12-27 16:21:00 INFO http-nio-8080-exec-8] [org.springdoc.api.AbstractOpenApiResource] Init duration for springdoc-openapi is: 153 ms
+[2024-12-27 16:21:28 INFO http-nio-8080-exec-5] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-27 16:21:28 INFO http-nio-8080-exec-5] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@4c736873
+[2024-12-27 16:21:28 INFO http-nio-8080-exec-5] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-27 16:21:28 DEBUGhttp-nio-8080-exec-5] [com.green.firstproject.user.UserMapper.userSignIn] ==>  Preparing: SELECT user_no AS userNo, password, nickname, user_id AS userId, profile_pic AS profilePic, first_login AS firstLogin, status_message AS userStatusMessage FROM user WHERE user_id = ?
+[2024-12-27 16:21:28 DEBUGhttp-nio-8080-exec-5] [com.green.firstproject.user.UserMapper.userSignIn] ==> Parameters: 쩡미니(String)
+[2024-12-27 16:21:28 DEBUGhttp-nio-8080-exec-5] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        user_no AS userNo,
+        password,
+        nickname,
+        user_id AS userId,
+        profile_pic AS profilePic,
+        first_login AS firstLogin,
+        status_message AS userStatusMessage
+        FROM user
+        WHERE user_id = '쩡미니'
+ {executed in 0 msec}
+[2024-12-27 16:21:28 INFO http-nio-8080-exec-5] [jdbc.resultsettable] 
+|--------|---------|---------|--------|------------|------------|---------------|
+|user_no |password |nickname |user_id |profile_pic |first_login |status_message |
+|--------|---------|---------|--------|------------|------------|---------------|
+|--------|---------|---------|--------|------------|------------|---------------|
+
+[2024-12-27 16:21:28 DEBUGhttp-nio-8080-exec-5] [com.green.firstproject.user.UserMapper.userSignIn] <==      Total: 0
+[2024-12-27 16:21:38 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.userSignIn] ==>  Preparing: SELECT user_no AS userNo, password, nickname, user_id AS userId, profile_pic AS profilePic, first_login AS firstLogin, status_message AS userStatusMessage FROM user WHERE user_id = ?
+[2024-12-27 16:21:38 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.userSignIn] ==> Parameters: 쩡미니미니(String)
+[2024-12-27 16:21:38 DEBUGhttp-nio-8080-exec-3] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        user_no AS userNo,
+        password,
+        nickname,
+        user_id AS userId,
+        profile_pic AS profilePic,
+        first_login AS firstLogin,
+        status_message AS userStatusMessage
+        FROM user
+        WHERE user_id = '쩡미니미니'
+ {executed in 0 msec}
+[2024-12-27 16:21:38 INFO http-nio-8080-exec-3] [jdbc.resultsettable] 
+|--------|-------------------------------------------------------------|-------------|--------|------------|------------|---------------|
+|user_no |password                                                     |nickname     |user_id |profile_pic |first_login |status_message |
+|--------|-------------------------------------------------------------|-------------|--------|------------|------------|---------------|
+|19      |$2a$10$TXvJ3iF90Ivnap5SyNTTaeaUmg6HCnw1kNnByvN/gWWnGwZo6s78G |사랑스러운펭귄#8517 |쩡미니미니   |null        |false       |null           |
+|--------|-------------------------------------------------------------|-------------|--------|------------|------------|---------------|
+
+[2024-12-27 16:21:38 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.userSignIn] <==      Total: 1
+[2024-12-27 16:21:46 DEBUGhttp-nio-8080-exec-7] [com.green.firstproject.user.UserMapper.userSignIn] ==>  Preparing: SELECT user_no AS userNo, password, nickname, user_id AS userId, profile_pic AS profilePic, first_login AS firstLogin, status_message AS userStatusMessage FROM user WHERE user_id = ?
+[2024-12-27 16:21:46 DEBUGhttp-nio-8080-exec-7] [com.green.firstproject.user.UserMapper.userSignIn] ==> Parameters: 쩡미니미니(String)
+[2024-12-27 16:21:46 DEBUGhttp-nio-8080-exec-7] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        user_no AS userNo,
+        password,
+        nickname,
+        user_id AS userId,
+        profile_pic AS profilePic,
+        first_login AS firstLogin,
+        status_message AS userStatusMessage
+        FROM user
+        WHERE user_id = '쩡미니미니'
+ {executed in 1 msec}
+[2024-12-27 16:21:46 INFO http-nio-8080-exec-7] [jdbc.resultsettable] 
+|--------|-------------------------------------------------------------|-------------|--------|------------|------------|---------------|
+|user_no |password                                                     |nickname     |user_id |profile_pic |first_login |status_message |
+|--------|-------------------------------------------------------------|-------------|--------|------------|------------|---------------|
+|19      |$2a$10$TXvJ3iF90Ivnap5SyNTTaeaUmg6HCnw1kNnByvN/gWWnGwZo6s78G |사랑스러운펭귄#8517 |쩡미니미니   |null        |false       |null           |
+|--------|-------------------------------------------------------------|-------------|--------|------------|------------|---------------|
+
+[2024-12-27 16:21:46 DEBUGhttp-nio-8080-exec-7] [com.green.firstproject.user.UserMapper.userSignIn] <==      Total: 1
+[2024-12-27 16:22:12 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.userSignIn] ==>  Preparing: SELECT user_no AS userNo, password, nickname, user_id AS userId, profile_pic AS profilePic, first_login AS firstLogin, status_message AS userStatusMessage FROM user WHERE user_id = ?
+[2024-12-27 16:22:12 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.userSignIn] ==> Parameters: 쩡미니미니(String)
+[2024-12-27 16:22:12 DEBUGhttp-nio-8080-exec-2] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        user_no AS userNo,
+        password,
+        nickname,
+        user_id AS userId,
+        profile_pic AS profilePic,
+        first_login AS firstLogin,
+        status_message AS userStatusMessage
+        FROM user
+        WHERE user_id = '쩡미니미니'
+ {executed in 0 msec}
+[2024-12-27 16:22:12 INFO http-nio-8080-exec-2] [jdbc.resultsettable] 
+|--------|-------------------------------------------------------------|-------------|--------|------------|------------|---------------|
+|user_no |password                                                     |nickname     |user_id |profile_pic |first_login |status_message |
+|--------|-------------------------------------------------------------|-------------|--------|------------|------------|---------------|
+|19      |$2a$10$TXvJ3iF90Ivnap5SyNTTaeaUmg6HCnw1kNnByvN/gWWnGwZo6s78G |사랑스러운펭귄#8517 |쩡미니미니   |null        |false       |null           |
+|--------|-------------------------------------------------------------|-------------|--------|------------|------------|---------------|
+
+[2024-12-27 16:22:12 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.userSignIn] <==      Total: 1
+[2024-12-27 16:23:30 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.userSignIn] ==>  Preparing: SELECT user_no AS userNo, password, nickname, user_id AS userId, profile_pic AS profilePic, first_login AS firstLogin, status_message AS userStatusMessage FROM user WHERE user_id = ?
+[2024-12-27 16:23:30 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.userSignIn] ==> Parameters: 쩡미니미니(String)
+[2024-12-27 16:23:30 DEBUGhttp-nio-8080-exec-1] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        user_no AS userNo,
+        password,
+        nickname,
+        user_id AS userId,
+        profile_pic AS profilePic,
+        first_login AS firstLogin,
+        status_message AS userStatusMessage
+        FROM user
+        WHERE user_id = '쩡미니미니'
+ {executed in 0 msec}
+[2024-12-27 16:23:30 INFO http-nio-8080-exec-1] [jdbc.resultsettable] 
+|--------|-------------------------------------------------------------|-------------|--------|------------|------------|---------------|
+|user_no |password                                                     |nickname     |user_id |profile_pic |first_login |status_message |
+|--------|-------------------------------------------------------------|-------------|--------|------------|------------|---------------|
+|19      |$2a$10$TXvJ3iF90Ivnap5SyNTTaeaUmg6HCnw1kNnByvN/gWWnGwZo6s78G |사랑스러운펭귄#8517 |쩡미니미니   |null        |false       |null           |
+|--------|-------------------------------------------------------------|-------------|--------|------------|------------|---------------|
+
+[2024-12-27 16:23:30 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.userSignIn] <==      Total: 1
+[2024-12-27 16:23:37 DEBUGhttp-nio-8080-exec-4] [com.green.firstproject.user.UserMapper.userSignIn] ==>  Preparing: SELECT user_no AS userNo, password, nickname, user_id AS userId, profile_pic AS profilePic, first_login AS firstLogin, status_message AS userStatusMessage FROM user WHERE user_id = ?
+[2024-12-27 16:23:37 DEBUGhttp-nio-8080-exec-4] [com.green.firstproject.user.UserMapper.userSignIn] ==> Parameters: 쩡미니미니(String)
+[2024-12-27 16:23:37 DEBUGhttp-nio-8080-exec-4] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        user_no AS userNo,
+        password,
+        nickname,
+        user_id AS userId,
+        profile_pic AS profilePic,
+        first_login AS firstLogin,
+        status_message AS userStatusMessage
+        FROM user
+        WHERE user_id = '쩡미니미니'
+ {executed in 0 msec}
+[2024-12-27 16:23:37 INFO http-nio-8080-exec-4] [jdbc.resultsettable] 
+|--------|-------------------------------------------------------------|-------------|--------|------------|------------|---------------|
+|user_no |password                                                     |nickname     |user_id |profile_pic |first_login |status_message |
+|--------|-------------------------------------------------------------|-------------|--------|------------|------------|---------------|
+|19      |$2a$10$TXvJ3iF90Ivnap5SyNTTaeaUmg6HCnw1kNnByvN/gWWnGwZo6s78G |사랑스러운펭귄#8517 |쩡미니미니   |null        |false       |null           |
+|--------|-------------------------------------------------------------|-------------|--------|------------|------------|---------------|
+
+[2024-12-27 16:23:37 DEBUGhttp-nio-8080-exec-4] [com.green.firstproject.user.UserMapper.userSignIn] <==      Total: 1
+[2024-12-27 16:24:00 DEBUGhttp-nio-8080-exec-6] [com.green.firstproject.user.UserMapper.userSignIn] ==>  Preparing: SELECT user_no AS userNo, password, nickname, user_id AS userId, profile_pic AS profilePic, first_login AS firstLogin, status_message AS userStatusMessage FROM user WHERE user_id = ?
+[2024-12-27 16:24:00 DEBUGhttp-nio-8080-exec-6] [com.green.firstproject.user.UserMapper.userSignIn] ==> Parameters: 민(String)
+[2024-12-27 16:24:00 DEBUGhttp-nio-8080-exec-6] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        user_no AS userNo,
+        password,
+        nickname,
+        user_id AS userId,
+        profile_pic AS profilePic,
+        first_login AS firstLogin,
+        status_message AS userStatusMessage
+        FROM user
+        WHERE user_id = '민'
+ {executed in 1 msec}
+[2024-12-27 16:24:00 INFO http-nio-8080-exec-6] [jdbc.resultsettable] 
+|--------|---------|---------|--------|------------|------------|---------------|
+|user_no |password |nickname |user_id |profile_pic |first_login |status_message |
+|--------|---------|---------|--------|------------|------------|---------------|
+|--------|---------|---------|--------|------------|------------|---------------|
+
+[2024-12-27 16:24:00 DEBUGhttp-nio-8080-exec-6] [com.green.firstproject.user.UserMapper.userSignIn] <==      Total: 0
+[2024-12-27 16:24:42 DEBUGhttp-nio-8080-exec-8] [com.green.firstproject.user.UserMapper.userSignIn] ==>  Preparing: SELECT user_no AS userNo, password, nickname, user_id AS userId, profile_pic AS profilePic, first_login AS firstLogin, status_message AS userStatusMessage FROM user WHERE user_id = ?
+[2024-12-27 16:24:42 DEBUGhttp-nio-8080-exec-8] [com.green.firstproject.user.UserMapper.userSignIn] ==> Parameters: 민(String)
+[2024-12-27 16:24:42 DEBUGhttp-nio-8080-exec-8] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        user_no AS userNo,
+        password,
+        nickname,
+        user_id AS userId,
+        profile_pic AS profilePic,
+        first_login AS firstLogin,
+        status_message AS userStatusMessage
+        FROM user
+        WHERE user_id = '민'
+ {executed in 1 msec}
+[2024-12-27 16:24:42 INFO http-nio-8080-exec-8] [jdbc.resultsettable] 
+|--------|---------|---------|--------|------------|------------|---------------|
+|user_no |password |nickname |user_id |profile_pic |first_login |status_message |
+|--------|---------|---------|--------|------------|------------|---------------|
+|--------|---------|---------|--------|------------|------------|---------------|
+
+[2024-12-27 16:24:42 DEBUGhttp-nio-8080-exec-8] [com.green.firstproject.user.UserMapper.userSignIn] <==      Total: 0
+[2024-12-27 16:26:00 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.userSignIn] ==>  Preparing: SELECT user_no AS userNo, password, nickname, user_id AS userId, profile_pic AS profilePic, first_login AS firstLogin, status_message AS userStatusMessage FROM user WHERE user_id = ?
+[2024-12-27 16:26:00 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.userSignIn] ==> Parameters: 러브(String)
+[2024-12-27 16:26:00 DEBUGhttp-nio-8080-exec-3] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        user_no AS userNo,
+        password,
+        nickname,
+        user_id AS userId,
+        profile_pic AS profilePic,
+        first_login AS firstLogin,
+        status_message AS userStatusMessage
+        FROM user
+        WHERE user_id = '러브'
+ {executed in 0 msec}
+[2024-12-27 16:26:00 INFO http-nio-8080-exec-3] [jdbc.resultsettable] 
+|--------|---------|---------|--------|------------|------------|---------------|
+|user_no |password |nickname |user_id |profile_pic |first_login |status_message |
+|--------|---------|---------|--------|------------|------------|---------------|
+|--------|---------|---------|--------|------------|------------|---------------|
+
+[2024-12-27 16:26:00 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.userSignIn] <==      Total: 0
+[2024-12-27 16:26:30 DEBUGhttp-nio-8080-exec-7] [com.green.firstproject.user.UserMapper.userSignIn] ==>  Preparing: SELECT user_no AS userNo, password, nickname, user_id AS userId, profile_pic AS profilePic, first_login AS firstLogin, status_message AS userStatusMessage FROM user WHERE user_id = ?
+[2024-12-27 16:26:30 DEBUGhttp-nio-8080-exec-7] [com.green.firstproject.user.UserMapper.userSignIn] ==> Parameters: mini(String)
+[2024-12-27 16:26:30 DEBUGhttp-nio-8080-exec-7] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        user_no AS userNo,
+        password,
+        nickname,
+        user_id AS userId,
+        profile_pic AS profilePic,
+        first_login AS firstLogin,
+        status_message AS userStatusMessage
+        FROM user
+        WHERE user_id = 'mini'
+ {executed in 0 msec}
+[2024-12-27 16:26:30 INFO http-nio-8080-exec-7] [jdbc.resultsettable] 
+|--------|-------------------------------------------------------------|---------|--------|------------|------------|---------------|
+|user_no |password                                                     |nickname |user_id |profile_pic |first_login |status_message |
+|--------|-------------------------------------------------------------|---------|--------|------------|------------|---------------|
+|2       |$2a$10$Lk.PojjCwfpoYZTrJHq.O.7y6Tt5hgtFgwVwil76EZH/HIaMNHMFe |미니       |mini    |null        |false       |null           |
+|--------|-------------------------------------------------------------|---------|--------|------------|------------|---------------|
+
+[2024-12-27 16:26:30 DEBUGhttp-nio-8080-exec-7] [com.green.firstproject.user.UserMapper.userSignIn] <==      Total: 1

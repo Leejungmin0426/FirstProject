@@ -12,7 +12,7 @@ import java.util.Map;
 
 @Mapper
 public interface UserMapper {
-    UserLoginInfo userSignIn(String email);
+    UserLoginInfo userSignIn(String userId);
     UserInfo selUserInfo (UserInfoGetReq p);
 
     DuplicateCheckResult checkDuplicates(UserSignUpReq p); // 중복 체크, BigDecimal 대응

@@ -36,7 +36,7 @@ public class UserService {
     // 1. 사용자 로그인
     public ResponseResult userSignIn(UserSignInReq p) {
         // 요청 데이터 검증
-        if (p == null || p.getEmail() == null || p.getEmail().isEmpty()) {
+        if (p == null || p.getUserId() == null || p.getUserId().isEmpty()) {
             return ResponseResult.badRequest(ResponseCode.INCORRECT_EMAIL); // 이메일이 없거나 비어 있을 경우
         }
 
@@ -45,7 +45,7 @@ public class UserService {
         }
 
         // 매퍼 메서드를 호출하여 사용자 조회
-        UserLoginInfo info = mapper.userSignIn(p.getEmail());
+        UserLoginInfo info = mapper.userSignIn(p.getUserId());
         if (info == null) {
             return ResponseResult.badRequest(ResponseCode.NO_EXIST_USER); // 사용자 정보가 없을 경우
         }

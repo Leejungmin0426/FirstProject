@@ -25,7 +25,7 @@ public class UserController {
     // 2. 유저 로그인 (POST)
     @PostMapping("/sign-in")
     public ResponseResult userSignIn(@RequestBody UserSignInReq p) {
-        System.out.println("요청된 이메일: " + p.getEmail());
+        System.out.println("요청된 아이디: " + p.getUserId());
         System.out.println("요청된 비밀번호: " + p.getPassword());
         return service.userSignIn(p);
     }

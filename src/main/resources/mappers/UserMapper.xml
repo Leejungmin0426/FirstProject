@@ -25,12 +25,12 @@
         user_no AS userNo,
         password,
         nickname,
-        email,
+        user_id AS userId,
         profile_pic AS profilePic,
         first_login AS firstLogin,
         status_message AS userStatusMessage
         FROM user
-        WHERE email = #{email}
+        WHERE user_id = #{userId}
     </select>
 
 
