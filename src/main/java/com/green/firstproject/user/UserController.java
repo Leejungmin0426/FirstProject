@@ -41,4 +41,9 @@ public class UserController {
         return service.selUserInfo(req);
     }
 
+    // 4. 비밀번호 재설정
+    @PostMapping("/find-pw")
+    public ResponseResult updatePassword(@RequestBody UserFindPasswordReq p) {
+        return service.updatePassword(p);
+    }
 }

@@ -27,7 +27,7 @@ public class UserSignUpReq {
     @Pattern(
             regexp = "^(?=.*[a-z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,15}$",
 
-            message = "비밀번호는 8자 이상 16자 미만이며, 대문자, 소문자, 숫자, 특수문자를 최소 1개 포함해야 합니다."
+            message = "비밀번호는 8자 이상 16자 미만이며, 영문 소문자, 숫자, 특수문자를 최소 1개 포함해야 합니다."
     )
     private String password;
 

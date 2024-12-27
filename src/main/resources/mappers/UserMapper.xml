@@ -35,7 +35,6 @@
 
 
     <!-- 2. 사용자 정보 조회 -->
-
     <select id="selUserInfo">
         SELECT
         u2.email,
@@ -47,4 +46,20 @@
         ON u1.user_no = #{signedUserNo}
         WHERE u2.user_no = #{targetUserNo};
     </select>
+
+
+    <!-- 비밀번호 업데이트 -->
+    <update id="updatePassword">
+        UPDATE user
+        SET password = #{password}
+        WHERE email = #{email}
+    </update>
+
+    <select id="findUserByEmail">
+        SELECT *
+        FROM user
+        WHERE email = #{email}
+    </select>
+
+
 </mapper>

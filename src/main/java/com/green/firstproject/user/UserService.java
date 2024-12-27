@@ -158,4 +158,36 @@ public class UserService {
         // 9. 성공 응답
         return new UserSignUpRes(ResponseCode.OK.getCode());
     }
+
+
+    public ResponseResult updatePassword(UserFindPasswordReq p) {
+
+        // 1. 사용자 조회
+        UserInfo info = mapper.findUserByEmail(p.getEmail());
+        if (info == null) {
+            return ResponseResult.badRequest(ResponseCode.NO_EXIST_USER); // 사용자 정보가 없을 경우
+        }
+
+        // 2. 비밀번호 검증
+        if (!PasswordValidator.isValidPassword(p.getPassword())) {
+            return ResponseResult.badRequest(ResponseCode.PASSWORD_FORMAT_ERROR); // 비밀번호 형식 오류
+        }
+
+        if (!p.getPassword().equals(p.getPasswordConfirm())) {
+            return ResponseResult.badRequest(ResponseCode.PASSWORD_CHECK_ERROR); // 비밀번호 확인 불일치
+        }
+
+        // 3. 비밀번호 암호화
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        String encryptedPassword = encoder.encode(p.getPassword());
+
+        // 4. DB 업데이트
+        int updatedPassword = mapper.updatePassword(p.getEmail(), encryptedPassword);
+        if (updatedPassword > 0) {
+            return new UserFindPasswordRes(ResponseCode.OK.getCode()); // 성공
+        }
+
+        // 5. 실패 시 처리
+        return ResponseResult.badRequest(ResponseCode.FAIL); // 일반 실패 처리
+    }
 }

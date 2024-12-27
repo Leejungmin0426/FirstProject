@@ -17,4 +17,8 @@ public interface UserMapper {
 
     DuplicateCheckResult checkDuplicates(UserSignUpReq p); // 중복 체크, BigDecimal 대응
     int insertUser(UserSignUpReq p); // 유저 등록
+
+
+    UserInfo findUserByEmail(String email); // 가입된 유저인지 이메일로 검증
+    int updatePassword (String email, String password); // 새로운 비밀번호 등록
 }
