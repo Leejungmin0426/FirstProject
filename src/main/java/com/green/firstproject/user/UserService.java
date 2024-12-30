@@ -1,5 +1,6 @@
 package com.green.firstproject.user;
 
+import com.green.firstproject.common.exception.MyFileUtils;
 import com.green.firstproject.common.exception.ResponseCode;
 import com.green.firstproject.common.exception.ResponseResult;
 import com.green.firstproject.user.model.*;
@@ -10,6 +11,9 @@ import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.IOException;
 
 
 
@@ -19,6 +23,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 public class UserService {
 
     private final UserMapper mapper;
+    private final MyFileUtils myFileUtils;
 
     /**
      * 요청 데이터 유효성 검증 메서드
@@ -92,7 +97,7 @@ public class UserService {
         UserInfoGetRes response = new UserInfoGetRes();
         response.setEmail(userInfo.getEmail());
         response.setNickname(userInfo.getNickname());
-        response.setUserStatusMessage(userInfo.getUserStatusMessage());
+        response.setUserStatusMessage(userInfo.getStatusMessage());
         response.setProfilePic(userInfo.getProfilePic());
 
         // 본인 여부를 결과에 포함
@@ -189,5 +194,72 @@ public class UserService {
 
         // 5. 실패 시 처리
         return ResponseResult.badRequest(ResponseCode.FAIL); // 일반 실패 처리
+    }
+
+
+
+
+
+    @Transactional
+    public ResponseResult updateUser(UserUpdateProfileReq p, MultipartFile pic) {
+        // 1. 현재 사용자 정보 조회
+        UserInfo currentInfo = mapper.getUserInfo(p.getTargetUserNo());
+        if (currentInfo == null) {
+            log.warn("User not found for targetUserNo: {}", p.getTargetUserNo());
+            return ResponseResult.badRequest(ResponseCode.NOT_NULL); // 사용자 없음 (입력 오류)
+        }
+
+        currentInfo.setUserNo(p.getTargetUserNo());
+
+        // 2. 권한 검증
+        if (p.getSignedUserNo() != p.getTargetUserNo()) {
+            log.error("Unauthorized profile update attempt. signedUserNo: {}, targetUserNo: {}", p.getSignedUserNo(), p.getTargetUserNo());
+            return ResponseResult.badRequest(ResponseCode.NO_FORBIDDEN); // 권한 없음
+        }
+
+        // 3. 닉네임 중복 체크
+        if (p.getNickname() != null && !p.getNickname().isEmpty()) {
+            if (mapper.checkNicknameExists(p.getNickname())) {
+                log.warn("Duplicate nickname found: {}", p.getNickname());
+                return ResponseResult.badRequest(ResponseCode.DUPLICATE_NICKNAME); // 닉네임 중복
+            }
+            currentInfo.setNickname(p.getNickname());
+        }
+
+        // 4. 상태 메시지 업데이트
+        if (p.getStatusMessage() != null && !p.getStatusMessage().isEmpty()) {
+            currentInfo.setStatusMessage(p.getStatusMessage());
+        }
+
+        // 5. 프로필 사진 업데이트
+        if (pic != null && !pic.isEmpty()) {
+            try {
+                String userFolder = String.format("user/%d", p.getTargetUserNo());
+                myFileUtils.makeFolders(userFolder);
+
+                // 기존 파일 이름 유지
+                String originalFileName = currentInfo.getProfilePic();
+                String filePath = String.format("%s/%s", userFolder, originalFileName);
+
+                // 기존 파일 이름으로 덮어쓰기
+                myFileUtils.transferTo(pic, filePath);
+
+                // 기존 파일 이름 변경 없음
+            } catch (IOException e) {
+                log.error("Failed to overwrite profile picture for targetUserNo: {}", p.getTargetUserNo(), e);
+                return ResponseResult.serverError(); // 파일 처리 실패
+            }
+        }
+
+        // 6. 데이터베이스 업데이트
+        int updatedRows = mapper.updUserProfile(currentInfo);
+        if (updatedRows <= 0) {
+            log.error("Failed to update user profile for targetUserNo: {}", p.getTargetUserNo());
+            return ResponseResult.serverError(); // 업데이트 실패
+        }
+
+        // 7. 성공 응답
+        log.info("User profile updated successfully for targetUserNo: {}", p.getTargetUserNo());
+        return ResponseResult.success();
     }
 }

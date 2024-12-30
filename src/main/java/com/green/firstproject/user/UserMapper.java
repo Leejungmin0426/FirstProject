@@ -12,6 +12,7 @@ import java.util.Map;
 
 @Mapper
 public interface UserMapper {
+
     UserLoginInfo userSignIn(String userId);
     UserInfo selUserInfo (UserInfoGetReq p);
 
@@ -21,4 +22,15 @@ public interface UserMapper {
 
     UserInfo findUserByEmail(String email); // 가입된 유저인지 이메일로 검증
     int updatePassword (String email, String password); // 새로운 비밀번호 등록
+
+
+
+    // 사용자 프로필 업데이트
+    int updUserProfile(UserInfo userInfo);
+
+    // 사용자 정보 조회
+    UserInfo getUserInfo(long signedUserNo);
+
+    // 닉네임 중복 체크
+    Boolean checkNicknameExists(String nickname);
 }

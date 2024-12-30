@@ -1,10 +1,13 @@
 package com.green.firstproject.user;
 
+import com.green.firstproject.common.exception.ResponseCode;
 import com.green.firstproject.common.exception.ResponseResult;
 import com.green.firstproject.user.model.*;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 @RequiredArgsConstructor
 @RestController
@@ -45,5 +48,15 @@ public class UserController {
     @PostMapping("/find-pw")
     public ResponseResult updatePassword(@RequestBody UserFindPasswordReq p) {
         return service.updatePassword(p);
+    }
+
+
+
+    @PatchMapping
+    public ResponseResult updateProfile(
+            @RequestPart UserUpdateProfileReq p, // JSON 데이터
+            @RequestPart(required = false) MultipartFile pic // 파일 데이터
+    ) {
+        return service.updateUser(p, pic);
     }
 }

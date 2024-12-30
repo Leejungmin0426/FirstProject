@@ -62,4 +62,34 @@
     </select>
 
 
+    <!-- 중복 체크 -->
+    <select id="checkNicknameExists">
+        SELECT
+        COUNT(*) > 0
+        FROM user
+        WHERE nickname = #{nickname}
+    </select>
+
+    <!-- 유저 정보 업데이트 -->
+    <update id="updUserProfile">
+        UPDATE user
+        SET
+        nickname = #{nickname},
+        status_message = #{statusMessage},
+        profile_pic = #{profilePic}
+        WHERE
+        user_no = #{userNo}
+    </update>
+
+    <!-- 사용자 정보 조회 -->
+    <select id="getUserInfo">
+        SELECT
+        email,
+        nickname,
+        status_message AS statusMessage,
+        profile_pic AS profilePic
+        FROM user
+        WHERE user_no = #{signedUserNo}
+    </select>
+
 </mapper>

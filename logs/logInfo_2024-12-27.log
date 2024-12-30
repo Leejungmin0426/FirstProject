@@ -1,0 +1,1963 @@
+[2024-12-27 09:12:16 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-27 09:12:16 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 5304 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-27 09:12:16 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-27 09:12:16 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-27 09:12:17 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-27 09:12:17 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 891 ms
+[2024-12-27 09:12:17 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-27 09:12:17 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-27 09:12:17 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.904 seconds (process running for 2.292)
+[2024-12-27 09:12:20 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-27 09:12:20 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+[2024-12-27 09:12:21 INFO http-nio-8080-exec-4] [org.springdoc.api.AbstractOpenApiResource] Init duration for springdoc-openapi is: 159 ms
+[2024-12-27 09:12:59 INFO http-nio-8080-exec-10] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-27 09:13:00 INFO http-nio-8080-exec-10] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@4620c68b
+[2024-12-27 09:13:00 INFO http-nio-8080-exec-10] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-27 09:13:00 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserService] Service Request: UserInfoGetReq(targetUserNo=2, signedUserNo=4)
+[2024-12-27 09:13:00 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserMapper.selUserInfo] ==>  Preparing: SELECT u2.email, u2.nickname, u2.status_message AS userStatusMessage, u2.profile_pic AS profilePic FROM user u1 JOIN user u2 ON u1.user_no = ? WHERE u2.user_no = ?;
+[2024-12-27 09:13:00 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserMapper.selUserInfo] ==> Parameters: 4(Long), 2(Long)
+[2024-12-27 09:13:00 DEBUGhttp-nio-8080-exec-10] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        u2.email,
+        u2.nickname,
+        u2.status_message AS userStatusMessage,
+        u2.profile_pic AS profilePic
+        FROM user u1
+        JOIN user u2
+        ON u1.user_no = 4
+        WHERE u2.user_no = 2;
+ {executed in 1 msec}
+[2024-12-27 09:13:00 INFO http-nio-8080-exec-10] [jdbc.resultsettable] 
+|-----------------|---------|---------------|------------|
+|email            |nickname |status_message |profile_pic |
+|-----------------|---------|---------------|------------|
+|mini@example.com |미니       |null           |null        |
+|-----------------|---------|---------------|------------|
+
+[2024-12-27 09:13:00 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserMapper.selUserInfo] <==      Total: 1
+[2024-12-27 09:13:00 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserService] User requested another user's information. signedUserNo=4, targetUserNo=2
+[2024-12-27 09:13:17 DEBUGhttp-nio-8080-exec-6] [com.green.firstproject.user.UserService] Service Request: UserInfoGetReq(targetUserNo=4, signedUserNo=4)
+[2024-12-27 09:13:17 DEBUGhttp-nio-8080-exec-6] [com.green.firstproject.user.UserMapper.selUserInfo] ==>  Preparing: SELECT u2.email, u2.nickname, u2.status_message AS userStatusMessage, u2.profile_pic AS profilePic FROM user u1 JOIN user u2 ON u1.user_no = ? WHERE u2.user_no = ?;
+[2024-12-27 09:13:17 DEBUGhttp-nio-8080-exec-6] [com.green.firstproject.user.UserMapper.selUserInfo] ==> Parameters: 4(Long), 4(Long)
+[2024-12-27 09:13:17 DEBUGhttp-nio-8080-exec-6] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        u2.email,
+        u2.nickname,
+        u2.status_message AS userStatusMessage,
+        u2.profile_pic AS profilePic
+        FROM user u1
+        JOIN user u2
+        ON u1.user_no = 4
+        WHERE u2.user_no = 4;
+ {executed in 0 msec}
+[2024-12-27 09:13:17 INFO http-nio-8080-exec-6] [jdbc.resultsettable] 
+|---------------------|---------|---------------|------------|
+|email                |nickname |status_message |profile_pic |
+|---------------------|---------|---------------|------------|
+|princess@example.com |공주       |null           |null        |
+|---------------------|---------|---------------|------------|
+
+[2024-12-27 09:13:17 DEBUGhttp-nio-8080-exec-6] [com.green.firstproject.user.UserMapper.selUserInfo] <==      Total: 1
+[2024-12-27 09:13:17 DEBUGhttp-nio-8080-exec-6] [com.green.firstproject.user.UserService] User requested their own information. signedUserNo=4, targetUserNo=4
+[2024-12-27 09:18:27 INFO http-nio-8080-exec-9] [com.green.firstproject.user.UserController] Received Request: com.green.firstproject.user.model.UserSignUpReq@271ce387
+[2024-12-27 09:18:27 INFO http-nio-8080-exec-9] [com.green.firstproject.user.UserService] Validating email format for email: aaa@aaaa.com
+[2024-12-27 09:18:27 INFO http-nio-8080-exec-9] [com.green.firstproject.user.UserService] Validating password format for userId: aa
+[2024-12-27 09:18:27 ERRORhttp-nio-8080-exec-9] [com.green.firstproject.user.UserService] Invalid password format for userId: aa
+[2024-12-27 09:19:15 INFO http-nio-8080-exec-2] [com.green.firstproject.user.UserController] Received Request: com.green.firstproject.user.model.UserSignUpReq@34f6696
+[2024-12-27 09:19:15 INFO http-nio-8080-exec-2] [com.green.firstproject.user.UserService] Validating email format for email: aaa@aaaa.com
+[2024-12-27 09:19:15 INFO http-nio-8080-exec-2] [com.green.firstproject.user.UserService] Validating password format for userId: aa
+[2024-12-27 09:19:15 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.checkDuplicates] ==>  Preparing: SELECT SUM(email = ?) AS emailCount, SUM(user_id = ?) AS userIdCount, SUM(nickname = ?) AS nicknameCount FROM user
+[2024-12-27 09:19:15 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.checkDuplicates] ==> Parameters: aaa@aaaa.com(String), aa(String), (String)
+[2024-12-27 09:19:15 DEBUGhttp-nio-8080-exec-2] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        SUM(email = 'aaa@aaaa.com') AS emailCount,
+        SUM(user_id = 'aa') AS userIdCount,
+        SUM(nickname = '') AS nicknameCount
+        FROM user
+ {executed in 2 msec}
+[2024-12-27 09:19:15 INFO http-nio-8080-exec-2] [jdbc.resultsettable] 
+|-----------|------------|--------------|
+|emailcount |useridcount |nicknamecount |
+|-----------|------------|--------------|
+|0          |0           |0             |
+|-----------|------------|--------------|
+
+[2024-12-27 09:19:15 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.checkDuplicates] <==      Total: 1
+[2024-12-27 09:19:15 INFO http-nio-8080-exec-2] [com.green.firstproject.user.UserService] Generated default nickname for userId aa: 귀여운토끼
+[2024-12-27 09:19:15 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.insertUser] ==>  Preparing: INSERT INTO user (email, user_id, password, nickname) VALUES (?, ?, ?, ?)
+[2024-12-27 09:19:15 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.insertUser] ==> Parameters: aaa@aaaa.com(String), aa(String), 1Q2w3e4r!(String), 귀여운토끼(String)
+[2024-12-27 09:19:15 DEBUGhttp-nio-8080-exec-2] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO user (email, user_id, password, nickname)
+        VALUES ('aaa@aaaa.com', 'aa', '1Q2w3e4r!', '귀여운토끼')
+ {executed in 3 msec}
+[2024-12-27 09:19:15 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.insertUser] <==    Updates: 1
+[2024-12-27 09:19:15 INFO http-nio-8080-exec-2] [com.green.firstproject.user.UserService] UserSignUp successful for userId: aa
+[2024-12-27 09:39:37 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-27 09:39:37 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-27 09:39:39 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-27 09:39:39 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 4224 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-27 09:39:39 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-27 09:39:39 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-27 09:39:40 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-27 09:39:40 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 760 ms
+[2024-12-27 09:39:40 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-27 09:39:40 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-27 09:39:40 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.648 seconds (process running for 1.967)
+[2024-12-27 09:40:47 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-27 09:40:47 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+[2024-12-27 09:40:47 INFO http-nio-8080-exec-1] [com.green.firstproject.user.UserController] Received Request: com.green.firstproject.user.model.UserSignUpReq@4b5067b8
+[2024-12-27 09:40:47 INFO http-nio-8080-exec-1] [com.green.firstproject.user.UserService] Validating email format for email: lovely@naver.com
+[2024-12-27 09:40:47 INFO http-nio-8080-exec-1] [com.green.firstproject.user.UserService] Validating password format for userId: lovely
+[2024-12-27 09:40:47 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-27 09:40:47 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@793abd71
+[2024-12-27 09:40:47 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-27 09:40:47 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.checkDuplicates] ==>  Preparing: SELECT SUM(email = ?) AS emailCount, SUM(user_id = ?) AS userIdCount, SUM(nickname = ?) AS nicknameCount FROM user
+[2024-12-27 09:40:47 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.checkDuplicates] ==> Parameters: lovely@naver.com(String), lovely(String), (String)
+[2024-12-27 09:40:47 DEBUGhttp-nio-8080-exec-1] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        SUM(email = 'lovely@naver.com') AS emailCount,
+        SUM(user_id = 'lovely') AS userIdCount,
+        SUM(nickname = '') AS nicknameCount
+        FROM user
+ {executed in 0 msec}
+[2024-12-27 09:40:47 INFO http-nio-8080-exec-1] [jdbc.resultsettable] 
+|-----------|------------|--------------|
+|emailcount |useridcount |nicknamecount |
+|-----------|------------|--------------|
+|0          |0           |0             |
+|-----------|------------|--------------|
+
+[2024-12-27 09:40:47 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.checkDuplicates] <==      Total: 1
+[2024-12-27 09:40:47 INFO http-nio-8080-exec-1] [com.green.firstproject.user.UserService] Generated default nickname for userId lovely: 소중한알파카
+[2024-12-27 09:40:47 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.insertUser] ==>  Preparing: INSERT INTO user (email, user_id, password, nickname) VALUES (?, ?, ?, ?)
+[2024-12-27 09:40:47 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.insertUser] ==> Parameters: lovely@naver.com(String), lovely(String), Love0426!(String), 소중한알파카(String)
+[2024-12-27 09:40:47 DEBUGhttp-nio-8080-exec-1] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO user (email, user_id, password, nickname)
+        VALUES ('lovely@naver.com', 'lovely', 'Love0426!', '소중한알파카')
+ {executed in 3 msec}
+[2024-12-27 09:40:47 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.insertUser] <==    Updates: 1
+[2024-12-27 09:40:47 INFO http-nio-8080-exec-1] [com.green.firstproject.user.UserService] UserSignUp successful for userId: lovely
+[2024-12-27 09:49:42 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-27 09:49:42 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-27 09:49:44 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-27 09:49:44 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 2216 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-27 09:49:44 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-27 09:49:44 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-27 09:49:45 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-27 09:49:45 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 871 ms
+[2024-12-27 09:49:45 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-27 09:49:45 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-27 09:49:45 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.883 seconds (process running for 2.225)
+[2024-12-27 09:50:04 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-27 09:50:04 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 0 ms
+[2024-12-27 09:50:05 INFO http-nio-8080-exec-1] [com.green.firstproject.user.UserController] Received Request: com.green.firstproject.user.model.UserSignUpReq@3f3571d3
+[2024-12-27 09:50:05 INFO http-nio-8080-exec-1] [com.green.firstproject.user.UserService] Validating email format for email: lovely@naver.com
+[2024-12-27 09:50:05 INFO http-nio-8080-exec-1] [com.green.firstproject.user.UserService] Validating password format for userId: lovely
+[2024-12-27 09:50:05 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-27 09:50:05 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@331a1ed
+[2024-12-27 09:50:05 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-27 09:50:05 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.checkDuplicates] ==>  Preparing: SELECT SUM(email = ?) AS emailCount, SUM(user_id = ?) AS userIdCount, SUM(nickname = ?) AS nicknameCount FROM user
+[2024-12-27 09:50:05 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.checkDuplicates] ==> Parameters: lovely@naver.com(String), lovely(String), (String)
+[2024-12-27 09:50:05 DEBUGhttp-nio-8080-exec-1] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        SUM(email = 'lovely@naver.com') AS emailCount,
+        SUM(user_id = 'lovely') AS userIdCount,
+        SUM(nickname = '') AS nicknameCount
+        FROM user
+ {executed in 0 msec}
+[2024-12-27 09:50:05 INFO http-nio-8080-exec-1] [jdbc.resultsettable] 
+|-----------|------------|--------------|
+|emailcount |useridcount |nicknamecount |
+|-----------|------------|--------------|
+|0          |0           |0             |
+|-----------|------------|--------------|
+
+[2024-12-27 09:50:05 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.checkDuplicates] <==      Total: 1
+[2024-12-27 09:50:05 INFO http-nio-8080-exec-1] [com.green.firstproject.user.UserService] Generated default nickname for userId lovely: 인사하는앵무새
+[2024-12-27 09:50:05 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.insertUser] ==>  Preparing: INSERT INTO user (email, user_id, password, nickname) VALUES (?, ?, ?, ?)
+[2024-12-27 09:50:05 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.insertUser] ==> Parameters: lovely@naver.com(String), lovely(String), $2a$10$chTZdXyVs3DT057ir9L3MuHl27M4KuFrgCaxMHU9yuF.41EduDETe(String), 인사하는앵무새(String)
+[2024-12-27 09:50:05 DEBUGhttp-nio-8080-exec-1] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO user (email, user_id, password, nickname)
+        VALUES ('lovely@naver.com', 'lovely', '$2a$10$chTZdXyVs3DT057ir9L3MuHl27M4KuFrgCaxMHU9yuF.41EduDETe', '인사하는앵무새')
+ {executed in 1 msec}
+[2024-12-27 09:50:05 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.insertUser] <==    Updates: 1
+[2024-12-27 09:50:05 INFO http-nio-8080-exec-1] [com.green.firstproject.user.UserService] UserSignUp successful for userId: lovely
+[2024-12-27 10:16:34 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-27 10:16:34 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-27 13:48:50 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-27 13:48:50 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 10268 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-27 13:48:50 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-27 13:48:50 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-27 13:48:51 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-27 13:48:51 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 766 ms
+[2024-12-27 13:48:51 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-27 13:48:52 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-27 13:48:52 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.647 seconds (process running for 1.973)
+[2024-12-27 13:48:52 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-27 13:48:52 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+[2024-12-27 13:48:52 INFO http-nio-8080-exec-6] [org.springdoc.api.AbstractOpenApiResource] Init duration for springdoc-openapi is: 151 ms
+[2024-12-27 13:49:36 INFO http-nio-8080-exec-4] [com.green.firstproject.user.UserController] Received Request: com.green.firstproject.user.model.UserSignUpReq@5dcd80f1
+[2024-12-27 13:49:36 INFO http-nio-8080-exec-4] [com.green.firstproject.user.UserService] Validating email format for email: minmin0426@naver.com
+[2024-12-27 13:49:36 INFO http-nio-8080-exec-4] [com.green.firstproject.user.UserService] Validating password format for userId: 쩡미니미니
+[2024-12-27 13:49:36 INFO http-nio-8080-exec-4] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-27 13:49:36 INFO http-nio-8080-exec-4] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@af7d15a
+[2024-12-27 13:49:36 INFO http-nio-8080-exec-4] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-27 13:49:36 DEBUGhttp-nio-8080-exec-4] [com.green.firstproject.user.UserMapper.checkDuplicates] ==>  Preparing: SELECT SUM(email = ?) AS emailCount, SUM(user_id = ?) AS userIdCount, SUM(nickname = ?) AS nicknameCount FROM user
+[2024-12-27 13:49:36 DEBUGhttp-nio-8080-exec-4] [com.green.firstproject.user.UserMapper.checkDuplicates] ==> Parameters: minmin0426@naver.com(String), 쩡미니미니(String), (String)
+[2024-12-27 13:49:36 DEBUGhttp-nio-8080-exec-4] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        SUM(email = 'minmin0426@naver.com') AS emailCount,
+        SUM(user_id = '쩡미니미니') AS userIdCount,
+        SUM(nickname = '') AS nicknameCount
+        FROM user
+ {executed in 1 msec}
+[2024-12-27 13:49:36 INFO http-nio-8080-exec-4] [jdbc.resultsettable] 
+|-----------|------------|--------------|
+|emailcount |useridcount |nicknamecount |
+|-----------|------------|--------------|
+|0          |0           |0             |
+|-----------|------------|--------------|
+
+[2024-12-27 13:49:36 DEBUGhttp-nio-8080-exec-4] [com.green.firstproject.user.UserMapper.checkDuplicates] <==      Total: 1
+[2024-12-27 13:49:56 INFO http-nio-8080-exec-10] [com.green.firstproject.user.UserController] Received Request: com.green.firstproject.user.model.UserSignUpReq@bb44134
+[2024-12-27 13:49:56 INFO http-nio-8080-exec-10] [com.green.firstproject.user.UserService] Validating email format for email: minmin0426@naver.com
+[2024-12-27 13:49:56 INFO http-nio-8080-exec-10] [com.green.firstproject.user.UserService] Validating password format for userId: 쩡미니미니
+[2024-12-27 13:49:56 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserMapper.checkDuplicates] ==>  Preparing: SELECT SUM(email = ?) AS emailCount, SUM(user_id = ?) AS userIdCount, SUM(nickname = ?) AS nicknameCount FROM user
+[2024-12-27 13:49:56 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserMapper.checkDuplicates] ==> Parameters: minmin0426@naver.com(String), 쩡미니미니(String), (String)
+[2024-12-27 13:49:56 DEBUGhttp-nio-8080-exec-10] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        SUM(email = 'minmin0426@naver.com') AS emailCount,
+        SUM(user_id = '쩡미니미니') AS userIdCount,
+        SUM(nickname = '') AS nicknameCount
+        FROM user
+ {executed in 1 msec}
+[2024-12-27 13:49:56 INFO http-nio-8080-exec-10] [jdbc.resultsettable] 
+|-----------|------------|--------------|
+|emailcount |useridcount |nicknamecount |
+|-----------|------------|--------------|
+|0          |0           |0             |
+|-----------|------------|--------------|
+
+[2024-12-27 13:49:56 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserMapper.checkDuplicates] <==      Total: 1
+[2024-12-27 13:49:56 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserMapper.insertUser] ==>  Preparing: INSERT INTO user (email, user_id, password, nickname) VALUES (?, ?, ?, ?)
+[2024-12-27 13:49:56 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserMapper.insertUser] ==> Parameters: minmin0426@naver.com(String), 쩡미니미니(String), $2a$10$L4N4yvFX2Se6FQ5BBLugB.Tj6CR6BCUEZH9IfT4YAzdZ/NIdYLgAS(String), 인사하는물범#9092(String)
+[2024-12-27 13:49:56 DEBUGhttp-nio-8080-exec-10] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO user (email, user_id, password, nickname)
+        VALUES ('minmin0426@naver.com', '쩡미니미니', '$2a$10$L4N4yvFX2Se6FQ5BBLugB.Tj6CR6BCUEZH9IfT4YAzdZ/NIdYLgAS', '인사하는물범#9092')
+ {executed in 2 msec}
+[2024-12-27 13:49:56 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserMapper.insertUser] <==    Updates: 1
+[2024-12-27 13:50:25 INFO http-nio-8080-exec-1] [com.green.firstproject.user.UserController] Received Request: com.green.firstproject.user.model.UserSignUpReq@14907cda
+[2024-12-27 13:50:25 INFO http-nio-8080-exec-1] [com.green.firstproject.user.UserService] Validating email format for email: minmin0426@naver.com
+[2024-12-27 13:50:25 INFO http-nio-8080-exec-1] [com.green.firstproject.user.UserService] Validating password format for userId: 쩡미니미니
+[2024-12-27 13:50:25 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.checkDuplicates] ==>  Preparing: SELECT SUM(email = ?) AS emailCount, SUM(user_id = ?) AS userIdCount, SUM(nickname = ?) AS nicknameCount FROM user
+[2024-12-27 13:50:25 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.checkDuplicates] ==> Parameters: minmin0426@naver.com(String), 쩡미니미니(String), (String)
+[2024-12-27 13:50:25 DEBUGhttp-nio-8080-exec-1] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        SUM(email = 'minmin0426@naver.com') AS emailCount,
+        SUM(user_id = '쩡미니미니') AS userIdCount,
+        SUM(nickname = '') AS nicknameCount
+        FROM user
+ {executed in 1 msec}
+[2024-12-27 13:50:25 INFO http-nio-8080-exec-1] [jdbc.resultsettable] 
+|-----------|------------|--------------|
+|emailcount |useridcount |nicknamecount |
+|-----------|------------|--------------|
+|0          |0           |0             |
+|-----------|------------|--------------|
+
+[2024-12-27 13:50:25 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.checkDuplicates] <==      Total: 1
+[2024-12-27 13:50:25 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.insertUser] ==>  Preparing: INSERT INTO user (email, user_id, password, nickname) VALUES (?, ?, ?, ?)
+[2024-12-27 13:50:25 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.insertUser] ==> Parameters: minmin0426@naver.com(String), 쩡미니미니(String), $2a$10$65lvFu4Ao0YzIpau1/0CYuVOwY6c/pQqwMG3.kgZihe2s91KF/.GK(String), 사랑스러운펭귄#8517(String)
+[2024-12-27 13:50:25 DEBUGhttp-nio-8080-exec-1] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO user (email, user_id, password, nickname)
+        VALUES ('minmin0426@naver.com', '쩡미니미니', '$2a$10$65lvFu4Ao0YzIpau1/0CYuVOwY6c/pQqwMG3.kgZihe2s91KF/.GK', '사랑스러운펭귄#8517')
+ {executed in 1 msec}
+[2024-12-27 13:50:25 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.insertUser] <==    Updates: 1
+[2024-12-27 15:57:54 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-27 15:57:54 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-27 15:57:57 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-27 15:57:57 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 3820 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-27 15:57:57 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-27 15:57:57 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-27 15:57:58 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-27 15:57:58 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 738 ms
+[2024-12-27 15:57:58 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-27 15:57:58 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-27 15:57:58 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.618 seconds (process running for 1.944)
+[2024-12-27 15:58:13 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-27 15:58:13 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 0 ms
+[2024-12-27 15:58:13 INFO http-nio-8080-exec-9] [org.springdoc.api.AbstractOpenApiResource] Init duration for springdoc-openapi is: 138 ms
+[2024-12-27 15:58:31 ERRORhttp-nio-8080-exec-5] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.green.firstproject.user.UserMapper.findUserByEmail] with root cause
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.green.firstproject.user.UserMapper.findUserByEmail
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:229)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53)
+	at org.apache.ibatis.binding.MapperProxy.lambda$cachedInvoker$0(MapperProxy.java:96)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at org.apache.ibatis.util.MapUtil.computeIfAbsent(MapUtil.java:36)
+	at org.apache.ibatis.binding.MapperProxy.cachedInvoker(MapperProxy.java:94)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy82.findUserByEmail(Unknown Source)
+	at com.green.firstproject.user.UserService.updatePassword(UserService.java:166)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:716)
+	at com.green.firstproject.user.UserService$$SpringCGLIB$$0.updatePassword(<generated>)
+	at com.green.firstproject.user.UserController.updatePassword(UserController.java:47)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[2024-12-27 16:00:40 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-27 16:00:40 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 11192 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-27 16:00:40 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-27 16:00:40 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-27 16:00:41 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-27 16:00:41 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 751 ms
+[2024-12-27 16:00:41 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-27 16:00:42 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-27 16:00:42 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.648 seconds (process running for 1.957)
+[2024-12-27 16:00:47 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-27 16:00:47 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+[2024-12-27 16:00:47 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-27 16:00:47 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@31ddcced
+[2024-12-27 16:00:47 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-27 16:00:47 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.findUserByEmail] ==>  Preparing: SELECT * FROM user WHERE email = ?
+[2024-12-27 16:00:47 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.findUserByEmail] ==> Parameters: mi0426@naver.com(String)
+[2024-12-27 16:00:47 DEBUGhttp-nio-8080-exec-1] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT *
+        FROM user
+        WHERE email = 'mi0426@naver.com'
+ {executed in 1 msec}
+[2024-12-27 16:00:47 INFO http-nio-8080-exec-1] [jdbc.resultsettable] 
+|--------|---------|---------|------|------------|------------|-----------|-----------|---------------|--------|
+|user_no |password |nickname |email |profile_pic |first_login |created_at |updated_at |status_message |user_id |
+|--------|---------|---------|------|------------|------------|-----------|-----------|---------------|--------|
+|--------|---------|---------|------|------------|------------|-----------|-----------|---------------|--------|
+
+[2024-12-27 16:00:47 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.findUserByEmail] <==      Total: 0
+[2024-12-27 16:01:11 DEBUGhttp-nio-8080-exec-4] [com.green.firstproject.user.UserMapper.findUserByEmail] ==>  Preparing: SELECT * FROM user WHERE email = ?
+[2024-12-27 16:01:11 DEBUGhttp-nio-8080-exec-4] [com.green.firstproject.user.UserMapper.findUserByEmail] ==> Parameters: minmin0426@naver.com(String)
+[2024-12-27 16:01:11 DEBUGhttp-nio-8080-exec-4] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT *
+        FROM user
+        WHERE email = 'minmin0426@naver.com'
+ {executed in 0 msec}
+[2024-12-27 16:01:11 INFO http-nio-8080-exec-4] [jdbc.resultsettable] 
+|--------|-------------------------------------------------------------|-------------|---------------------|------------|------------|----------------------|-----------|---------------|--------|
+|user_no |password                                                     |nickname     |email                |profile_pic |first_login |created_at            |updated_at |status_message |user_id |
+|--------|-------------------------------------------------------------|-------------|---------------------|------------|------------|----------------------|-----------|---------------|--------|
+|19      |$2a$10$65lvFu4Ao0YzIpau1/0CYuVOwY6c/pQqwMG3.kgZihe2s91KF/.GK |사랑스러운펭귄#8517 |minmin0426@naver.com |null        |0           |2024-12-27 13:50:25.0 |[null]     |[null]         |쩡미니미니   |
+|--------|-------------------------------------------------------------|-------------|---------------------|------------|------------|----------------------|-----------|---------------|--------|
+
+[2024-12-27 16:01:11 DEBUGhttp-nio-8080-exec-4] [com.green.firstproject.user.UserMapper.findUserByEmail] <==      Total: 1
+[2024-12-27 16:01:39 DEBUGhttp-nio-8080-exec-7] [com.green.firstproject.user.UserMapper.findUserByEmail] ==>  Preparing: SELECT * FROM user WHERE email = ?
+[2024-12-27 16:01:39 DEBUGhttp-nio-8080-exec-7] [com.green.firstproject.user.UserMapper.findUserByEmail] ==> Parameters: minmin0426@naver.com(String)
+[2024-12-27 16:01:39 DEBUGhttp-nio-8080-exec-7] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT *
+        FROM user
+        WHERE email = 'minmin0426@naver.com'
+ {executed in 0 msec}
+[2024-12-27 16:01:39 INFO http-nio-8080-exec-7] [jdbc.resultsettable] 
+|--------|-------------------------------------------------------------|-------------|---------------------|------------|------------|----------------------|-----------|---------------|--------|
+|user_no |password                                                     |nickname     |email                |profile_pic |first_login |created_at            |updated_at |status_message |user_id |
+|--------|-------------------------------------------------------------|-------------|---------------------|------------|------------|----------------------|-----------|---------------|--------|
+|19      |$2a$10$65lvFu4Ao0YzIpau1/0CYuVOwY6c/pQqwMG3.kgZihe2s91KF/.GK |사랑스러운펭귄#8517 |minmin0426@naver.com |null        |0           |2024-12-27 13:50:25.0 |[null]     |[null]         |쩡미니미니   |
+|--------|-------------------------------------------------------------|-------------|---------------------|------------|------------|----------------------|-----------|---------------|--------|
+
+[2024-12-27 16:01:39 DEBUGhttp-nio-8080-exec-7] [com.green.firstproject.user.UserMapper.findUserByEmail] <==      Total: 1
+[2024-12-27 16:01:47 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserMapper.findUserByEmail] ==>  Preparing: SELECT * FROM user WHERE email = ?
+[2024-12-27 16:01:47 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserMapper.findUserByEmail] ==> Parameters: minmin0426@naver.com(String)
+[2024-12-27 16:01:47 DEBUGhttp-nio-8080-exec-10] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT *
+        FROM user
+        WHERE email = 'minmin0426@naver.com'
+ {executed in 0 msec}
+[2024-12-27 16:01:47 INFO http-nio-8080-exec-10] [jdbc.resultsettable] 
+|--------|-------------------------------------------------------------|-------------|---------------------|------------|------------|----------------------|-----------|---------------|--------|
+|user_no |password                                                     |nickname     |email                |profile_pic |first_login |created_at            |updated_at |status_message |user_id |
+|--------|-------------------------------------------------------------|-------------|---------------------|------------|------------|----------------------|-----------|---------------|--------|
+|19      |$2a$10$65lvFu4Ao0YzIpau1/0CYuVOwY6c/pQqwMG3.kgZihe2s91KF/.GK |사랑스러운펭귄#8517 |minmin0426@naver.com |null        |0           |2024-12-27 13:50:25.0 |[null]     |[null]         |쩡미니미니   |
+|--------|-------------------------------------------------------------|-------------|---------------------|------------|------------|----------------------|-----------|---------------|--------|
+
+[2024-12-27 16:01:47 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserMapper.findUserByEmail] <==      Total: 1
+[2024-12-27 16:01:47 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserMapper.updatePassword] ==>  Preparing: UPDATE user SET password = ? WHERE email = ?
+[2024-12-27 16:01:47 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserMapper.updatePassword] ==> Parameters: $2a$10$TXvJ3iF90Ivnap5SyNTTaeaUmg6HCnw1kNnByvN/gWWnGwZo6s78G(String), minmin0426@naver.com(String)
+[2024-12-27 16:01:47 DEBUGhttp-nio-8080-exec-10] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. UPDATE user
+        SET password = '$2a$10$TXvJ3iF90Ivnap5SyNTTaeaUmg6HCnw1kNnByvN/gWWnGwZo6s78G'
+        WHERE email = 'minmin0426@naver.com'
+ {executed in 1 msec}
+[2024-12-27 16:01:47 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserMapper.updatePassword] <==    Updates: 1
+[2024-12-27 16:20:48 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-27 16:20:48 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-27 16:20:51 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-27 16:20:51 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 11408 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-27 16:20:51 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-27 16:20:51 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-27 16:20:52 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-27 16:20:52 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 751 ms
+[2024-12-27 16:20:52 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-27 16:20:53 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-27 16:20:53 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.636 seconds (process running for 1.962)
+[2024-12-27 16:21:00 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-27 16:21:00 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 0 ms
+[2024-12-27 16:21:00 INFO http-nio-8080-exec-8] [org.springdoc.api.AbstractOpenApiResource] Init duration for springdoc-openapi is: 153 ms
+[2024-12-27 16:21:28 INFO http-nio-8080-exec-5] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-27 16:21:28 INFO http-nio-8080-exec-5] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@4c736873
+[2024-12-27 16:21:28 INFO http-nio-8080-exec-5] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-27 16:21:28 DEBUGhttp-nio-8080-exec-5] [com.green.firstproject.user.UserMapper.userSignIn] ==>  Preparing: SELECT user_no AS userNo, password, nickname, user_id AS userId, profile_pic AS profilePic, first_login AS firstLogin, status_message AS userStatusMessage FROM user WHERE user_id = ?
+[2024-12-27 16:21:28 DEBUGhttp-nio-8080-exec-5] [com.green.firstproject.user.UserMapper.userSignIn] ==> Parameters: 쩡미니(String)
+[2024-12-27 16:21:28 DEBUGhttp-nio-8080-exec-5] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        user_no AS userNo,
+        password,
+        nickname,
+        user_id AS userId,
+        profile_pic AS profilePic,
+        first_login AS firstLogin,
+        status_message AS userStatusMessage
+        FROM user
+        WHERE user_id = '쩡미니'
+ {executed in 0 msec}
+[2024-12-27 16:21:28 INFO http-nio-8080-exec-5] [jdbc.resultsettable] 
+|--------|---------|---------|--------|------------|------------|---------------|
+|user_no |password |nickname |user_id |profile_pic |first_login |status_message |
+|--------|---------|---------|--------|------------|------------|---------------|
+|--------|---------|---------|--------|------------|------------|---------------|
+
+[2024-12-27 16:21:28 DEBUGhttp-nio-8080-exec-5] [com.green.firstproject.user.UserMapper.userSignIn] <==      Total: 0
+[2024-12-27 16:21:38 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.userSignIn] ==>  Preparing: SELECT user_no AS userNo, password, nickname, user_id AS userId, profile_pic AS profilePic, first_login AS firstLogin, status_message AS userStatusMessage FROM user WHERE user_id = ?
+[2024-12-27 16:21:38 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.userSignIn] ==> Parameters: 쩡미니미니(String)
+[2024-12-27 16:21:38 DEBUGhttp-nio-8080-exec-3] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        user_no AS userNo,
+        password,
+        nickname,
+        user_id AS userId,
+        profile_pic AS profilePic,
+        first_login AS firstLogin,
+        status_message AS userStatusMessage
+        FROM user
+        WHERE user_id = '쩡미니미니'
+ {executed in 0 msec}
+[2024-12-27 16:21:38 INFO http-nio-8080-exec-3] [jdbc.resultsettable] 
+|--------|-------------------------------------------------------------|-------------|--------|------------|------------|---------------|
+|user_no |password                                                     |nickname     |user_id |profile_pic |first_login |status_message |
+|--------|-------------------------------------------------------------|-------------|--------|------------|------------|---------------|
+|19      |$2a$10$TXvJ3iF90Ivnap5SyNTTaeaUmg6HCnw1kNnByvN/gWWnGwZo6s78G |사랑스러운펭귄#8517 |쩡미니미니   |null        |false       |null           |
+|--------|-------------------------------------------------------------|-------------|--------|------------|------------|---------------|
+
+[2024-12-27 16:21:38 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.userSignIn] <==      Total: 1
+[2024-12-27 16:21:46 DEBUGhttp-nio-8080-exec-7] [com.green.firstproject.user.UserMapper.userSignIn] ==>  Preparing: SELECT user_no AS userNo, password, nickname, user_id AS userId, profile_pic AS profilePic, first_login AS firstLogin, status_message AS userStatusMessage FROM user WHERE user_id = ?
+[2024-12-27 16:21:46 DEBUGhttp-nio-8080-exec-7] [com.green.firstproject.user.UserMapper.userSignIn] ==> Parameters: 쩡미니미니(String)
+[2024-12-27 16:21:46 DEBUGhttp-nio-8080-exec-7] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        user_no AS userNo,
+        password,
+        nickname,
+        user_id AS userId,
+        profile_pic AS profilePic,
+        first_login AS firstLogin,
+        status_message AS userStatusMessage
+        FROM user
+        WHERE user_id = '쩡미니미니'
+ {executed in 1 msec}
+[2024-12-27 16:21:46 INFO http-nio-8080-exec-7] [jdbc.resultsettable] 
+|--------|-------------------------------------------------------------|-------------|--------|------------|------------|---------------|
+|user_no |password                                                     |nickname     |user_id |profile_pic |first_login |status_message |
+|--------|-------------------------------------------------------------|-------------|--------|------------|------------|---------------|
+|19      |$2a$10$TXvJ3iF90Ivnap5SyNTTaeaUmg6HCnw1kNnByvN/gWWnGwZo6s78G |사랑스러운펭귄#8517 |쩡미니미니   |null        |false       |null           |
+|--------|-------------------------------------------------------------|-------------|--------|------------|------------|---------------|
+
+[2024-12-27 16:21:46 DEBUGhttp-nio-8080-exec-7] [com.green.firstproject.user.UserMapper.userSignIn] <==      Total: 1
+[2024-12-27 16:22:12 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.userSignIn] ==>  Preparing: SELECT user_no AS userNo, password, nickname, user_id AS userId, profile_pic AS profilePic, first_login AS firstLogin, status_message AS userStatusMessage FROM user WHERE user_id = ?
+[2024-12-27 16:22:12 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.userSignIn] ==> Parameters: 쩡미니미니(String)
+[2024-12-27 16:22:12 DEBUGhttp-nio-8080-exec-2] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        user_no AS userNo,
+        password,
+        nickname,
+        user_id AS userId,
+        profile_pic AS profilePic,
+        first_login AS firstLogin,
+        status_message AS userStatusMessage
+        FROM user
+        WHERE user_id = '쩡미니미니'
+ {executed in 0 msec}
+[2024-12-27 16:22:12 INFO http-nio-8080-exec-2] [jdbc.resultsettable] 
+|--------|-------------------------------------------------------------|-------------|--------|------------|------------|---------------|
+|user_no |password                                                     |nickname     |user_id |profile_pic |first_login |status_message |
+|--------|-------------------------------------------------------------|-------------|--------|------------|------------|---------------|
+|19      |$2a$10$TXvJ3iF90Ivnap5SyNTTaeaUmg6HCnw1kNnByvN/gWWnGwZo6s78G |사랑스러운펭귄#8517 |쩡미니미니   |null        |false       |null           |
+|--------|-------------------------------------------------------------|-------------|--------|------------|------------|---------------|
+
+[2024-12-27 16:22:12 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.userSignIn] <==      Total: 1
+[2024-12-27 16:23:30 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.userSignIn] ==>  Preparing: SELECT user_no AS userNo, password, nickname, user_id AS userId, profile_pic AS profilePic, first_login AS firstLogin, status_message AS userStatusMessage FROM user WHERE user_id = ?
+[2024-12-27 16:23:30 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.userSignIn] ==> Parameters: 쩡미니미니(String)
+[2024-12-27 16:23:30 DEBUGhttp-nio-8080-exec-1] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        user_no AS userNo,
+        password,
+        nickname,
+        user_id AS userId,
+        profile_pic AS profilePic,
+        first_login AS firstLogin,
+        status_message AS userStatusMessage
+        FROM user
+        WHERE user_id = '쩡미니미니'
+ {executed in 0 msec}
+[2024-12-27 16:23:30 INFO http-nio-8080-exec-1] [jdbc.resultsettable] 
+|--------|-------------------------------------------------------------|-------------|--------|------------|------------|---------------|
+|user_no |password                                                     |nickname     |user_id |profile_pic |first_login |status_message |
+|--------|-------------------------------------------------------------|-------------|--------|------------|------------|---------------|
+|19      |$2a$10$TXvJ3iF90Ivnap5SyNTTaeaUmg6HCnw1kNnByvN/gWWnGwZo6s78G |사랑스러운펭귄#8517 |쩡미니미니   |null        |false       |null           |
+|--------|-------------------------------------------------------------|-------------|--------|------------|------------|---------------|
+
+[2024-12-27 16:23:30 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.userSignIn] <==      Total: 1
+[2024-12-27 16:23:37 DEBUGhttp-nio-8080-exec-4] [com.green.firstproject.user.UserMapper.userSignIn] ==>  Preparing: SELECT user_no AS userNo, password, nickname, user_id AS userId, profile_pic AS profilePic, first_login AS firstLogin, status_message AS userStatusMessage FROM user WHERE user_id = ?
+[2024-12-27 16:23:37 DEBUGhttp-nio-8080-exec-4] [com.green.firstproject.user.UserMapper.userSignIn] ==> Parameters: 쩡미니미니(String)
+[2024-12-27 16:23:37 DEBUGhttp-nio-8080-exec-4] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        user_no AS userNo,
+        password,
+        nickname,
+        user_id AS userId,
+        profile_pic AS profilePic,
+        first_login AS firstLogin,
+        status_message AS userStatusMessage
+        FROM user
+        WHERE user_id = '쩡미니미니'
+ {executed in 0 msec}
+[2024-12-27 16:23:37 INFO http-nio-8080-exec-4] [jdbc.resultsettable] 
+|--------|-------------------------------------------------------------|-------------|--------|------------|------------|---------------|
+|user_no |password                                                     |nickname     |user_id |profile_pic |first_login |status_message |
+|--------|-------------------------------------------------------------|-------------|--------|------------|------------|---------------|
+|19      |$2a$10$TXvJ3iF90Ivnap5SyNTTaeaUmg6HCnw1kNnByvN/gWWnGwZo6s78G |사랑스러운펭귄#8517 |쩡미니미니   |null        |false       |null           |
+|--------|-------------------------------------------------------------|-------------|--------|------------|------------|---------------|
+
+[2024-12-27 16:23:37 DEBUGhttp-nio-8080-exec-4] [com.green.firstproject.user.UserMapper.userSignIn] <==      Total: 1
+[2024-12-27 16:24:00 DEBUGhttp-nio-8080-exec-6] [com.green.firstproject.user.UserMapper.userSignIn] ==>  Preparing: SELECT user_no AS userNo, password, nickname, user_id AS userId, profile_pic AS profilePic, first_login AS firstLogin, status_message AS userStatusMessage FROM user WHERE user_id = ?
+[2024-12-27 16:24:00 DEBUGhttp-nio-8080-exec-6] [com.green.firstproject.user.UserMapper.userSignIn] ==> Parameters: 민(String)
+[2024-12-27 16:24:00 DEBUGhttp-nio-8080-exec-6] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        user_no AS userNo,
+        password,
+        nickname,
+        user_id AS userId,
+        profile_pic AS profilePic,
+        first_login AS firstLogin,
+        status_message AS userStatusMessage
+        FROM user
+        WHERE user_id = '민'
+ {executed in 1 msec}
+[2024-12-27 16:24:00 INFO http-nio-8080-exec-6] [jdbc.resultsettable] 
+|--------|---------|---------|--------|------------|------------|---------------|
+|user_no |password |nickname |user_id |profile_pic |first_login |status_message |
+|--------|---------|---------|--------|------------|------------|---------------|
+|--------|---------|---------|--------|------------|------------|---------------|
+
+[2024-12-27 16:24:00 DEBUGhttp-nio-8080-exec-6] [com.green.firstproject.user.UserMapper.userSignIn] <==      Total: 0
+[2024-12-27 16:24:42 DEBUGhttp-nio-8080-exec-8] [com.green.firstproject.user.UserMapper.userSignIn] ==>  Preparing: SELECT user_no AS userNo, password, nickname, user_id AS userId, profile_pic AS profilePic, first_login AS firstLogin, status_message AS userStatusMessage FROM user WHERE user_id = ?
+[2024-12-27 16:24:42 DEBUGhttp-nio-8080-exec-8] [com.green.firstproject.user.UserMapper.userSignIn] ==> Parameters: 민(String)
+[2024-12-27 16:24:42 DEBUGhttp-nio-8080-exec-8] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        user_no AS userNo,
+        password,
+        nickname,
+        user_id AS userId,
+        profile_pic AS profilePic,
+        first_login AS firstLogin,
+        status_message AS userStatusMessage
+        FROM user
+        WHERE user_id = '민'
+ {executed in 1 msec}
+[2024-12-27 16:24:42 INFO http-nio-8080-exec-8] [jdbc.resultsettable] 
+|--------|---------|---------|--------|------------|------------|---------------|
+|user_no |password |nickname |user_id |profile_pic |first_login |status_message |
+|--------|---------|---------|--------|------------|------------|---------------|
+|--------|---------|---------|--------|------------|------------|---------------|
+
+[2024-12-27 16:24:42 DEBUGhttp-nio-8080-exec-8] [com.green.firstproject.user.UserMapper.userSignIn] <==      Total: 0
+[2024-12-27 16:26:00 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.userSignIn] ==>  Preparing: SELECT user_no AS userNo, password, nickname, user_id AS userId, profile_pic AS profilePic, first_login AS firstLogin, status_message AS userStatusMessage FROM user WHERE user_id = ?
+[2024-12-27 16:26:00 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.userSignIn] ==> Parameters: 러브(String)
+[2024-12-27 16:26:00 DEBUGhttp-nio-8080-exec-3] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        user_no AS userNo,
+        password,
+        nickname,
+        user_id AS userId,
+        profile_pic AS profilePic,
+        first_login AS firstLogin,
+        status_message AS userStatusMessage
+        FROM user
+        WHERE user_id = '러브'
+ {executed in 0 msec}
+[2024-12-27 16:26:00 INFO http-nio-8080-exec-3] [jdbc.resultsettable] 
+|--------|---------|---------|--------|------------|------------|---------------|
+|user_no |password |nickname |user_id |profile_pic |first_login |status_message |
+|--------|---------|---------|--------|------------|------------|---------------|
+|--------|---------|---------|--------|------------|------------|---------------|
+
+[2024-12-27 16:26:00 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.userSignIn] <==      Total: 0
+[2024-12-27 16:26:30 DEBUGhttp-nio-8080-exec-7] [com.green.firstproject.user.UserMapper.userSignIn] ==>  Preparing: SELECT user_no AS userNo, password, nickname, user_id AS userId, profile_pic AS profilePic, first_login AS firstLogin, status_message AS userStatusMessage FROM user WHERE user_id = ?
+[2024-12-27 16:26:30 DEBUGhttp-nio-8080-exec-7] [com.green.firstproject.user.UserMapper.userSignIn] ==> Parameters: mini(String)
+[2024-12-27 16:26:30 DEBUGhttp-nio-8080-exec-7] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        user_no AS userNo,
+        password,
+        nickname,
+        user_id AS userId,
+        profile_pic AS profilePic,
+        first_login AS firstLogin,
+        status_message AS userStatusMessage
+        FROM user
+        WHERE user_id = 'mini'
+ {executed in 0 msec}
+[2024-12-27 16:26:30 INFO http-nio-8080-exec-7] [jdbc.resultsettable] 
+|--------|-------------------------------------------------------------|---------|--------|------------|------------|---------------|
+|user_no |password                                                     |nickname |user_id |profile_pic |first_login |status_message |
+|--------|-------------------------------------------------------------|---------|--------|------------|------------|---------------|
+|2       |$2a$10$Lk.PojjCwfpoYZTrJHq.O.7y6Tt5hgtFgwVwil76EZH/HIaMNHMFe |미니       |mini    |null        |false       |null           |
+|--------|-------------------------------------------------------------|---------|--------|------------|------------|---------------|
+
+[2024-12-27 16:26:30 DEBUGhttp-nio-8080-exec-7] [com.green.firstproject.user.UserMapper.userSignIn] <==      Total: 1
+[2024-12-27 16:30:56 INFO http-nio-8080-exec-4] [org.springdoc.api.AbstractOpenApiResource] Init duration for springdoc-openapi is: 28 ms
+[2024-12-27 17:09:20 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-27 17:09:20 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-27 18:58:07 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-27 18:58:07 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 11692 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-27 18:58:07 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-27 18:58:07 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-27 18:58:08 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-27 18:58:08 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 793 ms
+[2024-12-27 18:58:08 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-27 18:58:09 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-27 18:58:09 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.705 seconds (process running for 2.045)
+[2024-12-27 18:59:00 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-27 18:59:00 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 0 ms
+[2024-12-27 18:59:00 INFO http-nio-8080-exec-6] [org.springdoc.api.AbstractOpenApiResource] Init duration for springdoc-openapi is: 151 ms
+[2024-12-27 20:23:13 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-27 20:23:13 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 13632 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-27 20:23:13 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-27 20:23:13 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-27 20:23:14 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-27 20:23:14 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 843 ms
+[2024-12-27 20:23:14 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-27 20:23:15 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-27 20:23:15 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.844 seconds (process running for 2.191)
+[2024-12-27 20:23:49 INFO http-nio-8080-exec-4] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-27 20:23:49 INFO http-nio-8080-exec-4] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+[2024-12-27 20:23:49 WARN http-nio-8080-exec-4] [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver] Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required part 'data' is not present.]
+[2024-12-27 20:26:19 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-27 20:26:19 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 6564 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-27 20:26:19 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-27 20:26:19 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-27 20:26:20 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-27 20:26:20 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 847 ms
+[2024-12-27 20:26:20 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-27 20:26:21 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-27 20:26:21 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.814 seconds (process running for 2.132)
+[2024-12-27 20:26:34 INFO http-nio-8080-exec-3] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-27 20:26:34 INFO http-nio-8080-exec-3] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+[2024-12-27 20:26:35 WARN http-nio-8080-exec-3] [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver] Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required part 'data' is not present.]
+[2024-12-27 20:26:55 INFO http-nio-8080-exec-4] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-27 20:26:55 INFO http-nio-8080-exec-4] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@7e545df8
+[2024-12-27 20:26:55 INFO http-nio-8080-exec-4] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-27 20:26:55 DEBUGhttp-nio-8080-exec-4] [com.green.firstproject.user.UserMapper.getUserInfo] ==>  Preparing: SELECT email, nickname, status_message AS statusMessage, profile_pic AS profilePic FROM user WHERE user_no = ?
+[2024-12-27 20:26:55 DEBUGhttp-nio-8080-exec-4] [com.green.firstproject.user.UserMapper.getUserInfo] ==> Parameters: 0(Long)
+[2024-12-27 20:26:55 DEBUGhttp-nio-8080-exec-4] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        email,
+        nickname,
+        status_message AS statusMessage,
+        profile_pic AS profilePic
+        FROM user
+        WHERE user_no = 0
+ {executed in 1 msec}
+[2024-12-27 20:26:55 INFO http-nio-8080-exec-4] [jdbc.resultsettable] 
+|------|---------|---------------|------------|
+|email |nickname |status_message |profile_pic |
+|------|---------|---------------|------------|
+|------|---------|---------------|------------|
+
+[2024-12-27 20:26:55 DEBUGhttp-nio-8080-exec-4] [com.green.firstproject.user.UserMapper.getUserInfo] <==      Total: 0
+[2024-12-27 20:26:55 WARN http-nio-8080-exec-4] [com.green.firstproject.user.UserService] User not found for targetUserNo: 0
+[2024-12-27 20:27:29 WARN http-nio-8080-exec-7] [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver] Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required part 'data' is not present.]
+[2024-12-27 20:27:44 WARN http-nio-8080-exec-8] [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver] Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required part 'data' is not present.]
+[2024-12-27 20:30:18 WARN http-nio-8080-exec-9] [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver] Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required part 'data' is not present.]
+[2024-12-27 20:39:33 WARN http-nio-8080-exec-1] [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver] Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required part 'data' is not present.]
+[2024-12-27 20:44:29 WARN http-nio-8080-exec-2] [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver] Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required part 'data' is not present.]
+[2024-12-27 20:50:08 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-27 20:50:08 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-27 20:50:10 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-27 20:50:10 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 5524 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-27 20:50:10 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-27 20:50:10 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-27 20:50:11 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-27 20:50:11 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 751 ms
+[2024-12-27 20:50:11 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-27 20:50:12 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-27 20:50:12 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.637 seconds (process running for 1.953)
+[2024-12-27 20:50:24 INFO http-nio-8080-exec-2] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-27 20:50:24 INFO http-nio-8080-exec-2] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 0 ms
+[2024-12-27 20:50:24 INFO http-nio-8080-exec-2] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-27 20:50:24 INFO http-nio-8080-exec-2] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@143eb9df
+[2024-12-27 20:50:24 INFO http-nio-8080-exec-2] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-27 20:50:25 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.getUserInfo] ==>  Preparing: SELECT email, nickname, status_message AS statusMessage, profile_pic AS profilePic FROM user WHERE user_no = ?
+[2024-12-27 20:50:25 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.getUserInfo] ==> Parameters: 2(Long)
+[2024-12-27 20:50:25 DEBUGhttp-nio-8080-exec-2] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        email,
+        nickname,
+        status_message AS statusMessage,
+        profile_pic AS profilePic
+        FROM user
+        WHERE user_no = 2
+ {executed in 0 msec}
+[2024-12-27 20:50:25 INFO http-nio-8080-exec-2] [jdbc.resultsettable] 
+|-----------------|---------|---------------|------------|
+|email            |nickname |status_message |profile_pic |
+|-----------------|---------|---------------|------------|
+|mini@example.com |미니       |null           |null        |
+|-----------------|---------|---------------|------------|
+
+[2024-12-27 20:50:25 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.getUserInfo] <==      Total: 1
+[2024-12-27 20:50:25 ERRORhttp-nio-8080-exec-2] [com.green.firstproject.user.UserService] Unauthorized profile update attempt. signedUserNo: 1, targetUserNo: 2
+[2024-12-27 20:51:06 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-27 20:51:06 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-27 20:51:08 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-27 20:51:08 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 9748 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-27 20:51:08 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-27 20:51:08 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-27 20:51:09 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-27 20:51:09 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 775 ms
+[2024-12-27 20:51:09 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-27 20:51:09 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-27 20:51:09 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.737 seconds (process running for 2.04)
+[2024-12-27 20:51:14 INFO http-nio-8080-exec-2] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-27 20:51:14 INFO http-nio-8080-exec-2] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+[2024-12-27 20:51:14 INFO http-nio-8080-exec-2] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-27 20:51:14 INFO http-nio-8080-exec-2] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@7071f80a
+[2024-12-27 20:51:14 INFO http-nio-8080-exec-2] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-27 20:51:14 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.getUserInfo] ==>  Preparing: SELECT email, nickname, status_message AS statusMessage, profile_pic AS profilePic FROM user WHERE user_no = ?
+[2024-12-27 20:51:14 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.getUserInfo] ==> Parameters: 2(Long)
+[2024-12-27 20:51:14 DEBUGhttp-nio-8080-exec-2] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        email,
+        nickname,
+        status_message AS statusMessage,
+        profile_pic AS profilePic
+        FROM user
+        WHERE user_no = 2
+ {executed in 0 msec}
+[2024-12-27 20:51:14 INFO http-nio-8080-exec-2] [jdbc.resultsettable] 
+|-----------------|---------|---------------|------------|
+|email            |nickname |status_message |profile_pic |
+|-----------------|---------|---------------|------------|
+|mini@example.com |미니       |null           |null        |
+|-----------------|---------|---------------|------------|
+
+[2024-12-27 20:51:14 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.getUserInfo] <==      Total: 1
+[2024-12-27 20:51:14 ERRORhttp-nio-8080-exec-2] [com.green.firstproject.user.UserService] Unauthorized profile update attempt. signedUserNo: 1, targetUserNo: 2
+[2024-12-27 20:51:49 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-27 20:51:49 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-27 20:51:51 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-27 20:51:52 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 13876 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-27 20:51:52 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-27 20:51:52 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-27 20:51:52 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-27 20:51:52 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 796 ms
+[2024-12-27 20:51:52 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-27 20:51:53 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-27 20:51:53 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.75 seconds (process running for 2.104)
+[2024-12-27 20:51:54 INFO http-nio-8080-exec-3] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-27 20:51:54 INFO http-nio-8080-exec-3] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 0 ms
+[2024-12-27 20:51:54 INFO http-nio-8080-exec-3] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-27 20:51:54 INFO http-nio-8080-exec-3] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@1a722f6d
+[2024-12-27 20:51:54 INFO http-nio-8080-exec-3] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-27 20:51:54 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.getUserInfo] ==>  Preparing: SELECT email, nickname, status_message AS statusMessage, profile_pic AS profilePic FROM user WHERE user_no = ?
+[2024-12-27 20:51:54 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.getUserInfo] ==> Parameters: 2(Long)
+[2024-12-27 20:51:54 DEBUGhttp-nio-8080-exec-3] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        email,
+        nickname,
+        status_message AS statusMessage,
+        profile_pic AS profilePic
+        FROM user
+        WHERE user_no = 2
+ {executed in 0 msec}
+[2024-12-27 20:51:54 INFO http-nio-8080-exec-3] [jdbc.resultsettable] 
+|-----------------|---------|---------------|------------|
+|email            |nickname |status_message |profile_pic |
+|-----------------|---------|---------------|------------|
+|mini@example.com |미니       |null           |null        |
+|-----------------|---------|---------------|------------|
+
+[2024-12-27 20:51:54 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.getUserInfo] <==      Total: 1
+[2024-12-27 20:51:54 ERRORhttp-nio-8080-exec-3] [com.green.firstproject.user.UserService] Unauthorized profile update attempt. signedUserNo: 1, targetUserNo: 2
+[2024-12-27 20:52:03 DEBUGhttp-nio-8080-exec-7] [com.green.firstproject.user.UserMapper.getUserInfo] ==>  Preparing: SELECT email, nickname, status_message AS statusMessage, profile_pic AS profilePic FROM user WHERE user_no = ?
+[2024-12-27 20:52:03 DEBUGhttp-nio-8080-exec-7] [com.green.firstproject.user.UserMapper.getUserInfo] ==> Parameters: 1(Long)
+[2024-12-27 20:52:03 DEBUGhttp-nio-8080-exec-7] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        email,
+        nickname,
+        status_message AS statusMessage,
+        profile_pic AS profilePic
+        FROM user
+        WHERE user_no = 1
+ {executed in 0 msec}
+[2024-12-27 20:52:03 INFO http-nio-8080-exec-7] [jdbc.resultsettable] 
+|-----------------|---------|---------------|------------|
+|email            |nickname |status_message |profile_pic |
+|-----------------|---------|---------------|------------|
+|ming@example.com |민        |null           |null        |
+|-----------------|---------|---------------|------------|
+
+[2024-12-27 20:52:03 DEBUGhttp-nio-8080-exec-7] [com.green.firstproject.user.UserMapper.getUserInfo] <==      Total: 1
+[2024-12-27 20:52:03 DEBUGhttp-nio-8080-exec-7] [com.green.firstproject.user.UserMapper.checkNicknameExists] ==>  Preparing: SELECT COUNT(*) > 0 FROM user WHERE nickname = ?
+[2024-12-27 20:52:03 DEBUGhttp-nio-8080-exec-7] [com.green.firstproject.user.UserMapper.checkNicknameExists] ==> Parameters: 미니공쥬(String)
+[2024-12-27 20:52:03 DEBUGhttp-nio-8080-exec-7] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        COUNT(*) > 0
+        FROM user
+        WHERE nickname = '미니공쥬'
+ {executed in 0 msec}
+[2024-12-27 20:52:03 INFO http-nio-8080-exec-7] [jdbc.resultsettable] 
+|-------------|
+|count(*) > 0 |
+|-------------|
+|false        |
+|-------------|
+
+[2024-12-27 20:52:03 DEBUGhttp-nio-8080-exec-7] [com.green.firstproject.user.UserMapper.checkNicknameExists] <==      Total: 1
+[2024-12-27 20:52:03 DEBUGhttp-nio-8080-exec-7] [com.green.firstproject.user.UserMapper.updUserProfile] ==>  Preparing: UPDATE user SET nickname = ?, user_status_message = ?, profile_pic = ? WHERE user_no = ?
+[2024-12-27 20:52:03 ERRORhttp-nio-8080-exec-7] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.mybatis.spring.MyBatisSystemException: 
+### Error updating database.  Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'userStatusMessage' in 'class com.green.firstproject.user.model.dto.UserInfo'
+### The error may exist in file [D:\LJM\FirstProject\build\resources\main\mappers\UserMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: UPDATE user         SET         nickname = ?,         user_status_message = ?,         profile_pic = ?         WHERE         user_no = ?
+### Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'userStatusMessage' in 'class com.green.firstproject.user.model.dto.UserInfo'] with root cause
+org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'userStatusMessage' in 'class com.green.firstproject.user.model.dto.UserInfo'
+	at org.apache.ibatis.reflection.Reflector.getGetInvoker(Reflector.java:385)
+	at org.apache.ibatis.reflection.MetaClass.getGetInvoker(MetaClass.java:160)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.getBeanProperty(BeanWrapper.java:156)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.get(BeanWrapper.java:50)
+	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:115)
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:82)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:97)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:65)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:91)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:49)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:333)
+	at jdk.proxy2/jdk.proxy2.$Proxy77.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:234)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:67)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy83.updUserProfile(Unknown Source)
+	at com.green.firstproject.user.UserService.updateUser(UserService.java:254)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:379)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at com.green.firstproject.user.UserService$$SpringCGLIB$$0.updateUser(<generated>)
+	at com.green.firstproject.user.UserController.updateProfile(UserController.java:60)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:888)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[2024-12-27 20:53:03 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-27 20:53:03 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-27 20:53:05 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-27 20:53:05 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 6300 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-27 20:53:05 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-27 20:53:05 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-27 20:53:06 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-27 20:53:06 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 786 ms
+[2024-12-27 20:53:06 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-27 20:53:07 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-27 20:53:07 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.724 seconds (process running for 2.044)
+[2024-12-27 20:53:09 INFO http-nio-8080-exec-3] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-27 20:53:09 INFO http-nio-8080-exec-3] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 0 ms
+[2024-12-27 20:53:09 INFO http-nio-8080-exec-3] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-27 20:53:09 INFO http-nio-8080-exec-3] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@52b2291e
+[2024-12-27 20:53:09 INFO http-nio-8080-exec-3] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-27 20:53:09 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.getUserInfo] ==>  Preparing: SELECT email, nickname, status_message AS statusMessage, profile_pic AS profilePic FROM user WHERE user_no = ?
+[2024-12-27 20:53:09 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.getUserInfo] ==> Parameters: 1(Long)
+[2024-12-27 20:53:09 DEBUGhttp-nio-8080-exec-3] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        email,
+        nickname,
+        status_message AS statusMessage,
+        profile_pic AS profilePic
+        FROM user
+        WHERE user_no = 1
+ {executed in 0 msec}
+[2024-12-27 20:53:09 INFO http-nio-8080-exec-3] [jdbc.resultsettable] 
+|-----------------|---------|---------------|------------|
+|email            |nickname |status_message |profile_pic |
+|-----------------|---------|---------------|------------|
+|ming@example.com |민        |null           |null        |
+|-----------------|---------|---------------|------------|
+
+[2024-12-27 20:53:09 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.getUserInfo] <==      Total: 1
+[2024-12-27 20:53:09 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.checkNicknameExists] ==>  Preparing: SELECT COUNT(*) > 0 FROM user WHERE nickname = ?
+[2024-12-27 20:53:09 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.checkNicknameExists] ==> Parameters: 미니공쥬(String)
+[2024-12-27 20:53:09 DEBUGhttp-nio-8080-exec-3] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        COUNT(*) > 0
+        FROM user
+        WHERE nickname = '미니공쥬'
+ {executed in 1 msec}
+[2024-12-27 20:53:09 INFO http-nio-8080-exec-3] [jdbc.resultsettable] 
+|-------------|
+|count(*) > 0 |
+|-------------|
+|false        |
+|-------------|
+
+[2024-12-27 20:53:09 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.checkNicknameExists] <==      Total: 1
+[2024-12-27 20:53:09 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.updUserProfile] ==>  Preparing: UPDATE user SET nickname = ?, user_status_message = ?, profile_pic = ? WHERE user_no = ?
+[2024-12-27 20:53:09 ERRORhttp-nio-8080-exec-3] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.mybatis.spring.MyBatisSystemException: 
+### Error updating database.  Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'targetUserNo' in 'class com.green.firstproject.user.model.dto.UserInfo'
+### The error may exist in file [D:\LJM\FirstProject\build\resources\main\mappers\UserMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: UPDATE user         SET         nickname = ?,         user_status_message = ?,         profile_pic = ?         WHERE         user_no = ?
+### Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'targetUserNo' in 'class com.green.firstproject.user.model.dto.UserInfo'] with root cause
+org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'targetUserNo' in 'class com.green.firstproject.user.model.dto.UserInfo'
+	at org.apache.ibatis.reflection.Reflector.getGetInvoker(Reflector.java:385)
+	at org.apache.ibatis.reflection.MetaClass.getGetInvoker(MetaClass.java:160)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.getBeanProperty(BeanWrapper.java:156)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.get(BeanWrapper.java:50)
+	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:115)
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:82)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:97)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:65)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:91)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:49)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:333)
+	at jdk.proxy2/jdk.proxy2.$Proxy77.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:234)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:67)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy83.updUserProfile(Unknown Source)
+	at com.green.firstproject.user.UserService.updateUser(UserService.java:254)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:379)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at com.green.firstproject.user.UserService$$SpringCGLIB$$0.updateUser(<generated>)
+	at com.green.firstproject.user.UserController.updateProfile(UserController.java:60)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:888)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[2024-12-27 20:56:51 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-27 20:56:51 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-27 20:57:04 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-27 20:57:04 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 1692 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-27 20:57:04 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-27 20:57:04 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-27 20:57:04 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-27 20:57:05 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 777 ms
+[2024-12-27 20:57:05 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-27 20:57:05 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-27 20:57:05 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.68 seconds (process running for 1.989)
+[2024-12-27 20:57:09 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-27 20:57:09 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+[2024-12-27 20:57:09 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-27 20:57:10 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@7abd8dda
+[2024-12-27 20:57:10 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-27 20:57:10 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.getUserInfo] ==>  Preparing: SELECT email, nickname, status_message AS statusMessage, profile_pic AS profilePic FROM user WHERE user_no = ?
+[2024-12-27 20:57:10 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.getUserInfo] ==> Parameters: 1(Long)
+[2024-12-27 20:57:10 DEBUGhttp-nio-8080-exec-1] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        email,
+        nickname,
+        status_message AS statusMessage,
+        profile_pic AS profilePic
+        FROM user
+        WHERE user_no = 1
+ {executed in 0 msec}
+[2024-12-27 20:57:10 INFO http-nio-8080-exec-1] [jdbc.resultsettable] 
+|-----------------|---------|---------------|------------|
+|email            |nickname |status_message |profile_pic |
+|-----------------|---------|---------------|------------|
+|ming@example.com |민        |null           |null        |
+|-----------------|---------|---------------|------------|
+
+[2024-12-27 20:57:10 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.getUserInfo] <==      Total: 1
+[2024-12-27 20:57:10 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.checkNicknameExists] ==>  Preparing: SELECT COUNT(*) > 0 FROM user WHERE nickname = ?
+[2024-12-27 20:57:10 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.checkNicknameExists] ==> Parameters: 미니공쥬(String)
+[2024-12-27 20:57:10 DEBUGhttp-nio-8080-exec-1] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        COUNT(*) > 0
+        FROM user
+        WHERE nickname = '미니공쥬'
+ {executed in 1 msec}
+[2024-12-27 20:57:10 INFO http-nio-8080-exec-1] [jdbc.resultsettable] 
+|-------------|
+|count(*) > 0 |
+|-------------|
+|false        |
+|-------------|
+
+[2024-12-27 20:57:10 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.checkNicknameExists] <==      Total: 1
+[2024-12-27 20:57:10 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.updUserProfile] ==>  Preparing: UPDATE user SET nickname = ?, user_status_message = ?, profile_pic = ? WHERE user_no = ?
+[2024-12-27 20:57:10 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.updUserProfile] ==> Parameters: 미니공쥬(String), Just do it!(String), 626feccf-223e-40eb-b4d4-b53956e53bba.png(String), 0(Long)
+[2024-12-27 20:57:10 WARN http-nio-8080-exec-1] [org.mariadb.jdbc.message.server.ErrorPacket] Error: 1054-42S22: Unknown column 'user_status_message' in 'field list'
+[2024-12-27 20:57:10 ERRORhttp-nio-8080-exec-1] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. UPDATE user
+        SET
+        nickname = '미니공쥬',
+        user_status_message = 'Just do it!',
+        profile_pic = '626feccf-223e-40eb-b4d4-b53956e53bba.png'
+        WHERE
+        user_no = 0
+ {FAILED after 2 msec}
+java.sql.SQLSyntaxErrorException: (conn=347) Unknown column 'user_status_message' in 'field list'
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:289)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:172)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:915)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:854)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:773)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:697)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:93)
+	at org.mariadb.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:276)
+	at net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy.execute(PreparedStatementSpy.java:443)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:58)
+	at jdk.proxy3/jdk.proxy3.$Proxy100.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:48)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:75)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:333)
+	at jdk.proxy2/jdk.proxy2.$Proxy77.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:234)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:67)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy83.updUserProfile(Unknown Source)
+	at com.green.firstproject.user.UserService.updateUser(UserService.java:254)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:379)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at com.green.firstproject.user.UserService$$SpringCGLIB$$0.updateUser(<generated>)
+	at com.green.firstproject.user.UserController.updateProfile(UserController.java:60)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:888)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[2024-12-27 20:57:10 ERRORhttp-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: (conn=347) Unknown column 'user_status_message' in 'field list'
+### The error may exist in file [D:\LJM\FirstProject\build\resources\main\mappers\UserMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: UPDATE user         SET         nickname = ?,         user_status_message = ?,         profile_pic = ?         WHERE         user_no = ?
+### Cause: java.sql.SQLSyntaxErrorException: (conn=347) Unknown column 'user_status_message' in 'field list'
+; bad SQL grammar []] with root cause
+java.sql.SQLSyntaxErrorException: (conn=347) Unknown column 'user_status_message' in 'field list'
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:289)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:172)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:915)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:854)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:773)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:697)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:93)
+	at org.mariadb.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:276)
+	at net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy.execute(PreparedStatementSpy.java:443)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:58)
+	at jdk.proxy3/jdk.proxy3.$Proxy100.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:48)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:75)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:333)
+	at jdk.proxy2/jdk.proxy2.$Proxy77.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:234)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:67)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy83.updUserProfile(Unknown Source)
+	at com.green.firstproject.user.UserService.updateUser(UserService.java:254)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:379)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at com.green.firstproject.user.UserService$$SpringCGLIB$$0.updateUser(<generated>)
+	at com.green.firstproject.user.UserController.updateProfile(UserController.java:60)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:888)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[2024-12-27 20:58:22 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-27 20:58:22 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-27 20:58:28 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-27 20:58:28 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 13776 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-27 20:58:28 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-27 20:58:28 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-27 20:58:29 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-27 20:58:29 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 767 ms
+[2024-12-27 20:58:29 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-27 20:58:30 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-27 20:58:30 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.637 seconds (process running for 1.96)
+[2024-12-27 20:58:42 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-27 20:58:42 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 7844 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-27 20:58:42 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-27 20:58:42 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-27 20:58:43 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-27 20:58:43 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 778 ms
+[2024-12-27 20:58:43 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-27 20:58:43 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-27 20:58:43 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.671 seconds (process running for 2.006)
+[2024-12-27 20:58:46 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-27 20:58:46 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+[2024-12-27 20:58:46 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-27 20:58:46 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@57891480
+[2024-12-27 20:58:46 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-27 20:58:46 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.getUserInfo] ==>  Preparing: SELECT email, nickname, status_message AS statusMessage, profile_pic AS profilePic FROM user WHERE user_no = ?
+[2024-12-27 20:58:46 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.getUserInfo] ==> Parameters: 1(Long)
+[2024-12-27 20:58:46 DEBUGhttp-nio-8080-exec-1] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        email,
+        nickname,
+        status_message AS statusMessage,
+        profile_pic AS profilePic
+        FROM user
+        WHERE user_no = 1
+ {executed in 1 msec}
+[2024-12-27 20:58:46 INFO http-nio-8080-exec-1] [jdbc.resultsettable] 
+|-----------------|---------|---------------|------------|
+|email            |nickname |status_message |profile_pic |
+|-----------------|---------|---------------|------------|
+|ming@example.com |민        |null           |null        |
+|-----------------|---------|---------------|------------|
+
+[2024-12-27 20:58:46 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.getUserInfo] <==      Total: 1
+[2024-12-27 20:58:46 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.checkNicknameExists] ==>  Preparing: SELECT COUNT(*) > 0 FROM user WHERE nickname = ?
+[2024-12-27 20:58:46 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.checkNicknameExists] ==> Parameters: 미니공쥬(String)
+[2024-12-27 20:58:46 DEBUGhttp-nio-8080-exec-1] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        COUNT(*) > 0
+        FROM user
+        WHERE nickname = '미니공쥬'
+ {executed in 0 msec}
+[2024-12-27 20:58:46 INFO http-nio-8080-exec-1] [jdbc.resultsettable] 
+|-------------|
+|count(*) > 0 |
+|-------------|
+|false        |
+|-------------|
+
+[2024-12-27 20:58:46 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.checkNicknameExists] <==      Total: 1
+[2024-12-27 20:58:46 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.updUserProfile] ==>  Preparing: UPDATE user SET nickname = ?, status_message = ?, profile_pic = ? WHERE user_no = ?
+[2024-12-27 20:58:46 ERRORhttp-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.mybatis.spring.MyBatisSystemException: 
+### Error updating database.  Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'targetUserNo' in 'class com.green.firstproject.user.model.dto.UserInfo'
+### The error may exist in file [D:\LJM\FirstProject\build\resources\main\mappers\UserMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: UPDATE user         SET         nickname = ?,         status_message = ?,         profile_pic = ?         WHERE         user_no = ?
+### Cause: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'targetUserNo' in 'class com.green.firstproject.user.model.dto.UserInfo'] with root cause
+org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'targetUserNo' in 'class com.green.firstproject.user.model.dto.UserInfo'
+	at org.apache.ibatis.reflection.Reflector.getGetInvoker(Reflector.java:385)
+	at org.apache.ibatis.reflection.MetaClass.getGetInvoker(MetaClass.java:160)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.getBeanProperty(BeanWrapper.java:156)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.get(BeanWrapper.java:50)
+	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:115)
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:82)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:97)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:65)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:91)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:49)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:333)
+	at jdk.proxy2/jdk.proxy2.$Proxy77.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:234)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:67)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy83.updUserProfile(Unknown Source)
+	at com.green.firstproject.user.UserService.updateUser(UserService.java:254)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:379)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at com.green.firstproject.user.UserService$$SpringCGLIB$$0.updateUser(<generated>)
+	at com.green.firstproject.user.UserController.updateProfile(UserController.java:60)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:888)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[2024-12-27 20:59:03 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-27 20:59:03 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-27 20:59:05 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-27 20:59:05 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 7300 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-27 20:59:05 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-27 20:59:05 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-27 20:59:06 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-27 20:59:06 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 827 ms
+[2024-12-27 20:59:06 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-27 20:59:06 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-27 20:59:06 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.715 seconds (process running for 2.03)
+[2024-12-27 20:59:08 INFO http-nio-8080-exec-2] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-27 20:59:08 INFO http-nio-8080-exec-2] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+[2024-12-27 20:59:08 INFO http-nio-8080-exec-2] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-27 20:59:08 INFO http-nio-8080-exec-2] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@773e6b3b
+[2024-12-27 20:59:08 INFO http-nio-8080-exec-2] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-27 20:59:08 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.getUserInfo] ==>  Preparing: SELECT email, nickname, status_message AS statusMessage, profile_pic AS profilePic FROM user WHERE user_no = ?
+[2024-12-27 20:59:08 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.getUserInfo] ==> Parameters: 1(Long)
+[2024-12-27 20:59:08 DEBUGhttp-nio-8080-exec-2] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        email,
+        nickname,
+        status_message AS statusMessage,
+        profile_pic AS profilePic
+        FROM user
+        WHERE user_no = 1
+ {executed in 1 msec}
+[2024-12-27 20:59:08 INFO http-nio-8080-exec-2] [jdbc.resultsettable] 
+|-----------------|---------|---------------|------------|
+|email            |nickname |status_message |profile_pic |
+|-----------------|---------|---------------|------------|
+|ming@example.com |민        |null           |null        |
+|-----------------|---------|---------------|------------|
+
+[2024-12-27 20:59:08 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.getUserInfo] <==      Total: 1
+[2024-12-27 20:59:08 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.checkNicknameExists] ==>  Preparing: SELECT COUNT(*) > 0 FROM user WHERE nickname = ?
+[2024-12-27 20:59:08 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.checkNicknameExists] ==> Parameters: 미니공쥬(String)
+[2024-12-27 20:59:08 DEBUGhttp-nio-8080-exec-2] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        COUNT(*) > 0
+        FROM user
+        WHERE nickname = '미니공쥬'
+ {executed in 0 msec}
+[2024-12-27 20:59:08 INFO http-nio-8080-exec-2] [jdbc.resultsettable] 
+|-------------|
+|count(*) > 0 |
+|-------------|
+|false        |
+|-------------|
+
+[2024-12-27 20:59:08 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.checkNicknameExists] <==      Total: 1
+[2024-12-27 20:59:08 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.updUserProfile] ==>  Preparing: UPDATE user SET nickname = ?, status_message = ?, profile_pic = ? WHERE user_no = ?
+[2024-12-27 20:59:08 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.updUserProfile] ==> Parameters: 미니공쥬(String), Just do it!(String), 80402306-b05f-4b7f-bb1a-35760b68a425.png(String), 0(Long)
+[2024-12-27 20:59:08 DEBUGhttp-nio-8080-exec-2] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. UPDATE user
+        SET
+        nickname = '미니공쥬',
+        status_message = 'Just do it!',
+        profile_pic = '80402306-b05f-4b7f-bb1a-35760b68a425.png'
+        WHERE
+        user_no = 0
+ {executed in 1 msec}
+[2024-12-27 20:59:08 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.updUserProfile] <==    Updates: 0
+[2024-12-27 20:59:08 ERRORhttp-nio-8080-exec-2] [com.green.firstproject.user.UserService] Failed to update user profile for targetUserNo: 1
+[2024-12-27 21:02:38 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-27 21:02:38 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-27 21:02:40 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-27 21:02:40 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 9516 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-27 21:02:40 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-27 21:02:40 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-27 21:02:41 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-27 21:02:41 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 760 ms
+[2024-12-27 21:02:41 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-27 21:02:41 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-27 21:02:42 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.639 seconds (process running for 1.944)
+[2024-12-27 21:02:51 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-27 21:02:51 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 12300 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-27 21:02:51 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-27 21:02:51 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-27 21:02:52 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-27 21:02:52 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 786 ms
+[2024-12-27 21:02:52 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-27 21:02:53 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-27 21:02:53 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.692 seconds (process running for 2.007)
+[2024-12-27 21:02:57 INFO http-nio-8080-exec-4] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-27 21:02:57 INFO http-nio-8080-exec-4] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+[2024-12-27 21:02:57 INFO http-nio-8080-exec-4] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-27 21:02:57 INFO http-nio-8080-exec-4] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@3f881c0a
+[2024-12-27 21:02:57 INFO http-nio-8080-exec-4] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-27 21:02:57 DEBUGhttp-nio-8080-exec-4] [com.green.firstproject.user.UserMapper.getUserInfo] ==>  Preparing: SELECT email, nickname, status_message AS statusMessage, profile_pic AS profilePic FROM user WHERE user_no = ?
+[2024-12-27 21:02:57 DEBUGhttp-nio-8080-exec-4] [com.green.firstproject.user.UserMapper.getUserInfo] ==> Parameters: 1(Long)
+[2024-12-27 21:02:57 DEBUGhttp-nio-8080-exec-4] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        email,
+        nickname,
+        status_message AS statusMessage,
+        profile_pic AS profilePic
+        FROM user
+        WHERE user_no = 1
+ {executed in 1 msec}
+[2024-12-27 21:02:57 INFO http-nio-8080-exec-4] [jdbc.resultsettable] 
+|-----------------|---------|---------------|------------|
+|email            |nickname |status_message |profile_pic |
+|-----------------|---------|---------------|------------|
+|ming@example.com |민        |null           |null        |
+|-----------------|---------|---------------|------------|
+
+[2024-12-27 21:02:57 DEBUGhttp-nio-8080-exec-4] [com.green.firstproject.user.UserMapper.getUserInfo] <==      Total: 1
+[2024-12-27 21:02:57 DEBUGhttp-nio-8080-exec-4] [com.green.firstproject.user.UserMapper.checkNicknameExists] ==>  Preparing: SELECT COUNT(*) > 0 FROM user WHERE nickname = ?
+[2024-12-27 21:02:57 DEBUGhttp-nio-8080-exec-4] [com.green.firstproject.user.UserMapper.checkNicknameExists] ==> Parameters: 미니공쥬(String)
+[2024-12-27 21:02:57 DEBUGhttp-nio-8080-exec-4] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        COUNT(*) > 0
+        FROM user
+        WHERE nickname = '미니공쥬'
+ {executed in 0 msec}
+[2024-12-27 21:02:57 INFO http-nio-8080-exec-4] [jdbc.resultsettable] 
+|-------------|
+|count(*) > 0 |
+|-------------|
+|false        |
+|-------------|
+
+[2024-12-27 21:02:57 DEBUGhttp-nio-8080-exec-4] [com.green.firstproject.user.UserMapper.checkNicknameExists] <==      Total: 1
+[2024-12-27 21:02:57 DEBUGhttp-nio-8080-exec-4] [com.green.firstproject.user.UserMapper.updUserProfile] ==>  Preparing: UPDATE user SET nickname = ?, status_message = ?, profile_pic = ? WHERE user_no = ?
+[2024-12-27 21:02:57 DEBUGhttp-nio-8080-exec-4] [com.green.firstproject.user.UserMapper.updUserProfile] ==> Parameters: 미니공쥬(String), Just do it!(String), 54e3b628-d352-4172-bb9c-d9819b8e95b0.png(String), 1(Long)
+[2024-12-27 21:02:57 DEBUGhttp-nio-8080-exec-4] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. UPDATE user
+        SET
+        nickname = '미니공쥬',
+        status_message = 'Just do it!',
+        profile_pic = '54e3b628-d352-4172-bb9c-d9819b8e95b0.png'
+        WHERE
+        user_no = 1
+ {executed in 0 msec}
+[2024-12-27 21:02:57 DEBUGhttp-nio-8080-exec-4] [com.green.firstproject.user.UserMapper.updUserProfile] <==    Updates: 1
+[2024-12-27 21:02:57 INFO http-nio-8080-exec-4] [com.green.firstproject.user.UserService] User profile updated successfully for targetUserNo: 1
+[2024-12-27 21:03:18 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.getUserInfo] ==>  Preparing: SELECT email, nickname, status_message AS statusMessage, profile_pic AS profilePic FROM user WHERE user_no = ?
+[2024-12-27 21:03:18 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.getUserInfo] ==> Parameters: 1(Long)
+[2024-12-27 21:03:18 DEBUGhttp-nio-8080-exec-3] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        email,
+        nickname,
+        status_message AS statusMessage,
+        profile_pic AS profilePic
+        FROM user
+        WHERE user_no = 1
+ {executed in 0 msec}
+[2024-12-27 21:03:18 INFO http-nio-8080-exec-3] [jdbc.resultsettable] 
+|-----------------|---------|---------------|-----------------------------------------|
+|email            |nickname |status_message |profile_pic                              |
+|-----------------|---------|---------------|-----------------------------------------|
+|ming@example.com |미니공쥬     |Just do it!    |54e3b628-d352-4172-bb9c-d9819b8e95b0.png |
+|-----------------|---------|---------------|-----------------------------------------|
+
+[2024-12-27 21:03:18 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.getUserInfo] <==      Total: 1
+[2024-12-27 21:03:18 ERRORhttp-nio-8080-exec-3] [com.green.firstproject.user.UserService] Unauthorized profile update attempt. signedUserNo: 2, targetUserNo: 1
+[2024-12-27 21:04:04 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.getUserInfo] ==>  Preparing: SELECT email, nickname, status_message AS statusMessage, profile_pic AS profilePic FROM user WHERE user_no = ?
+[2024-12-27 21:04:04 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.getUserInfo] ==> Parameters: 2(Long)
+[2024-12-27 21:04:04 DEBUGhttp-nio-8080-exec-2] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        email,
+        nickname,
+        status_message AS statusMessage,
+        profile_pic AS profilePic
+        FROM user
+        WHERE user_no = 2
+ {executed in 0 msec}
+[2024-12-27 21:04:04 INFO http-nio-8080-exec-2] [jdbc.resultsettable] 
+|-----------------|---------|---------------|------------|
+|email            |nickname |status_message |profile_pic |
+|-----------------|---------|---------------|------------|
+|mini@example.com |미니       |null           |null        |
+|-----------------|---------|---------------|------------|
+
+[2024-12-27 21:04:04 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.getUserInfo] <==      Total: 1
+[2024-12-27 21:04:04 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.checkNicknameExists] ==>  Preparing: SELECT COUNT(*) > 0 FROM user WHERE nickname = ?
+[2024-12-27 21:04:04 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.checkNicknameExists] ==> Parameters: 미니공쥬(String)
+[2024-12-27 21:04:04 DEBUGhttp-nio-8080-exec-2] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        COUNT(*) > 0
+        FROM user
+        WHERE nickname = '미니공쥬'
+ {executed in 0 msec}
+[2024-12-27 21:04:04 INFO http-nio-8080-exec-2] [jdbc.resultsettable] 
+|-------------|
+|count(*) > 0 |
+|-------------|
+|true         |
+|-------------|
+
+[2024-12-27 21:04:04 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.checkNicknameExists] <==      Total: 1
+[2024-12-27 21:04:04 WARN http-nio-8080-exec-2] [com.green.firstproject.user.UserService] Duplicate nickname found: 미니공쥬
+[2024-12-27 21:04:52 DEBUGhttp-nio-8080-exec-5] [com.green.firstproject.user.UserMapper.getUserInfo] ==>  Preparing: SELECT email, nickname, status_message AS statusMessage, profile_pic AS profilePic FROM user WHERE user_no = ?
+[2024-12-27 21:04:52 DEBUGhttp-nio-8080-exec-5] [com.green.firstproject.user.UserMapper.getUserInfo] ==> Parameters: 2(Long)
+[2024-12-27 21:04:52 DEBUGhttp-nio-8080-exec-5] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        email,
+        nickname,
+        status_message AS statusMessage,
+        profile_pic AS profilePic
+        FROM user
+        WHERE user_no = 2
+ {executed in 0 msec}
+[2024-12-27 21:04:52 INFO http-nio-8080-exec-5] [jdbc.resultsettable] 
+|-----------------|---------|---------------|------------|
+|email            |nickname |status_message |profile_pic |
+|-----------------|---------|---------------|------------|
+|mini@example.com |미니       |null           |null        |
+|-----------------|---------|---------------|------------|
+
+[2024-12-27 21:04:52 DEBUGhttp-nio-8080-exec-5] [com.green.firstproject.user.UserMapper.getUserInfo] <==      Total: 1
+[2024-12-27 21:04:52 DEBUGhttp-nio-8080-exec-5] [com.green.firstproject.user.UserMapper.checkNicknameExists] ==>  Preparing: SELECT COUNT(*) > 0 FROM user WHERE nickname = ?
+[2024-12-27 21:04:52 DEBUGhttp-nio-8080-exec-5] [com.green.firstproject.user.UserMapper.checkNicknameExists] ==> Parameters: 미닝(String)
+[2024-12-27 21:04:52 DEBUGhttp-nio-8080-exec-5] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        COUNT(*) > 0
+        FROM user
+        WHERE nickname = '미닝'
+ {executed in 0 msec}
+[2024-12-27 21:04:52 INFO http-nio-8080-exec-5] [jdbc.resultsettable] 
+|-------------|
+|count(*) > 0 |
+|-------------|
+|false        |
+|-------------|
+
+[2024-12-27 21:04:52 DEBUGhttp-nio-8080-exec-5] [com.green.firstproject.user.UserMapper.checkNicknameExists] <==      Total: 1
+[2024-12-27 21:04:52 DEBUGhttp-nio-8080-exec-5] [com.green.firstproject.user.UserMapper.updUserProfile] ==>  Preparing: UPDATE user SET nickname = ?, status_message = ?, profile_pic = ? WHERE user_no = ?
+[2024-12-27 21:04:52 DEBUGhttp-nio-8080-exec-5] [com.green.firstproject.user.UserMapper.updUserProfile] ==> Parameters: 미닝(String), null, 3bf9fe44-1437-450c-b6c3-ea50dc603eb8.png(String), 2(Long)
+[2024-12-27 21:04:52 DEBUGhttp-nio-8080-exec-5] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. UPDATE user
+        SET
+        nickname = '미닝',
+        status_message = NULL,
+        profile_pic = '3bf9fe44-1437-450c-b6c3-ea50dc603eb8.png'
+        WHERE
+        user_no = 2
+ {executed in 0 msec}
+[2024-12-27 21:04:52 DEBUGhttp-nio-8080-exec-5] [com.green.firstproject.user.UserMapper.updUserProfile] <==    Updates: 1
+[2024-12-27 21:04:52 INFO http-nio-8080-exec-5] [com.green.firstproject.user.UserService] User profile updated successfully for targetUserNo: 2
+[2024-12-27 21:05:33 WARN http-nio-8080-exec-6] [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver] Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required part 'p' is not present.]
+[2024-12-27 21:05:50 WARN http-nio-8080-exec-8] [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver] Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required part 'p' is not present.]
+[2024-12-27 21:06:21 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserMapper.getUserInfo] ==>  Preparing: SELECT email, nickname, status_message AS statusMessage, profile_pic AS profilePic FROM user WHERE user_no = ?
+[2024-12-27 21:06:21 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserMapper.getUserInfo] ==> Parameters: 2(Long)
+[2024-12-27 21:06:21 DEBUGhttp-nio-8080-exec-10] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        email,
+        nickname,
+        status_message AS statusMessage,
+        profile_pic AS profilePic
+        FROM user
+        WHERE user_no = 2
+ {executed in 0 msec}
+[2024-12-27 21:06:21 INFO http-nio-8080-exec-10] [jdbc.resultsettable] 
+|-----------------|---------|---------------|-----------------------------------------|
+|email            |nickname |status_message |profile_pic                              |
+|-----------------|---------|---------------|-----------------------------------------|
+|mini@example.com |미닝       |null           |3bf9fe44-1437-450c-b6c3-ea50dc603eb8.png |
+|-----------------|---------|---------------|-----------------------------------------|
+
+[2024-12-27 21:06:21 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserMapper.getUserInfo] <==      Total: 1
+[2024-12-27 21:06:21 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserMapper.updUserProfile] ==>  Preparing: UPDATE user SET nickname = ?, status_message = ?, profile_pic = ? WHERE user_no = ?
+[2024-12-27 21:06:21 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserMapper.updUserProfile] ==> Parameters: 미닝(String), null, 5b2bba57-1c5b-4d6e-8d7b-97be0e27ceed.jpg(String), 2(Long)
+[2024-12-27 21:06:21 DEBUGhttp-nio-8080-exec-10] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. UPDATE user
+        SET
+        nickname = '미닝',
+        status_message = NULL,
+        profile_pic = '5b2bba57-1c5b-4d6e-8d7b-97be0e27ceed.jpg'
+        WHERE
+        user_no = 2
+ {executed in 0 msec}
+[2024-12-27 21:06:21 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserMapper.updUserProfile] <==    Updates: 1
+[2024-12-27 21:06:21 INFO http-nio-8080-exec-10] [com.green.firstproject.user.UserService] User profile updated successfully for targetUserNo: 2
+[2024-12-27 21:06:54 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.getUserInfo] ==>  Preparing: SELECT email, nickname, status_message AS statusMessage, profile_pic AS profilePic FROM user WHERE user_no = ?
+[2024-12-27 21:06:54 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.getUserInfo] ==> Parameters: 2(Long)
+[2024-12-27 21:06:54 DEBUGhttp-nio-8080-exec-1] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        email,
+        nickname,
+        status_message AS statusMessage,
+        profile_pic AS profilePic
+        FROM user
+        WHERE user_no = 2
+ {executed in 0 msec}
+[2024-12-27 21:06:54 INFO http-nio-8080-exec-1] [jdbc.resultsettable] 
+|-----------------|---------|---------------|-----------------------------------------|
+|email            |nickname |status_message |profile_pic                              |
+|-----------------|---------|---------------|-----------------------------------------|
+|mini@example.com |미닝       |null           |5b2bba57-1c5b-4d6e-8d7b-97be0e27ceed.jpg |
+|-----------------|---------|---------------|-----------------------------------------|
+
+[2024-12-27 21:06:54 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.getUserInfo] <==      Total: 1
+[2024-12-27 21:06:54 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.updUserProfile] ==>  Preparing: UPDATE user SET nickname = ?, status_message = ?, profile_pic = ? WHERE user_no = ?
+[2024-12-27 21:06:54 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.updUserProfile] ==> Parameters: 미닝(String), null, 6928faf1-c940-4b13-8c87-ecd293e1d13e.jpg(String), 2(Long)
+[2024-12-27 21:06:54 DEBUGhttp-nio-8080-exec-1] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. UPDATE user
+        SET
+        nickname = '미닝',
+        status_message = NULL,
+        profile_pic = '6928faf1-c940-4b13-8c87-ecd293e1d13e.jpg'
+        WHERE
+        user_no = 2
+ {executed in 1 msec}
+[2024-12-27 21:06:54 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.updUserProfile] <==    Updates: 1
+[2024-12-27 21:06:54 INFO http-nio-8080-exec-1] [com.green.firstproject.user.UserService] User profile updated successfully for targetUserNo: 2
+[2024-12-27 21:08:22 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.getUserInfo] ==>  Preparing: SELECT email, nickname, status_message AS statusMessage, profile_pic AS profilePic FROM user WHERE user_no = ?
+[2024-12-27 21:08:22 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.getUserInfo] ==> Parameters: 1(Long)
+[2024-12-27 21:08:22 DEBUGhttp-nio-8080-exec-3] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        email,
+        nickname,
+        status_message AS statusMessage,
+        profile_pic AS profilePic
+        FROM user
+        WHERE user_no = 1
+ {executed in 1 msec}
+[2024-12-27 21:08:22 INFO http-nio-8080-exec-3] [jdbc.resultsettable] 
+|-----------------|---------|---------------|-----------------------------------------|
+|email            |nickname |status_message |profile_pic                              |
+|-----------------|---------|---------------|-----------------------------------------|
+|ming@example.com |미니공쥬     |Just do it!    |54e3b628-d352-4172-bb9c-d9819b8e95b0.png |
+|-----------------|---------|---------------|-----------------------------------------|
+
+[2024-12-27 21:08:22 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.getUserInfo] <==      Total: 1
+[2024-12-27 21:08:22 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.updUserProfile] ==>  Preparing: UPDATE user SET nickname = ?, status_message = ?, profile_pic = ? WHERE user_no = ?
+[2024-12-27 21:08:22 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.updUserProfile] ==> Parameters: 미니공쥬(String), Just do it!(String), d92526cb-1cee-4584-9ae2-083412c7eb56.jpg(String), 1(Long)
+[2024-12-27 21:08:22 DEBUGhttp-nio-8080-exec-3] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. UPDATE user
+        SET
+        nickname = '미니공쥬',
+        status_message = 'Just do it!',
+        profile_pic = 'd92526cb-1cee-4584-9ae2-083412c7eb56.jpg'
+        WHERE
+        user_no = 1
+ {executed in 1 msec}
+[2024-12-27 21:08:22 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.updUserProfile] <==    Updates: 1
+[2024-12-27 21:08:22 INFO http-nio-8080-exec-3] [com.green.firstproject.user.UserService] User profile updated successfully for targetUserNo: 1
+[2024-12-27 21:17:52 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-27 21:17:52 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-27 21:17:55 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-27 21:17:55 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 11740 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-27 21:17:55 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-27 21:17:55 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-27 21:17:56 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-27 21:17:56 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 770 ms
+[2024-12-27 21:17:56 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-27 21:17:57 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-27 21:17:57 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.73 seconds (process running for 2.049)
+[2024-12-27 21:18:25 INFO http-nio-8080-exec-2] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-27 21:18:25 INFO http-nio-8080-exec-2] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+[2024-12-27 21:18:25 INFO http-nio-8080-exec-2] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-27 21:18:25 INFO http-nio-8080-exec-2] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@2f04b7f3
+[2024-12-27 21:18:25 INFO http-nio-8080-exec-2] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-27 21:18:25 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.getUserInfo] ==>  Preparing: SELECT email, nickname, status_message AS statusMessage, profile_pic AS profilePic FROM user WHERE user_no = ?
+[2024-12-27 21:18:25 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.getUserInfo] ==> Parameters: 1(Long)
+[2024-12-27 21:18:25 DEBUGhttp-nio-8080-exec-2] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        email,
+        nickname,
+        status_message AS statusMessage,
+        profile_pic AS profilePic
+        FROM user
+        WHERE user_no = 1
+ {executed in 1 msec}
+[2024-12-27 21:18:25 INFO http-nio-8080-exec-2] [jdbc.resultsettable] 
+|-----------------|---------|---------------|-----------------------------------------|
+|email            |nickname |status_message |profile_pic                              |
+|-----------------|---------|---------------|-----------------------------------------|
+|ming@example.com |미니공쥬     |Just do it!    |d92526cb-1cee-4584-9ae2-083412c7eb56.jpg |
+|-----------------|---------|---------------|-----------------------------------------|
+
+[2024-12-27 21:18:25 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.getUserInfo] <==      Total: 1
+[2024-12-27 21:18:25 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.updUserProfile] ==>  Preparing: UPDATE user SET nickname = ?, status_message = ?, profile_pic = ? WHERE user_no = ?
+[2024-12-27 21:18:25 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.updUserProfile] ==> Parameters: 미니공쥬(String), Just do it!(String), d92526cb-1cee-4584-9ae2-083412c7eb56.jpg(String), 1(Long)
+[2024-12-27 21:18:25 DEBUGhttp-nio-8080-exec-2] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. UPDATE user
+        SET
+        nickname = '미니공쥬',
+        status_message = 'Just do it!',
+        profile_pic = 'd92526cb-1cee-4584-9ae2-083412c7eb56.jpg'
+        WHERE
+        user_no = 1
+ {executed in 0 msec}
+[2024-12-27 21:18:25 DEBUGhttp-nio-8080-exec-2] [com.green.firstproject.user.UserMapper.updUserProfile] <==    Updates: 1
+[2024-12-27 21:18:25 INFO http-nio-8080-exec-2] [com.green.firstproject.user.UserService] User profile updated successfully for targetUserNo: 1
+[2024-12-27 21:19:01 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.getUserInfo] ==>  Preparing: SELECT email, nickname, status_message AS statusMessage, profile_pic AS profilePic FROM user WHERE user_no = ?
+[2024-12-27 21:19:01 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.getUserInfo] ==> Parameters: 3(Long)
+[2024-12-27 21:19:01 DEBUGhttp-nio-8080-exec-3] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        email,
+        nickname,
+        status_message AS statusMessage,
+        profile_pic AS profilePic
+        FROM user
+        WHERE user_no = 3
+ {executed in 0 msec}
+[2024-12-27 21:19:01 INFO http-nio-8080-exec-3] [jdbc.resultsettable] 
+|-----------------------|---------|---------------|-----------------------------------------|
+|email                  |nickname |status_message |profile_pic                              |
+|-----------------------|---------|---------------|-----------------------------------------|
+|test_user3@example.com |미니밍      |하라면 해!         |650897ed-407d-489f-a4c1-c2171049cd25.png |
+|-----------------------|---------|---------------|-----------------------------------------|
+
+[2024-12-27 21:19:01 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.getUserInfo] <==      Total: 1
+[2024-12-27 21:19:01 ERRORhttp-nio-8080-exec-3] [com.green.firstproject.user.UserService] Unauthorized profile update attempt. signedUserNo: 1, targetUserNo: 3
+[2024-12-27 21:20:37 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-27 21:20:37 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
