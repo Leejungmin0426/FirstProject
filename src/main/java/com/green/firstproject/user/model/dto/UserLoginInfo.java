@@ -24,7 +24,7 @@ private String profilePic; // 프로필 사진 URL
 @Schema(title = "유저 넘버", description = "유저 고유 넘버", example = "3", requiredMode = Schema.RequiredMode.REQUIRED)
 private Long userNo;
 
-@Schema(title = "첫 로그인 여부", description = "첫 로그인 여부를 나타내는 값", example = "true")
+@Schema(title = "첫 로그인 여부", description = "첫 로그인 여부를 나타내는 값")
 private boolean firstLogin;
 
 @JsonIgnore

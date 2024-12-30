@@ -1,22 +1,26 @@
 package com.green.firstproject.user;
 
 import com.green.firstproject.user.model.*;
-import com.green.firstproject.user.model.dto.DuplicateCheckResult;
 import com.green.firstproject.user.model.dto.UserInfo;
 import com.green.firstproject.user.model.dto.UserLoginInfo;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
-
-import java.util.Map;
-
 
 @Mapper
 public interface UserMapper {
 
     UserLoginInfo userSignIn(String userId);
+    // 첫 로그인 여부 업데이트
+    void updateFirstLogin(String userId);
+
+
+
     UserInfo selUserInfo (UserInfoGetReq p);
 
-    DuplicateCheckResult checkDuplicates(UserSignUpReq p); // 중복 체크, BigDecimal 대응
+    int checkNicknameDuplicate (UserSignUpReq p); //닉네임 중복 체크
+    int checkEmailDuplicate (UserSignUpReq p); //이메일 중복 체크
+    int checkUserIdDuplicate (UserSignUpReq p); // 중복 체크
+
+
     int insertUser(UserSignUpReq p); // 유저 등록
 
 
@@ -24,6 +28,7 @@ public interface UserMapper {
     int updatePassword (String email, String password); // 새로운 비밀번호 등록
 
 
+    String findUserIdByEmail (String email); // 사용자 Id를 email로 조회
 
     // 사용자 프로필 업데이트
     int updUserProfile(UserInfo userInfo);

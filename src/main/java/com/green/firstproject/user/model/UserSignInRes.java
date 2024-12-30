@@ -8,7 +8,7 @@ import lombok.Getter;
 @Schema(title = "사용자 로그인 응답")
 public class UserSignInRes extends ResponseResult {
 
-    @Schema(title = "첫 로그인 여부", description = "첫 로그인 여부를 나타내는 값", example = "true")
+    @Schema(title = "첫 로그인 여부", description = "첫 로그인 여부를 나타내는 값")
     private boolean firstLogin;
 
     public UserSignInRes(String code, boolean firstLogin) {

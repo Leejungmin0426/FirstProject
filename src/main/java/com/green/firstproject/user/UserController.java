@@ -35,13 +35,10 @@ public class UserController {
 
 
     // 3. 사용자 정보 조회 (GET)
-    @GetMapping("/{targetUserNo}")
-    public ResponseResult selUserInfo(
-            @PathVariable long targetUserNo,
-            @RequestHeader long signedUserNo
-    ) {
-        UserInfoGetReq req = new UserInfoGetReq(targetUserNo, signedUserNo);
-        return service.selUserInfo(req);
+    @GetMapping
+    public ResponseResult selUserInfo(@ModelAttribute UserInfoGetReq p) {
+        // 요청값을 직접 객체화하지 않고 바로 서비스로 전달
+        return service.selUserInfo(p);
     }
 
     // 4. 비밀번호 재설정
@@ -50,6 +47,11 @@ public class UserController {
         return service.updatePassword(p);
     }
 
+    @GetMapping("/find-id")
+    public ResponseResult findUserIdByEmail(@RequestParam String email) {
+        ResponseResult response = service.findUserIdByEmail(email);
+        return response;
+    }
 
 
     @PatchMapping

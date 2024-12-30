@@ -1,5 +1,6 @@
 package com.green.firstproject.user.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -35,6 +36,16 @@ public class UserSignUpReq {
     @NotBlank(message = "비밀번호 확인은 필수입니다.")
     private String passwordConfirm;
 
-    @Schema(description = "닉네임",  example = "미니공쥬", requiredMode = Schema.RequiredMode.REQUIRED)
+    @JsonIgnore
     private String nickname;
+
+    @JsonIgnore
+    private int nicknameCount;
+
+
+    @JsonIgnore
+    private int emailCount;
+
+    @JsonIgnore
+    private int userIdCount;
     }

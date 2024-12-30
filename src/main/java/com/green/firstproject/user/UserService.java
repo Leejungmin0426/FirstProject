@@ -10,7 +10,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
@@ -38,16 +37,9 @@ public class UserService {
         return signedUserNo > 0;
     }
 
+
     // 1. 사용자 로그인
     public ResponseResult userSignIn(UserSignInReq p) {
-        // 요청 데이터 검증
-        if (p == null || p.getUserId() == null || p.getUserId().isEmpty()) {
-            return ResponseResult.badRequest(ResponseCode.INCORRECT_EMAIL); // 이메일이 없거나 비어 있을 경우
-        }
-
-        if (p.getPassword() == null || p.getPassword().isEmpty()) {
-            return ResponseResult.badRequest(ResponseCode.INCORRECT_PASSWORD); // 비밀번호가 없거나 비어 있을 경우
-        }
 
         // 매퍼 메서드를 호출하여 사용자 조회
         UserLoginInfo info = mapper.userSignIn(p.getUserId());
@@ -63,10 +55,31 @@ public class UserService {
         }
 
         // 첫 로그인 여부 확인
-        boolean firstLogin = info.isFirstLogin(); // DB에서 firstLogin 여부 가져옴
+        boolean isFirstLogin = info.isFirstLogin();
+        if (info.isFirstLogin()) {
+            // 첫 로그인인 경우 처리
+            mapper.updateFirstLogin(p.getUserId()); // 첫 로그인 완료 처리
+        } else {
+            // 이미 로그인한 사용자
+        }
 
-        // 성공 응답
-        return new UserSignInRes(ResponseCode.OK.getCode(), firstLogin);
+        // 응답 생성
+        return new UserSignInRes(ResponseCode.OK.getCode(), isFirstLogin);
+    }
+
+
+
+    @Transactional
+    public ResponseResult findUserIdByEmail (String email){
+
+        // 데이터베이스에서 이메일로 사용자 조회
+        String userId = mapper.findUserIdByEmail(email);
+        if (userId == null) {
+            return ResponseResult.badRequest(ResponseCode.NO_EXIST_USER); // 사용자 없음
+        }
+        // 성공 응답 생성
+        FindUserIdRes res = new FindUserIdRes(ResponseCode.OK.getCode(), userId);
+        return res;
     }
 
 
@@ -108,16 +121,19 @@ public class UserService {
 
 
     public ResponseResult userSignUp(UserSignUpReq p) {
-        // 1. 필수 값 검증
-        if (p.getEmail() == null || p.getUserId() == null || p.getPassword() == null || p.getPasswordConfirm() == null) {
-            return ResponseResult.badRequest(ResponseCode.NOT_NULL); // 필수 값 누락
-        }
 
-        // 2. 이메일 형식 검증
+
+        // 1. 이메일 형식 검증
         log.info("Validating email format for email: {}", p.getEmail());
         if (!p.getEmail().matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$")) {
             log.error("Invalid email format: {}", p.getEmail());
             return ResponseResult.badRequest(ResponseCode.EMAIL_FORMAT_ERROR); // 이메일 형식 오류
+        }
+
+        //2. 이메일 중복 체크
+        int checkEmailDuplicate = mapper.checkEmailDuplicate(p);
+        if (checkEmailDuplicate > 0) {
+            return ResponseResult.badRequest(ResponseCode.DUPLICATE_EMAIL); // 이메일 중복
         }
 
         // 3. 비밀번호 형식 검증
@@ -126,16 +142,16 @@ public class UserService {
             return ResponseResult.badRequest(ResponseCode.PASSWORD_FORMAT_ERROR); // 비밀번호 형식 오류
         }
 
-        // 4. 중복 체크
-        DuplicateCheckResult duplicateCheck = mapper.checkDuplicates(p); // DTO로 반환
-        if (duplicateCheck.getEmailCount() > 0) {
-            return ResponseResult.badRequest(ResponseCode.DUPLICATE_EMAIL); // 이메일 중복
-        }
-        if (duplicateCheck.getUserIdCount() > 0) {
-            return ResponseResult.badRequest(ResponseCode.DUPLICATE_ID); // 유저 ID 중복
-        }
-        if (duplicateCheck.getNicknameCount() > 0) {
+        // 4. 중복 체크 (닉네임, 유저 아이디)
+        // 4-1. 닉네임 중복 체크
+        int checkNicknameDuplicate = mapper.checkNicknameDuplicate(p);
+        if (checkNicknameDuplicate > 0) {
             return ResponseResult.badRequest(ResponseCode.DUPLICATE_NICKNAME); // 닉네임 중복
+        }
+        // 4-2. 유저 아이디 중복 체크
+        int checkUserIdDuplicate = mapper.checkUserIdDuplicate(p);
+        if (checkUserIdDuplicate > 0) {
+            return ResponseResult.badRequest(ResponseCode.DUPLICATE_ID); // 유저 아이디 중복
         }
 
         // 5. 비밀번호 확인 검증
@@ -144,15 +160,14 @@ public class UserService {
         }
 
         // 6. 닉네임이 없을 경우 자동 생성
-        if (p.getNickname() == null || p.getNickname().isBlank()) {
             String generatedNickname = NicknameGenerator.generateDefaultNickname();
             p.setNickname(generatedNickname);
-        }
+
 
         // 7. 비밀번호 암호화
-        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-        String encryptedPassword = encoder.encode(p.getPassword());
-        p.setPassword(encryptedPassword);
+        String password = BCrypt.hashpw(p.getPassword(), BCrypt.gensalt());
+        p.setPassword(password);
+
 
         // 8. 회원가입 로직 (인증된 상태로 삽입 처리)
         int insertResult = mapper.insertUser(p);
@@ -183,11 +198,11 @@ public class UserService {
         }
 
         // 3. 비밀번호 암호화
-        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-        String encryptedPassword = encoder.encode(p.getPassword());
+        String password = BCrypt.hashpw(p.getPassword(), BCrypt.gensalt());
+        p.setPassword(password);
 
         // 4. DB 업데이트
-        int updatedPassword = mapper.updatePassword(p.getEmail(), encryptedPassword);
+        int updatedPassword = mapper.updatePassword(p.getEmail(), password);
         if (updatedPassword > 0) {
             return new UserFindPasswordRes(ResponseCode.OK.getCode()); // 성공
         }
@@ -250,6 +265,7 @@ public class UserService {
                 return ResponseResult.serverError(); // 파일 처리 실패
             }
         }
+
 
         // 6. 데이터베이스 업데이트
         int updatedRows = mapper.updUserProfile(currentInfo);

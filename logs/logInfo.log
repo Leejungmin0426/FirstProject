@@ -1,18 +1,1646 @@
-[2024-12-28 14:02:53 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
-[2024-12-28 14:02:53 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 5456 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
-[2024-12-28 14:02:53 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
-[2024-12-28 14:02:53 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
-[2024-12-28 14:02:54 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
-[2024-12-28 14:02:54 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 805 ms
-[2024-12-28 14:02:54 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
-[2024-12-28 14:02:54 WARN main] [org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration] 
+[2024-12-30 12:01:46 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 12:01:46 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 5332 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-30 12:01:46 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-30 12:01:46 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-30 12:01:47 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-30 12:01:47 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 918 ms
+[2024-12-30 12:01:47 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-30 12:01:47 WARN main] [org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration] 
 
-Using generated security password: 7ee0e1ef-5efd-4172-80da-7ef2191558e9
+Using generated security password: 576893c7-fabd-4562-b67b-15e3fb538954
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-[2024-12-28 14:02:54 INFO main] [org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer] Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-[2024-12-28 14:02:54 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
-[2024-12-28 14:02:54 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.785 seconds (process running for 2.126)
-[2024-12-28 14:03:03 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
-[2024-12-28 14:03:03 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 0 ms
+[2024-12-30 12:01:47 WARN main] [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Unsatisfied dependency expressed through field 'httpSecurity': Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.HttpSecurityConfiguration.httpSecurity' defined in class path resource [org/springframework/security/config/annotation/web/configuration/HttpSecurityConfiguration.class]: Failed to instantiate [org.springframework.security.config.annotation.web.builders.HttpSecurity]: Factory method 'httpSecurity' threw exception with message: org/springframework/security/authentication/password/CompromisedPasswordChecker
+[2024-12-30 12:01:47 INFO main] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2024-12-30 12:01:47 ERRORmain] [org.springframework.boot.SpringApplication] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Unsatisfied dependency expressed through field 'httpSecurity': Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.HttpSecurityConfiguration.httpSecurity' defined in class path resource [org/springframework/security/config/annotation/web/configuration/HttpSecurityConfiguration.class]: Failed to instantiate [org.springframework.security.config.annotation.web.builders.HttpSecurity]: Factory method 'httpSecurity' threw exception with message: org/springframework/security/authentication/password/CompromisedPasswordChecker
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:788)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1439)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.green.firstproject.FirstProjectApplication.main(FirstProjectApplication.java:10)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.HttpSecurityConfiguration.httpSecurity' defined in class path resource [org/springframework/security/config/annotation/web/configuration/HttpSecurityConfiguration.class]: Failed to instantiate [org.springframework.security.config.annotation.web.builders.HttpSecurity]: Factory method 'httpSecurity' threw exception with message: org/springframework/security/authentication/password/CompromisedPasswordChecker
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:485)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:355)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
+	... 20 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.config.annotation.web.builders.HttpSecurity]: Factory method 'httpSecurity' threw exception with message: org/springframework/security/authentication/password/CompromisedPasswordChecker
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:178)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644)
+	... 31 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/springframework/security/authentication/password/CompromisedPasswordChecker
+	at org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure(InitializeUserDetailsBeanManagerConfigurer.java:96)
+	at org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure(InitializeUserDetailsBeanManagerConfigurer.java:63)
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.configure(AbstractConfiguredSecurityBuilder.java:376)
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.doBuild(AbstractConfiguredSecurityBuilder.java:330)
+	at org.springframework.security.config.annotation.AbstractSecurityBuilder.build(AbstractSecurityBuilder.java:38)
+	at org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration.getAuthenticationManager(AuthenticationConfiguration.java:121)
+	at org.springframework.security.config.annotation.web.configuration.HttpSecurityConfiguration.authenticationManager(HttpSecurityConfiguration.java:141)
+	at org.springframework.security.config.annotation.web.configuration.HttpSecurityConfiguration.httpSecurity(HttpSecurityConfiguration.java:110)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:146)
+	... 32 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.security.authentication.password.CompromisedPasswordChecker
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	... 45 common frames omitted
+[2024-12-30 12:02:13 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 12:02:13 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 1152 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-30 12:02:13 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-30 12:02:13 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-30 12:02:14 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-30 12:02:14 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 781 ms
+[2024-12-30 12:02:14 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-30 12:02:15 WARN main] [org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration] 
+
+Using generated security password: 253620cd-071c-453f-b87f-307a21a103d4
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2024-12-30 12:02:15 WARN main] [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Unsatisfied dependency expressed through field 'httpSecurity': Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.HttpSecurityConfiguration.httpSecurity' defined in class path resource [org/springframework/security/config/annotation/web/configuration/HttpSecurityConfiguration.class]: Failed to instantiate [org.springframework.security.config.annotation.web.builders.HttpSecurity]: Factory method 'httpSecurity' threw exception with message: org/springframework/security/authentication/password/CompromisedPasswordChecker
+[2024-12-30 12:02:15 INFO main] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2024-12-30 12:02:15 ERRORmain] [org.springframework.boot.SpringApplication] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Unsatisfied dependency expressed through field 'httpSecurity': Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.HttpSecurityConfiguration.httpSecurity' defined in class path resource [org/springframework/security/config/annotation/web/configuration/HttpSecurityConfiguration.class]: Failed to instantiate [org.springframework.security.config.annotation.web.builders.HttpSecurity]: Factory method 'httpSecurity' threw exception with message: org/springframework/security/authentication/password/CompromisedPasswordChecker
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:788)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1439)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.green.firstproject.FirstProjectApplication.main(FirstProjectApplication.java:10)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.HttpSecurityConfiguration.httpSecurity' defined in class path resource [org/springframework/security/config/annotation/web/configuration/HttpSecurityConfiguration.class]: Failed to instantiate [org.springframework.security.config.annotation.web.builders.HttpSecurity]: Factory method 'httpSecurity' threw exception with message: org/springframework/security/authentication/password/CompromisedPasswordChecker
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:485)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:355)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
+	... 20 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.config.annotation.web.builders.HttpSecurity]: Factory method 'httpSecurity' threw exception with message: org/springframework/security/authentication/password/CompromisedPasswordChecker
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:178)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644)
+	... 31 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/springframework/security/authentication/password/CompromisedPasswordChecker
+	at org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure(InitializeUserDetailsBeanManagerConfigurer.java:96)
+	at org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure(InitializeUserDetailsBeanManagerConfigurer.java:63)
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.configure(AbstractConfiguredSecurityBuilder.java:376)
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.doBuild(AbstractConfiguredSecurityBuilder.java:330)
+	at org.springframework.security.config.annotation.AbstractSecurityBuilder.build(AbstractSecurityBuilder.java:38)
+	at org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration.getAuthenticationManager(AuthenticationConfiguration.java:121)
+	at org.springframework.security.config.annotation.web.configuration.HttpSecurityConfiguration.authenticationManager(HttpSecurityConfiguration.java:141)
+	at org.springframework.security.config.annotation.web.configuration.HttpSecurityConfiguration.httpSecurity(HttpSecurityConfiguration.java:110)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:146)
+	... 32 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.security.authentication.password.CompromisedPasswordChecker
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	... 45 common frames omitted
+[2024-12-30 12:03:58 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 12:03:58 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 7704 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-30 12:03:58 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-30 12:03:58 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-30 12:03:59 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-30 12:03:59 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 798 ms
+[2024-12-30 12:03:59 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-30 12:03:59 WARN main] [org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration] 
+
+Using generated security password: f6b23c8d-6fb1-44eb-840e-f24f6d09837b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2024-12-30 12:03:59 WARN main] [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Unsatisfied dependency expressed through field 'httpSecurity': Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.HttpSecurityConfiguration.httpSecurity' defined in class path resource [org/springframework/security/config/annotation/web/configuration/HttpSecurityConfiguration.class]: Failed to instantiate [org.springframework.security.config.annotation.web.builders.HttpSecurity]: Factory method 'httpSecurity' threw exception with message: org/springframework/security/authentication/password/CompromisedPasswordChecker
+[2024-12-30 12:03:59 INFO main] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2024-12-30 12:03:59 ERRORmain] [org.springframework.boot.SpringApplication] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Unsatisfied dependency expressed through field 'httpSecurity': Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.HttpSecurityConfiguration.httpSecurity' defined in class path resource [org/springframework/security/config/annotation/web/configuration/HttpSecurityConfiguration.class]: Failed to instantiate [org.springframework.security.config.annotation.web.builders.HttpSecurity]: Factory method 'httpSecurity' threw exception with message: org/springframework/security/authentication/password/CompromisedPasswordChecker
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:788)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1439)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.green.firstproject.FirstProjectApplication.main(FirstProjectApplication.java:10)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.HttpSecurityConfiguration.httpSecurity' defined in class path resource [org/springframework/security/config/annotation/web/configuration/HttpSecurityConfiguration.class]: Failed to instantiate [org.springframework.security.config.annotation.web.builders.HttpSecurity]: Factory method 'httpSecurity' threw exception with message: org/springframework/security/authentication/password/CompromisedPasswordChecker
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:485)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:355)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
+	... 20 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.config.annotation.web.builders.HttpSecurity]: Factory method 'httpSecurity' threw exception with message: org/springframework/security/authentication/password/CompromisedPasswordChecker
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:178)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644)
+	... 31 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/springframework/security/authentication/password/CompromisedPasswordChecker
+	at org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure(InitializeUserDetailsBeanManagerConfigurer.java:96)
+	at org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure(InitializeUserDetailsBeanManagerConfigurer.java:63)
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.configure(AbstractConfiguredSecurityBuilder.java:376)
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.doBuild(AbstractConfiguredSecurityBuilder.java:330)
+	at org.springframework.security.config.annotation.AbstractSecurityBuilder.build(AbstractSecurityBuilder.java:38)
+	at org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration.getAuthenticationManager(AuthenticationConfiguration.java:121)
+	at org.springframework.security.config.annotation.web.configuration.HttpSecurityConfiguration.authenticationManager(HttpSecurityConfiguration.java:141)
+	at org.springframework.security.config.annotation.web.configuration.HttpSecurityConfiguration.httpSecurity(HttpSecurityConfiguration.java:110)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:146)
+	... 32 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.security.authentication.password.CompromisedPasswordChecker
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	... 45 common frames omitted
+[2024-12-30 12:44:48 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 12:44:48 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 3704 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-30 12:44:48 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-30 12:44:48 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-30 12:44:49 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-30 12:44:49 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 785 ms
+[2024-12-30 12:44:49 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-30 12:44:50 WARN main] [org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration] 
+
+Using generated security password: 1375300b-0762-441e-acf7-2edf53ce4525
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2024-12-30 12:44:50 WARN main] [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Unsatisfied dependency expressed through field 'httpSecurity': Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.HttpSecurityConfiguration.httpSecurity' defined in class path resource [org/springframework/security/config/annotation/web/configuration/HttpSecurityConfiguration.class]: Failed to instantiate [org.springframework.security.config.annotation.web.builders.HttpSecurity]: Factory method 'httpSecurity' threw exception with message: org/springframework/security/authentication/password/CompromisedPasswordChecker
+[2024-12-30 12:44:50 INFO main] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2024-12-30 12:44:50 ERRORmain] [org.springframework.boot.SpringApplication] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Unsatisfied dependency expressed through field 'httpSecurity': Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.HttpSecurityConfiguration.httpSecurity' defined in class path resource [org/springframework/security/config/annotation/web/configuration/HttpSecurityConfiguration.class]: Failed to instantiate [org.springframework.security.config.annotation.web.builders.HttpSecurity]: Factory method 'httpSecurity' threw exception with message: org/springframework/security/authentication/password/CompromisedPasswordChecker
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:788)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1439)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.green.firstproject.FirstProjectApplication.main(FirstProjectApplication.java:10)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.HttpSecurityConfiguration.httpSecurity' defined in class path resource [org/springframework/security/config/annotation/web/configuration/HttpSecurityConfiguration.class]: Failed to instantiate [org.springframework.security.config.annotation.web.builders.HttpSecurity]: Factory method 'httpSecurity' threw exception with message: org/springframework/security/authentication/password/CompromisedPasswordChecker
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:485)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:355)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
+	... 20 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.config.annotation.web.builders.HttpSecurity]: Factory method 'httpSecurity' threw exception with message: org/springframework/security/authentication/password/CompromisedPasswordChecker
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:178)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644)
+	... 31 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/springframework/security/authentication/password/CompromisedPasswordChecker
+	at org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure(InitializeUserDetailsBeanManagerConfigurer.java:96)
+	at org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure(InitializeUserDetailsBeanManagerConfigurer.java:63)
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.configure(AbstractConfiguredSecurityBuilder.java:376)
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.doBuild(AbstractConfiguredSecurityBuilder.java:330)
+	at org.springframework.security.config.annotation.AbstractSecurityBuilder.build(AbstractSecurityBuilder.java:38)
+	at org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration.getAuthenticationManager(AuthenticationConfiguration.java:121)
+	at org.springframework.security.config.annotation.web.configuration.HttpSecurityConfiguration.authenticationManager(HttpSecurityConfiguration.java:141)
+	at org.springframework.security.config.annotation.web.configuration.HttpSecurityConfiguration.httpSecurity(HttpSecurityConfiguration.java:110)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:146)
+	... 32 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.security.authentication.password.CompromisedPasswordChecker
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	... 45 common frames omitted
+[2024-12-30 13:49:18 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 13:49:18 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 6892 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-30 13:49:18 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-30 13:49:18 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-30 13:49:19 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-30 13:49:19 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 792 ms
+[2024-12-30 13:49:19 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-30 13:49:20 WARN main] [org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration] 
+
+Using generated security password: 43d88929-7692-4a5f-b6e3-10439bb9438e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2024-12-30 13:49:20 INFO main] [org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer] Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+[2024-12-30 13:49:20 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-30 13:49:20 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.789 seconds (process running for 2.1)
+[2024-12-30 13:49:49 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-30 13:49:49 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 0 ms
+[2024-12-30 14:28:29 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 14:28:29 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 10528 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-30 14:28:29 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-30 14:28:29 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-30 14:28:30 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-30 14:28:30 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 747 ms
+[2024-12-30 14:28:30 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-30 14:28:30 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-30 14:28:30 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.609 seconds (process running for 1.949)
+[2024-12-30 14:28:37 INFO http-nio-8080-exec-4] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-30 14:28:37 INFO http-nio-8080-exec-4] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 0 ms
+[2024-12-30 14:28:37 INFO http-nio-8080-exec-4] [com.green.firstproject.user.UserController] Received Request: com.green.firstproject.user.model.UserSignUpReq@237a20d
+[2024-12-30 14:28:37 INFO http-nio-8080-exec-4] [com.green.firstproject.user.UserService] Validating email format for email: minmin0426@naver.com
+[2024-12-30 14:28:37 INFO http-nio-8080-exec-4] [com.green.firstproject.user.UserService] Validating password format for userId: 미니공주님
+[2024-12-30 14:28:37 INFO http-nio-8080-exec-4] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 14:28:37 INFO http-nio-8080-exec-4] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@75574d8d
+[2024-12-30 14:28:37 INFO http-nio-8080-exec-4] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 14:28:37 DEBUGhttp-nio-8080-exec-4] [com.green.firstproject.user.UserMapper.checkDuplicates] ==>  Preparing: SELECT COUNT(email = ?) AS emailCount, COUNT(user_id = ?) AS userIdCount, COUNT(nickname = ?) AS nicknameCount FROM user
+[2024-12-30 14:28:37 DEBUGhttp-nio-8080-exec-4] [com.green.firstproject.user.UserMapper.checkDuplicates] ==> Parameters: minmin0426@naver.com(String), 미니공주님(String), (String)
+[2024-12-30 14:28:37 DEBUGhttp-nio-8080-exec-4] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        COUNT(email = 'minmin0426@naver.com') AS emailCount,
+        COUNT(user_id = '미니공주님') AS userIdCount,
+        COUNT(nickname = '') AS nicknameCount
+        FROM user
+ {executed in 1 msec}
+[2024-12-30 14:28:37 INFO http-nio-8080-exec-4] [jdbc.resultsettable] 
+|-----------|------------|--------------|
+|emailcount |useridcount |nicknamecount |
+|-----------|------------|--------------|
+|10         |10          |10            |
+|-----------|------------|--------------|
+
+[2024-12-30 14:28:37 DEBUGhttp-nio-8080-exec-4] [com.green.firstproject.user.UserMapper.checkDuplicates] <==      Total: 1
+[2024-12-30 14:29:44 INFO http-nio-8080-exec-10] [com.green.firstproject.user.UserController] Received Request: com.green.firstproject.user.model.UserSignUpReq@33b4fcac
+[2024-12-30 14:29:44 INFO http-nio-8080-exec-10] [com.green.firstproject.user.UserService] Validating email format for email: minprincess@naver.com
+[2024-12-30 14:29:44 INFO http-nio-8080-exec-10] [com.green.firstproject.user.UserService] Validating password format for userId: 미니공주님
+[2024-12-30 14:29:44 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserMapper.checkDuplicates] ==>  Preparing: SELECT COUNT(email = ?) AS emailCount, COUNT(user_id = ?) AS userIdCount, COUNT(nickname = ?) AS nicknameCount FROM user
+[2024-12-30 14:29:44 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserMapper.checkDuplicates] ==> Parameters: minprincess@naver.com(String), 미니공주님(String), (String)
+[2024-12-30 14:29:44 DEBUGhttp-nio-8080-exec-10] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        COUNT(email = 'minprincess@naver.com') AS emailCount,
+        COUNT(user_id = '미니공주님') AS userIdCount,
+        COUNT(nickname = '') AS nicknameCount
+        FROM user
+ {executed in 1 msec}
+[2024-12-30 14:29:44 INFO http-nio-8080-exec-10] [jdbc.resultsettable] 
+|-----------|------------|--------------|
+|emailcount |useridcount |nicknamecount |
+|-----------|------------|--------------|
+|10         |10          |10            |
+|-----------|------------|--------------|
+
+[2024-12-30 14:29:44 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserMapper.checkDuplicates] <==      Total: 1
+[2024-12-30 14:30:24 INFO http-nio-8080-exec-6] [com.green.firstproject.user.UserController] Received Request: com.green.firstproject.user.model.UserSignUpReq@68928f3d
+[2024-12-30 14:30:24 INFO http-nio-8080-exec-6] [com.green.firstproject.user.UserService] Validating email format for email: minprincess@naver.com
+[2024-12-30 14:30:24 INFO http-nio-8080-exec-6] [com.green.firstproject.user.UserService] Validating password format for userId: 미니공주님
+[2024-12-30 14:30:24 DEBUGhttp-nio-8080-exec-6] [com.green.firstproject.user.UserMapper.checkDuplicates] ==>  Preparing: SELECT COUNT(email = ?) AS emailCount, COUNT(user_id = ?) AS userIdCount, COUNT(nickname = ?) AS nicknameCount FROM user
+[2024-12-30 14:30:24 DEBUGhttp-nio-8080-exec-6] [com.green.firstproject.user.UserMapper.checkDuplicates] ==> Parameters: minprincess@naver.com(String), 미니공주님(String), (String)
+[2024-12-30 14:30:24 DEBUGhttp-nio-8080-exec-6] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        COUNT(email = 'minprincess@naver.com') AS emailCount,
+        COUNT(user_id = '미니공주님') AS userIdCount,
+        COUNT(nickname = '') AS nicknameCount
+        FROM user
+ {executed in 1 msec}
+[2024-12-30 14:30:24 INFO http-nio-8080-exec-6] [jdbc.resultsettable] 
+|-----------|------------|--------------|
+|emailcount |useridcount |nicknamecount |
+|-----------|------------|--------------|
+|10         |10          |10            |
+|-----------|------------|--------------|
+
+[2024-12-30 14:30:24 DEBUGhttp-nio-8080-exec-6] [com.green.firstproject.user.UserMapper.checkDuplicates] <==      Total: 1
+[2024-12-30 14:32:41 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 14:32:41 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-30 14:32:43 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 14:32:43 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 10256 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-30 14:32:43 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-30 14:32:43 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-30 14:32:44 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-30 14:32:44 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 745 ms
+[2024-12-30 14:32:44 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-30 14:32:44 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-30 14:32:44 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.628 seconds (process running for 1.928)
+[2024-12-30 14:32:49 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-30 14:32:49 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+[2024-12-30 14:32:49 INFO http-nio-8080-exec-1] [com.green.firstproject.user.UserController] Received Request: com.green.firstproject.user.model.UserSignUpReq@41165f62
+[2024-12-30 14:32:49 INFO http-nio-8080-exec-1] [com.green.firstproject.user.UserService] Validating email format for email: minprincess@naver.com
+[2024-12-30 14:32:49 INFO http-nio-8080-exec-1] [com.green.firstproject.user.UserService] Validating password format for userId: 미니공주님
+[2024-12-30 14:32:49 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 14:32:49 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@4aca10df
+[2024-12-30 14:32:49 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 14:32:49 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.checkDuplicates] ==>  Preparing: SELECT SUM(email = ?) AS emailCount, SUM(user_id = ?) AS userIdCount, SUM(nickname = ?) AS nicknameCount FROM user
+[2024-12-30 14:32:49 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.checkDuplicates] ==> Parameters: minprincess@naver.com(String), 미니공주님(String), (String)
+[2024-12-30 14:32:49 DEBUGhttp-nio-8080-exec-1] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        SUM(email = 'minprincess@naver.com') AS emailCount,
+        SUM(user_id = '미니공주님') AS userIdCount,
+        SUM(nickname = '') AS nicknameCount
+        FROM user
+ {executed in 2 msec}
+[2024-12-30 14:32:49 INFO http-nio-8080-exec-1] [jdbc.resultsettable] 
+|-----------|------------|--------------|
+|emailcount |useridcount |nicknamecount |
+|-----------|------------|--------------|
+|0          |0           |0             |
+|-----------|------------|--------------|
+
+[2024-12-30 14:32:49 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.checkDuplicates] <==      Total: 1
+[2024-12-30 14:32:50 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.insertUser] ==>  Preparing: INSERT INTO user (email, user_id, password, nickname) VALUES (?, ?, ?, ?)
+[2024-12-30 14:32:50 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.insertUser] ==> Parameters: minprincess@naver.com(String), 미니공주님(String), $2a$10$6KeWV9NnPq1wXZoeCFW6IeAXMmBfU.cLCSdvbR9VBDlP9KBN0C0qS(String), 소중한재롱이#7107(String)
+[2024-12-30 14:32:50 DEBUGhttp-nio-8080-exec-1] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO user (email, user_id, password, nickname)
+        VALUES ('minprincess@naver.com', '미니공주님', '$2a$10$6KeWV9NnPq1wXZoeCFW6IeAXMmBfU.cLCSdvbR9VBDlP9KBN0C0qS', '소중한재롱이#7107')
+ {executed in 2 msec}
+[2024-12-30 14:32:50 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.insertUser] <==    Updates: 1
+[2024-12-30 14:33:37 INFO http-nio-8080-exec-7] [org.springdoc.api.AbstractOpenApiResource] Init duration for springdoc-openapi is: 133 ms
+[2024-12-30 14:34:05 DEBUGhttp-nio-8080-exec-9] [com.green.firstproject.user.UserMapper.userSignIn] ==>  Preparing: SELECT user_no AS userNo, password, nickname, user_id AS userId, profile_pic AS profilePic, first_login AS firstLogin, status_message AS userStatusMessage FROM user WHERE user_id = ?
+[2024-12-30 14:34:05 DEBUGhttp-nio-8080-exec-9] [com.green.firstproject.user.UserMapper.userSignIn] ==> Parameters: 미니공주님(String)
+[2024-12-30 14:34:05 DEBUGhttp-nio-8080-exec-9] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        user_no AS userNo,
+        password,
+        nickname,
+        user_id AS userId,
+        profile_pic AS profilePic,
+        first_login AS firstLogin,
+        status_message AS userStatusMessage
+        FROM user
+        WHERE user_id = '미니공주님'
+ {executed in 0 msec}
+[2024-12-30 14:34:05 INFO http-nio-8080-exec-9] [jdbc.resultsettable] 
+|--------|-------------------------------------------------------------|------------|--------|------------|------------|---------------|
+|user_no |password                                                     |nickname    |user_id |profile_pic |first_login |status_message |
+|--------|-------------------------------------------------------------|------------|--------|------------|------------|---------------|
+|20      |$2a$10$6KeWV9NnPq1wXZoeCFW6IeAXMmBfU.cLCSdvbR9VBDlP9KBN0C0qS |소중한재롱이#7107 |미니공주님   |null        |false       |null           |
+|--------|-------------------------------------------------------------|------------|--------|------------|------------|---------------|
+
+[2024-12-30 14:34:05 DEBUGhttp-nio-8080-exec-9] [com.green.firstproject.user.UserMapper.userSignIn] <==      Total: 1
+[2024-12-30 14:54:37 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 14:54:37 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-30 14:54:39 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 14:54:39 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 11724 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-30 14:54:39 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-30 14:54:39 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-30 14:54:40 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-30 14:54:40 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 745 ms
+[2024-12-30 14:54:40 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-30 14:54:40 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-30 14:54:40 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.629 seconds (process running for 1.944)
+[2024-12-30 14:54:57 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-30 14:54:57 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 0 ms
+[2024-12-30 14:54:57 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 14:54:57 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@3aca71eb
+[2024-12-30 14:54:57 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 14:54:57 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.userSignIn] ==>  Preparing: SELECT user_no AS userNo, password, nickname, user_id AS userId, profile_pic AS profilePic, first_login AS firstLogin, status_message AS userStatusMessage FROM user WHERE user_id = ?
+[2024-12-30 14:54:57 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.userSignIn] ==> Parameters: 미니공주님(String)
+[2024-12-30 14:54:57 DEBUGhttp-nio-8080-exec-1] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        user_no AS userNo,
+        password,
+        nickname,
+        user_id AS userId,
+        profile_pic AS profilePic,
+        first_login AS firstLogin,
+        status_message AS userStatusMessage
+        FROM user
+        WHERE user_id = '미니공주님'
+ {executed in 0 msec}
+[2024-12-30 14:54:57 INFO http-nio-8080-exec-1] [jdbc.resultsettable] 
+|--------|-------------------------------------------------------------|------------|--------|------------|------------|---------------|
+|user_no |password                                                     |nickname    |user_id |profile_pic |first_login |status_message |
+|--------|-------------------------------------------------------------|------------|--------|------------|------------|---------------|
+|20      |$2a$10$6KeWV9NnPq1wXZoeCFW6IeAXMmBfU.cLCSdvbR9VBDlP9KBN0C0qS |소중한재롱이#7107 |미니공주님   |null        |false       |null           |
+|--------|-------------------------------------------------------------|------------|--------|------------|------------|---------------|
+
+[2024-12-30 14:54:57 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.userSignIn] <==      Total: 1
+[2024-12-30 15:01:38 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 15:01:38 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-30 15:01:41 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 15:01:41 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 7280 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-30 15:01:41 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-30 15:01:41 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-30 15:01:42 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-30 15:01:42 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 756 ms
+[2024-12-30 15:01:42 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-30 15:01:43 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-30 15:01:43 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.639 seconds (process running for 1.959)
+[2024-12-30 15:01:49 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-30 15:01:49 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+[2024-12-30 15:01:49 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 15:01:49 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@6aaa2b8a
+[2024-12-30 15:01:49 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 15:01:49 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.userSignIn] ==>  Preparing: SELECT user_no AS userNo, password, nickname, user_id AS userId, profile_pic AS profilePic, first_login AS firstLogin, status_message AS userStatusMessage FROM user WHERE user_id = ?
+[2024-12-30 15:01:49 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.userSignIn] ==> Parameters: 미니공주님(String)
+[2024-12-30 15:01:49 DEBUGhttp-nio-8080-exec-1] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        user_no AS userNo,
+        password,
+        nickname,
+        user_id AS userId,
+        profile_pic AS profilePic,
+        first_login AS firstLogin,
+        status_message AS userStatusMessage
+        FROM user
+        WHERE user_id = '미니공주님'
+ {executed in 0 msec}
+[2024-12-30 15:01:49 INFO http-nio-8080-exec-1] [jdbc.resultsettable] 
+|--------|-------------------------------------------------------------|------------|--------|------------|------------|---------------|
+|user_no |password                                                     |nickname    |user_id |profile_pic |first_login |status_message |
+|--------|-------------------------------------------------------------|------------|--------|------------|------------|---------------|
+|20      |$2a$10$6KeWV9NnPq1wXZoeCFW6IeAXMmBfU.cLCSdvbR9VBDlP9KBN0C0qS |소중한재롱이#7107 |미니공주님   |null        |false       |null           |
+|--------|-------------------------------------------------------------|------------|--------|------------|------------|---------------|
+
+[2024-12-30 15:01:49 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.userSignIn] <==      Total: 1
+[2024-12-30 15:06:06 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 15:06:06 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-30 15:06:08 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 15:06:08 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 4544 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-30 15:06:08 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-30 15:06:08 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-30 15:06:09 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-30 15:06:09 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 744 ms
+[2024-12-30 15:06:09 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-30 15:06:09 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-30 15:06:09 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.644 seconds (process running for 1.948)
+[2024-12-30 15:06:43 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 15:06:43 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 6652 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-30 15:06:43 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-30 15:06:43 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-30 15:06:43 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-30 15:06:43 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 761 ms
+[2024-12-30 15:06:44 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-30 15:06:44 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-30 15:06:44 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.708 seconds (process running for 2.025)
+[2024-12-30 15:06:46 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-30 15:06:46 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 0 ms
+[2024-12-30 15:06:46 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 15:06:47 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@19c04cf
+[2024-12-30 15:06:47 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 15:06:47 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.userSignIn] ==>  Preparing: SELECT user_no AS userNo, password, nickname, user_id AS userId, profile_pic AS profilePic, first_login AS firstLogin, status_message AS userStatusMessage FROM user WHERE user_id = ?
+[2024-12-30 15:06:47 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.userSignIn] ==> Parameters: 미니공주님(String)
+[2024-12-30 15:06:47 DEBUGhttp-nio-8080-exec-1] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        user_no AS userNo,
+        password,
+        nickname,
+        user_id AS userId,
+        profile_pic AS profilePic,
+        first_login AS firstLogin,
+        status_message AS userStatusMessage
+        FROM user
+        WHERE user_id = '미니공주님'
+ {executed in 0 msec}
+[2024-12-30 15:06:47 INFO http-nio-8080-exec-1] [jdbc.resultsettable] 
+|--------|-------------------------------------------------------------|------------|--------|------------|------------|---------------|
+|user_no |password                                                     |nickname    |user_id |profile_pic |first_login |status_message |
+|--------|-------------------------------------------------------------|------------|--------|------------|------------|---------------|
+|20      |$2a$10$6KeWV9NnPq1wXZoeCFW6IeAXMmBfU.cLCSdvbR9VBDlP9KBN0C0qS |소중한재롱이#7107 |미니공주님   |null        |false       |null           |
+|--------|-------------------------------------------------------------|------------|--------|------------|------------|---------------|
+
+[2024-12-30 15:06:47 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.userSignIn] <==      Total: 1
+[2024-12-30 15:10:15 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 15:10:15 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-30 15:10:16 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 15:10:16 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 2628 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-30 15:10:16 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-30 15:10:16 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-30 15:10:17 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-30 15:10:17 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 743 ms
+[2024-12-30 15:10:17 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-30 15:10:17 WARN main] [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'homeController' defined in file [D:\LJM\FirstProject\build\classes\java\main\com\green\firstproject\home\HomeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'homeService' defined in file [D:\LJM\FirstProject\build\classes\java\main\com\green\firstproject\home\HomeService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'homeMapper' defined in file [D:\LJM\FirstProject\build\classes\java\main\com\green\firstproject\home\HomeMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'
+[2024-12-30 15:10:17 INFO main] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2024-12-30 15:10:17 ERRORmain] [org.springframework.boot.SpringApplication] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'homeController' defined in file [D:\LJM\FirstProject\build\classes\java\main\com\green\firstproject\home\HomeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'homeService' defined in file [D:\LJM\FirstProject\build\classes\java\main\com\green\firstproject\home\HomeService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'homeMapper' defined in file [D:\LJM\FirstProject\build\classes\java\main\com\green\firstproject\home\HomeMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.green.firstproject.FirstProjectApplication.main(FirstProjectApplication.java:10)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'homeService' defined in file [D:\LJM\FirstProject\build\classes\java\main\com\green\firstproject\home\HomeService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'homeMapper' defined in file [D:\LJM\FirstProject\build\classes\java\main\com\green\firstproject\home\HomeMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'homeMapper' defined in file [D:\LJM\FirstProject\build\classes\java\main\com\green\firstproject\home\HomeMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1705)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1454)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 33 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [D:\LJM\FirstProject\build\resources\main\mappers\UserMapper.xml]'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:542)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	... 47 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [D:\LJM\FirstProject\build\resources\main\mappers\UserMapper.xml]'
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 57 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [D:\LJM\FirstProject\build\resources\main\mappers\UserMapper.xml]'
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:178)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644)
+	... 71 common frames omitted
+Caused by: java.io.IOException: Failed to parse mapping resource: 'file [D:\LJM\FirstProject\build\resources\main\mappers\UserMapper.xml]'
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:695)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:572)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:712)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:189)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:146)
+	... 72 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Mapped Statements collection already contains key com.green.firstproject.user.UserMapper.updateFirstLogin. please check file [D:\LJM\FirstProject\build\resources\main\mappers\UserMapper.xml] and com/green/firstproject/user/UserMapper.java (best guess)
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:1158)
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:1111)
+	at org.apache.ibatis.session.Configuration.addMappedStatement(Configuration.java:834)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addMappedStatement(MapperBuilderAssistant.java:223)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.lambda$parseStatement$2(MapperAnnotationBuilder.java:349)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parseStatement(MapperAnnotationBuilder.java:286)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:131)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
+	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:943)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.bindMapperForNamespace(XMLMapperBuilder.java:397)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:100)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:693)
+	... 80 common frames omitted
+[2024-12-30 15:11:26 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 15:11:26 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 10308 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-30 15:11:26 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-30 15:11:26 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-30 15:11:26 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-30 15:11:27 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 743 ms
+[2024-12-30 15:11:27 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-30 15:11:27 WARN main] [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'homeController' defined in file [D:\LJM\FirstProject\build\classes\java\main\com\green\firstproject\home\HomeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'homeService' defined in file [D:\LJM\FirstProject\build\classes\java\main\com\green\firstproject\home\HomeService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'homeMapper' defined in file [D:\LJM\FirstProject\build\classes\java\main\com\green\firstproject\home\HomeMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'
+[2024-12-30 15:11:27 INFO main] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2024-12-30 15:11:27 ERRORmain] [org.springframework.boot.SpringApplication] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'homeController' defined in file [D:\LJM\FirstProject\build\classes\java\main\com\green\firstproject\home\HomeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'homeService' defined in file [D:\LJM\FirstProject\build\classes\java\main\com\green\firstproject\home\HomeService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'homeMapper' defined in file [D:\LJM\FirstProject\build\classes\java\main\com\green\firstproject\home\HomeMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.green.firstproject.FirstProjectApplication.main(FirstProjectApplication.java:10)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'homeService' defined in file [D:\LJM\FirstProject\build\classes\java\main\com\green\firstproject\home\HomeService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'homeMapper' defined in file [D:\LJM\FirstProject\build\classes\java\main\com\green\firstproject\home\HomeMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'homeMapper' defined in file [D:\LJM\FirstProject\build\classes\java\main\com\green\firstproject\home\HomeMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1705)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1454)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 33 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [D:\LJM\FirstProject\build\resources\main\mappers\UserMapper.xml]'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:542)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	... 47 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [D:\LJM\FirstProject\build\resources\main\mappers\UserMapper.xml]'
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 57 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [D:\LJM\FirstProject\build\resources\main\mappers\UserMapper.xml]'
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:178)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644)
+	... 71 common frames omitted
+Caused by: java.io.IOException: Failed to parse mapping resource: 'file [D:\LJM\FirstProject\build\resources\main\mappers\UserMapper.xml]'
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:695)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:572)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:712)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:189)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:146)
+	... 72 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Mapped Statements collection already contains key com.green.firstproject.user.UserMapper.updateFirstLogin. please check file [D:\LJM\FirstProject\build\resources\main\mappers\UserMapper.xml] and com/green/firstproject/user/UserMapper.java (best guess)
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:1158)
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:1111)
+	at org.apache.ibatis.session.Configuration.addMappedStatement(Configuration.java:834)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addMappedStatement(MapperBuilderAssistant.java:223)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.lambda$parseStatement$2(MapperAnnotationBuilder.java:349)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parseStatement(MapperAnnotationBuilder.java:286)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:131)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
+	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:943)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.bindMapperForNamespace(XMLMapperBuilder.java:397)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:100)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:693)
+	... 80 common frames omitted
+[2024-12-30 15:13:25 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 15:13:25 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 10540 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-30 15:13:25 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-30 15:13:25 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-30 15:13:26 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-30 15:13:26 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 743 ms
+[2024-12-30 15:13:26 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-30 15:13:26 WARN main] [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'homeController' defined in file [D:\LJM\FirstProject\build\classes\java\main\com\green\firstproject\home\HomeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'homeService' defined in file [D:\LJM\FirstProject\build\classes\java\main\com\green\firstproject\home\HomeService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'homeMapper' defined in file [D:\LJM\FirstProject\build\classes\java\main\com\green\firstproject\home\HomeMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'
+[2024-12-30 15:13:26 INFO main] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2024-12-30 15:13:26 ERRORmain] [org.springframework.boot.SpringApplication] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'homeController' defined in file [D:\LJM\FirstProject\build\classes\java\main\com\green\firstproject\home\HomeController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'homeService' defined in file [D:\LJM\FirstProject\build\classes\java\main\com\green\firstproject\home\HomeService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'homeMapper' defined in file [D:\LJM\FirstProject\build\classes\java\main\com\green\firstproject\home\HomeMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.green.firstproject.FirstProjectApplication.main(FirstProjectApplication.java:10)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'homeService' defined in file [D:\LJM\FirstProject\build\classes\java\main\com\green\firstproject\home\HomeService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'homeMapper' defined in file [D:\LJM\FirstProject\build\classes\java\main\com\green\firstproject\home\HomeMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'homeMapper' defined in file [D:\LJM\FirstProject\build\classes\java\main\com\green\firstproject\home\HomeMapper.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1705)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1454)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 33 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [D:\LJM\FirstProject\build\resources\main\mappers\UserMapper.xml]'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:542)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	... 47 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [D:\LJM\FirstProject\build\resources\main\mappers\UserMapper.xml]'
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 57 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [D:\LJM\FirstProject\build\resources\main\mappers\UserMapper.xml]'
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:178)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644)
+	... 71 common frames omitted
+Caused by: java.io.IOException: Failed to parse mapping resource: 'file [D:\LJM\FirstProject\build\resources\main\mappers\UserMapper.xml]'
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:695)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:572)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:712)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:189)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:146)
+	... 72 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Mapped Statements collection already contains key com.green.firstproject.user.UserMapper.updateFirstLogin. please check file [D:\LJM\FirstProject\build\resources\main\mappers\UserMapper.xml] and com/green/firstproject/user/UserMapper.java (best guess)
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:1158)
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:1111)
+	at org.apache.ibatis.session.Configuration.addMappedStatement(Configuration.java:834)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addMappedStatement(MapperBuilderAssistant.java:223)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.lambda$parseStatement$2(MapperAnnotationBuilder.java:349)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parseStatement(MapperAnnotationBuilder.java:286)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:131)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
+	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:943)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.bindMapperForNamespace(XMLMapperBuilder.java:397)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:100)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:693)
+	... 80 common frames omitted
+[2024-12-30 15:14:02 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 15:14:02 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 10800 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-30 15:14:02 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-30 15:14:02 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-30 15:14:03 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-30 15:14:03 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 746 ms
+[2024-12-30 15:14:03 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-30 15:14:04 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-30 15:14:04 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.623 seconds (process running for 1.937)
+[2024-12-30 15:14:15 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-30 15:14:15 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+[2024-12-30 15:14:15 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 15:14:15 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@52451ca9
+[2024-12-30 15:14:15 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 15:14:15 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.userSignIn] ==>  Preparing: SELECT user_no AS userNo, password, nickname, user_id AS userId, profile_pic AS profilePic, first_login AS firstLogin, status_message AS userStatusMessage FROM user WHERE user_id = ?
+[2024-12-30 15:14:15 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.userSignIn] ==> Parameters: 미니공주님(String)
+[2024-12-30 15:14:15 DEBUGhttp-nio-8080-exec-1] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        user_no AS userNo,
+        password,
+        nickname,
+        user_id AS userId,
+        profile_pic AS profilePic,
+        first_login AS firstLogin,
+        status_message AS userStatusMessage
+        FROM user
+        WHERE user_id = '미니공주님'
+ {executed in 0 msec}
+[2024-12-30 15:14:15 INFO http-nio-8080-exec-1] [jdbc.resultsettable] 
+|--------|-------------------------------------------------------------|------------|--------|------------|------------|---------------|
+|user_no |password                                                     |nickname    |user_id |profile_pic |first_login |status_message |
+|--------|-------------------------------------------------------------|------------|--------|------------|------------|---------------|
+|20      |$2a$10$6KeWV9NnPq1wXZoeCFW6IeAXMmBfU.cLCSdvbR9VBDlP9KBN0C0qS |소중한재롱이#7107 |미니공주님   |null        |false       |null           |
+|--------|-------------------------------------------------------------|------------|--------|------------|------------|---------------|
+
+[2024-12-30 15:14:15 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.userSignIn] <==      Total: 1
+[2024-12-30 15:28:02 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 15:28:02 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-30 15:28:04 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 15:28:04 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 7568 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-30 15:28:04 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-30 15:28:04 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-30 15:28:05 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-30 15:28:05 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 800 ms
+[2024-12-30 15:28:05 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-30 15:28:05 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-30 15:28:05 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.706 seconds (process running for 2.033)
+[2024-12-30 15:28:08 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-30 15:28:08 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 0 ms
+[2024-12-30 15:28:08 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 15:28:08 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@52451ca9
+[2024-12-30 15:28:08 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 15:28:08 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.userSignIn] ==>  Preparing: SELECT user_no AS userNo, password, nickname, user_id AS userId, profile_pic AS profilePic, first_login AS firstLogin, status_message AS userStatusMessage FROM user WHERE user_id = ?
+[2024-12-30 15:28:08 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.userSignIn] ==> Parameters: 미니공주님(String)
+[2024-12-30 15:28:08 DEBUGhttp-nio-8080-exec-1] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        user_no AS userNo,
+        password,
+        nickname,
+        user_id AS userId,
+        profile_pic AS profilePic,
+        first_login AS firstLogin,
+        status_message AS userStatusMessage
+        FROM user
+        WHERE user_id = '미니공주님'
+ {executed in 1 msec}
+[2024-12-30 15:28:08 INFO http-nio-8080-exec-1] [jdbc.resultsettable] 
+|--------|-------------------------------------------------------------|------------|--------|------------|------------|---------------|
+|user_no |password                                                     |nickname    |user_id |profile_pic |first_login |status_message |
+|--------|-------------------------------------------------------------|------------|--------|------------|------------|---------------|
+|20      |$2a$10$6KeWV9NnPq1wXZoeCFW6IeAXMmBfU.cLCSdvbR9VBDlP9KBN0C0qS |소중한재롱이#7107 |미니공주님   |null        |false       |null           |
+|--------|-------------------------------------------------------------|------------|--------|------------|------------|---------------|
+
+[2024-12-30 15:28:08 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.userSignIn] <==      Total: 1
+[2024-12-30 15:35:51 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 15:35:51 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-30 15:35:54 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 15:35:54 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 11924 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-30 15:35:54 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-30 15:35:54 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-30 15:35:54 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-30 15:35:54 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 767 ms
+[2024-12-30 15:35:55 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-30 15:35:55 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-30 15:35:55 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.632 seconds (process running for 1.969)
+[2024-12-30 15:36:13 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-30 15:36:13 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 16 ms
+[2024-12-30 15:36:13 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 15:36:13 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@3aca71eb
+[2024-12-30 15:36:13 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 15:36:13 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.userSignIn] ==>  Preparing: SELECT user_no AS userNo, password, nickname, user_id AS userId, profile_pic AS profilePic, first_login AS firstLogin, status_message AS userStatusMessage FROM user WHERE user_id = ?
+[2024-12-30 15:36:13 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.userSignIn] ==> Parameters: 미니공주님(String)
+[2024-12-30 15:36:13 DEBUGhttp-nio-8080-exec-1] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        user_no AS userNo,
+        password,
+        nickname,
+        user_id AS userId,
+        profile_pic AS profilePic,
+        first_login AS firstLogin,
+        status_message AS userStatusMessage
+        FROM user
+        WHERE user_id = '미니공주님'
+ {executed in 0 msec}
+[2024-12-30 15:36:14 INFO http-nio-8080-exec-1] [jdbc.resultsettable] 
+|--------|-------------------------------------------------------------|------------|--------|------------|------------|---------------|
+|user_no |password                                                     |nickname    |user_id |profile_pic |first_login |status_message |
+|--------|-------------------------------------------------------------|------------|--------|------------|------------|---------------|
+|20      |$2a$10$6KeWV9NnPq1wXZoeCFW6IeAXMmBfU.cLCSdvbR9VBDlP9KBN0C0qS |소중한재롱이#7107 |미니공주님   |null        |false       |null           |
+|--------|-------------------------------------------------------------|------------|--------|------------|------------|---------------|
+
+[2024-12-30 15:36:14 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.userSignIn] <==      Total: 1
+[2024-12-30 15:37:45 INFO http-nio-8080-exec-10] [com.green.firstproject.user.UserController] Received Request: com.green.firstproject.user.model.UserSignUpReq@4309b2cd
+[2024-12-30 15:37:45 INFO http-nio-8080-exec-10] [com.green.firstproject.user.UserService] Validating email format for email: minprincesstest@naver.com
+[2024-12-30 15:37:45 INFO http-nio-8080-exec-10] [com.green.firstproject.user.UserService] Validating password format for userId: 미니공주님test
+[2024-12-30 15:37:45 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserMapper.checkDuplicates] ==>  Preparing: SELECT SUM(email = ?) AS emailCount, SUM(user_id = ?) AS userIdCount, SUM(nickname = ?) AS nicknameCount FROM user
+[2024-12-30 15:37:45 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserMapper.checkDuplicates] ==> Parameters: minprincesstest@naver.com(String), 미니공주님test(String), (String)
+[2024-12-30 15:37:45 DEBUGhttp-nio-8080-exec-10] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        SUM(email = 'minprincesstest@naver.com') AS emailCount,
+        SUM(user_id = '미니공주님test') AS userIdCount,
+        SUM(nickname = '') AS nicknameCount
+        FROM user
+ {executed in 0 msec}
+[2024-12-30 15:37:45 INFO http-nio-8080-exec-10] [jdbc.resultsettable] 
+|-----------|------------|--------------|
+|emailcount |useridcount |nicknamecount |
+|-----------|------------|--------------|
+|0          |0           |0             |
+|-----------|------------|--------------|
+
+[2024-12-30 15:37:45 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserMapper.checkDuplicates] <==      Total: 1
+[2024-12-30 15:37:45 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserMapper.insertUser] ==>  Preparing: INSERT INTO user (email, user_id, password, nickname) VALUES (?, ?, ?, ?)
+[2024-12-30 15:37:45 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserMapper.insertUser] ==> Parameters: minprincesstest@naver.com(String), 미니공주님test(String), $2a$10$wrjkKIlhYbH2XmSyoi4OPuwdQ/H9HUBBf25P8DoxSKTJKQT8pnVJq(String), 고능한물고기#4584(String)
+[2024-12-30 15:37:45 DEBUGhttp-nio-8080-exec-10] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO user (email, user_id, password, nickname)
+        VALUES ('minprincesstest@naver.com', '미니공주님test', '$2a$10$wrjkKIlhYbH2XmSyoi4OPuwdQ/H9HUBBf25P8DoxSKTJKQT8pnVJq', '고능한물고기#4584')
+ {executed in 3 msec}
+[2024-12-30 15:37:45 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserMapper.insertUser] <==    Updates: 1
+[2024-12-30 15:43:03 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 15:43:03 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-30 15:43:05 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 15:43:05 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 12016 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-30 15:43:05 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-30 15:43:05 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-30 15:43:06 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-30 15:43:06 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 727 ms
+[2024-12-30 15:43:06 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-30 15:43:06 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-30 15:43:06 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.601 seconds (process running for 1.907)
+[2024-12-30 15:43:16 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-30 15:43:16 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 0 ms
+[2024-12-30 15:43:16 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 15:43:16 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@560cca0a
+[2024-12-30 15:43:16 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 15:43:16 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.userSignIn] ==>  Preparing: SELECT user_no AS userNo, password, nickname, user_id AS userId, profile_pic AS profilePic, first_login AS firstLogin, status_message AS userStatusMessage FROM user WHERE user_id = ?
+[2024-12-30 15:43:16 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.userSignIn] ==> Parameters: 미니공주님(String)
+[2024-12-30 15:43:16 DEBUGhttp-nio-8080-exec-1] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        user_no AS userNo,
+        password,
+        nickname,
+        user_id AS userId,
+        profile_pic AS profilePic,
+        first_login AS firstLogin,
+        status_message AS userStatusMessage
+        FROM user
+        WHERE user_id = '미니공주님'
+ {executed in 0 msec}
+[2024-12-30 15:43:16 INFO http-nio-8080-exec-1] [jdbc.resultsettable] 
+|--------|-------------------------------------------------------------|------------|--------|------------|------------|---------------|
+|user_no |password                                                     |nickname    |user_id |profile_pic |first_login |status_message |
+|--------|-------------------------------------------------------------|------------|--------|------------|------------|---------------|
+|20      |$2a$10$6KeWV9NnPq1wXZoeCFW6IeAXMmBfU.cLCSdvbR9VBDlP9KBN0C0qS |소중한재롱이#7107 |미니공주님   |null        |false       |null           |
+|--------|-------------------------------------------------------------|------------|--------|------------|------------|---------------|
+
+[2024-12-30 15:43:16 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.userSignIn] <==      Total: 1
+[2024-12-30 15:43:46 INFO http-nio-8080-exec-7] [com.green.firstproject.user.UserController] Received Request: com.green.firstproject.user.model.UserSignUpReq@441a5801
+[2024-12-30 15:43:46 INFO http-nio-8080-exec-7] [com.green.firstproject.user.UserService] Validating email format for email: minprincesstest1@naver.com
+[2024-12-30 15:43:46 INFO http-nio-8080-exec-7] [com.green.firstproject.user.UserService] Validating password format for userId: 미니공주님test1
+[2024-12-30 15:43:46 DEBUGhttp-nio-8080-exec-7] [com.green.firstproject.user.UserMapper.checkDuplicates] ==>  Preparing: SELECT SUM(email = ?) AS emailCount, SUM(user_id = ?) AS userIdCount, SUM(nickname = ?) AS nicknameCount FROM user
+[2024-12-30 15:43:46 DEBUGhttp-nio-8080-exec-7] [com.green.firstproject.user.UserMapper.checkDuplicates] ==> Parameters: minprincesstest1@naver.com(String), 미니공주님test1(String), (String)
+[2024-12-30 15:43:46 DEBUGhttp-nio-8080-exec-7] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        SUM(email = 'minprincesstest1@naver.com') AS emailCount,
+        SUM(user_id = '미니공주님test1') AS userIdCount,
+        SUM(nickname = '') AS nicknameCount
+        FROM user
+ {executed in 0 msec}
+[2024-12-30 15:43:46 INFO http-nio-8080-exec-7] [jdbc.resultsettable] 
+|-----------|------------|--------------|
+|emailcount |useridcount |nicknamecount |
+|-----------|------------|--------------|
+|0          |0           |0             |
+|-----------|------------|--------------|
+
+[2024-12-30 15:43:46 DEBUGhttp-nio-8080-exec-7] [com.green.firstproject.user.UserMapper.checkDuplicates] <==      Total: 1
+[2024-12-30 15:43:46 DEBUGhttp-nio-8080-exec-7] [com.green.firstproject.user.UserMapper.insertUser] ==>  Preparing: INSERT INTO user (password, nickname, user_id, email, first_login) VALUES (?, ?, ?, ?, 0)
+[2024-12-30 15:43:46 DEBUGhttp-nio-8080-exec-7] [com.green.firstproject.user.UserMapper.insertUser] ==> Parameters: $2a$10$iy7TvJw1x/eabJq9mt1wdOVMEAjACVqhPqYkuxL8sMtwFWDTR1Z1i(String), 인사하는물개#8529(String), 미니공주님test1(String), minprincesstest1@naver.com(String)
+[2024-12-30 15:43:46 DEBUGhttp-nio-8080-exec-7] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO user (password, nickname, user_id, email, first_login)
+        VALUES ('$2a$10$iy7TvJw1x/eabJq9mt1wdOVMEAjACVqhPqYkuxL8sMtwFWDTR1Z1i', '인사하는물개#8529', '미니공주님test1', 'minprincesstest1@naver.com', 0)
+ {executed in 0 msec}
+[2024-12-30 15:43:46 DEBUGhttp-nio-8080-exec-7] [com.green.firstproject.user.UserMapper.insertUser] <==    Updates: 1
+[2024-12-30 15:44:14 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserMapper.userSignIn] ==>  Preparing: SELECT user_no AS userNo, password, nickname, user_id AS userId, profile_pic AS profilePic, first_login AS firstLogin, status_message AS userStatusMessage FROM user WHERE user_id = ?
+[2024-12-30 15:44:14 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserMapper.userSignIn] ==> Parameters: 미니공주님test1(String)
+[2024-12-30 15:44:14 DEBUGhttp-nio-8080-exec-10] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        user_no AS userNo,
+        password,
+        nickname,
+        user_id AS userId,
+        profile_pic AS profilePic,
+        first_login AS firstLogin,
+        status_message AS userStatusMessage
+        FROM user
+        WHERE user_id = '미니공주님test1'
+ {executed in 0 msec}
+[2024-12-30 15:44:14 INFO http-nio-8080-exec-10] [jdbc.resultsettable] 
+|--------|-------------------------------------------------------------|------------|-----------|------------|------------|---------------|
+|user_no |password                                                     |nickname    |user_id    |profile_pic |first_login |status_message |
+|--------|-------------------------------------------------------------|------------|-----------|------------|------------|---------------|
+|22      |$2a$10$iy7TvJw1x/eabJq9mt1wdOVMEAjACVqhPqYkuxL8sMtwFWDTR1Z1i |인사하는물개#8529 |미니공주님test1 |null        |false       |null           |
+|--------|-------------------------------------------------------------|------------|-----------|------------|------------|---------------|
+
+[2024-12-30 15:44:14 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserMapper.userSignIn] <==      Total: 1
+[2024-12-30 15:46:28 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 15:46:28 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-30 15:46:30 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 15:46:30 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 11080 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-30 15:46:30 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-30 15:46:30 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-30 15:46:31 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-30 15:46:31 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 755 ms
+[2024-12-30 15:46:31 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-30 15:46:31 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-30 15:46:31 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.659 seconds (process running for 1.948)
+[2024-12-30 15:46:43 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-30 15:46:43 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 0 ms
+[2024-12-30 15:46:43 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 15:46:43 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@38349482
+[2024-12-30 15:46:43 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 15:46:43 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.userSignIn] ==>  Preparing: SELECT user_no AS userNo, password, nickname, user_id AS userId, profile_pic AS profilePic, first_login AS firstLogin, status_message AS userStatusMessage FROM user WHERE user_id = ?
+[2024-12-30 15:46:43 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.userSignIn] ==> Parameters: 미니공주님test1(String)
+[2024-12-30 15:46:43 DEBUGhttp-nio-8080-exec-1] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        user_no AS userNo,
+        password,
+        nickname,
+        user_id AS userId,
+        profile_pic AS profilePic,
+        first_login AS firstLogin,
+        status_message AS userStatusMessage
+        FROM user
+        WHERE user_id = '미니공주님test1'
+ {executed in 1 msec}
+[2024-12-30 15:46:43 INFO http-nio-8080-exec-1] [jdbc.resultsettable] 
+|--------|-------------------------------------------------------------|------------|-----------|------------|------------|---------------|
+|user_no |password                                                     |nickname    |user_id    |profile_pic |first_login |status_message |
+|--------|-------------------------------------------------------------|------------|-----------|------------|------------|---------------|
+|22      |$2a$10$iy7TvJw1x/eabJq9mt1wdOVMEAjACVqhPqYkuxL8sMtwFWDTR1Z1i |인사하는물개#8529 |미니공주님test1 |null        |false       |null           |
+|--------|-------------------------------------------------------------|------------|-----------|------------|------------|---------------|
+
+[2024-12-30 15:46:43 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.userSignIn] <==      Total: 1
+[2024-12-30 15:46:57 INFO http-nio-8080-exec-3] [com.green.firstproject.user.UserController] Received Request: com.green.firstproject.user.model.UserSignUpReq@5b92a50e
+[2024-12-30 15:46:57 INFO http-nio-8080-exec-3] [com.green.firstproject.user.UserService] Validating email format for email: minprincesstest2@naver.com
+[2024-12-30 15:46:57 INFO http-nio-8080-exec-3] [com.green.firstproject.user.UserService] Validating password format for userId: 미니공주님test2
+[2024-12-30 15:46:57 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.checkDuplicates] ==>  Preparing: SELECT SUM(email = ?) AS emailCount, SUM(user_id = ?) AS userIdCount, SUM(nickname = ?) AS nicknameCount FROM user
+[2024-12-30 15:46:57 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.checkDuplicates] ==> Parameters: minprincesstest2@naver.com(String), 미니공주님test2(String), (String)
+[2024-12-30 15:46:57 DEBUGhttp-nio-8080-exec-3] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        SUM(email = 'minprincesstest2@naver.com') AS emailCount,
+        SUM(user_id = '미니공주님test2') AS userIdCount,
+        SUM(nickname = '') AS nicknameCount
+        FROM user
+ {executed in 0 msec}
+[2024-12-30 15:46:57 INFO http-nio-8080-exec-3] [jdbc.resultsettable] 
+|-----------|------------|--------------|
+|emailcount |useridcount |nicknamecount |
+|-----------|------------|--------------|
+|0          |0           |0             |
+|-----------|------------|--------------|
+
+[2024-12-30 15:46:57 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.checkDuplicates] <==      Total: 1
+[2024-12-30 15:46:57 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.insertUser] ==>  Preparing: INSERT INTO user (password, nickname, user_id, email, first_login) VALUES (?, ?, ?, ?, 1)
+[2024-12-30 15:46:57 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.insertUser] ==> Parameters: $2a$10$BGd5IzN0/0ZkmTm97AeV.O7qplig2CLgFM2M.2jVRdgyvjndUY.U2(String), 둔둔한다람쥐#1752(String), 미니공주님test2(String), minprincesstest2@naver.com(String)
+[2024-12-30 15:46:57 DEBUGhttp-nio-8080-exec-3] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO user (password, nickname, user_id, email, first_login)
+        VALUES ('$2a$10$BGd5IzN0/0ZkmTm97AeV.O7qplig2CLgFM2M.2jVRdgyvjndUY.U2', '둔둔한다람쥐#1752', '미니공주님test2', 'minprincesstest2@naver.com', 1)
+ {executed in 2 msec}
+[2024-12-30 15:46:57 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.insertUser] <==    Updates: 1
+[2024-12-30 15:47:04 DEBUGhttp-nio-8080-exec-8] [com.green.firstproject.user.UserMapper.userSignIn] ==>  Preparing: SELECT user_no AS userNo, password, nickname, user_id AS userId, profile_pic AS profilePic, first_login AS firstLogin, status_message AS userStatusMessage FROM user WHERE user_id = ?
+[2024-12-30 15:47:04 DEBUGhttp-nio-8080-exec-8] [com.green.firstproject.user.UserMapper.userSignIn] ==> Parameters: 미니공주님test2(String)
+[2024-12-30 15:47:04 DEBUGhttp-nio-8080-exec-8] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        user_no AS userNo,
+        password,
+        nickname,
+        user_id AS userId,
+        profile_pic AS profilePic,
+        first_login AS firstLogin,
+        status_message AS userStatusMessage
+        FROM user
+        WHERE user_id = '미니공주님test2'
+ {executed in 1 msec}
+[2024-12-30 15:47:04 INFO http-nio-8080-exec-8] [jdbc.resultsettable] 
+|--------|-------------------------------------------------------------|------------|-----------|------------|------------|---------------|
+|user_no |password                                                     |nickname    |user_id    |profile_pic |first_login |status_message |
+|--------|-------------------------------------------------------------|------------|-----------|------------|------------|---------------|
+|23      |$2a$10$BGd5IzN0/0ZkmTm97AeV.O7qplig2CLgFM2M.2jVRdgyvjndUY.U2 |둔둔한다람쥐#1752 |미니공주님test2 |null        |true        |null           |
+|--------|-------------------------------------------------------------|------------|-----------|------------|------------|---------------|
+
+[2024-12-30 15:47:04 DEBUGhttp-nio-8080-exec-8] [com.green.firstproject.user.UserMapper.userSignIn] <==      Total: 1
+[2024-12-30 15:47:04 DEBUGhttp-nio-8080-exec-8] [com.green.firstproject.user.UserMapper.updateFirstLogin] ==>  Preparing: UPDATE user SET first_login = false WHERE user_id = ?
+[2024-12-30 15:47:04 DEBUGhttp-nio-8080-exec-8] [com.green.firstproject.user.UserMapper.updateFirstLogin] ==> Parameters: 미니공주님test2(String)
+[2024-12-30 15:47:04 DEBUGhttp-nio-8080-exec-8] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. UPDATE user SET first_login = false WHERE user_id = '미니공주님test2'
+ {executed in 1 msec}
+[2024-12-30 15:47:04 DEBUGhttp-nio-8080-exec-8] [com.green.firstproject.user.UserMapper.updateFirstLogin] <==    Updates: 1
+[2024-12-30 15:47:30 INFO http-nio-8080-exec-5] [com.green.firstproject.user.UserController] Received Request: com.green.firstproject.user.model.UserSignUpReq@6f81f210
+[2024-12-30 15:47:30 INFO http-nio-8080-exec-5] [com.green.firstproject.user.UserService] Validating email format for email: minprincesstest3@naver.com
+[2024-12-30 15:47:30 INFO http-nio-8080-exec-5] [com.green.firstproject.user.UserService] Validating password format for userId: 미니공주님test3
+[2024-12-30 15:47:30 DEBUGhttp-nio-8080-exec-5] [com.green.firstproject.user.UserMapper.checkDuplicates] ==>  Preparing: SELECT SUM(email = ?) AS emailCount, SUM(user_id = ?) AS userIdCount, SUM(nickname = ?) AS nicknameCount FROM user
+[2024-12-30 15:47:30 DEBUGhttp-nio-8080-exec-5] [com.green.firstproject.user.UserMapper.checkDuplicates] ==> Parameters: minprincesstest3@naver.com(String), 미니공주님test3(String), (String)
+[2024-12-30 15:47:30 DEBUGhttp-nio-8080-exec-5] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        SUM(email = 'minprincesstest3@naver.com') AS emailCount,
+        SUM(user_id = '미니공주님test3') AS userIdCount,
+        SUM(nickname = '') AS nicknameCount
+        FROM user
+ {executed in 0 msec}
+[2024-12-30 15:47:30 INFO http-nio-8080-exec-5] [jdbc.resultsettable] 
+|-----------|------------|--------------|
+|emailcount |useridcount |nicknamecount |
+|-----------|------------|--------------|
+|0          |0           |0             |
+|-----------|------------|--------------|
+
+[2024-12-30 15:47:30 DEBUGhttp-nio-8080-exec-5] [com.green.firstproject.user.UserMapper.checkDuplicates] <==      Total: 1
+[2024-12-30 15:47:30 DEBUGhttp-nio-8080-exec-5] [com.green.firstproject.user.UserMapper.insertUser] ==>  Preparing: INSERT INTO user (password, nickname, user_id, email, first_login) VALUES (?, ?, ?, ?, 1)
+[2024-12-30 15:47:30 DEBUGhttp-nio-8080-exec-5] [com.green.firstproject.user.UserMapper.insertUser] ==> Parameters: $2a$10$ixxGnxxqiWGbwvQPIOo1dOIgHrb79K1yyOdYnOpSoUkjfBsJiqGc.(String), 소중한물고기#8342(String), 미니공주님test3(String), minprincesstest3@naver.com(String)
+[2024-12-30 15:47:30 DEBUGhttp-nio-8080-exec-5] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO user (password, nickname, user_id, email, first_login)
+        VALUES ('$2a$10$ixxGnxxqiWGbwvQPIOo1dOIgHrb79K1yyOdYnOpSoUkjfBsJiqGc.', '소중한물고기#8342', '미니공주님test3', 'minprincesstest3@naver.com', 1)
+ {executed in 1 msec}
+[2024-12-30 15:47:30 DEBUGhttp-nio-8080-exec-5] [com.green.firstproject.user.UserMapper.insertUser] <==    Updates: 1
+[2024-12-30 15:49:33 DEBUGhttp-nio-8080-exec-9] [com.green.firstproject.user.UserMapper.userSignIn] ==>  Preparing: SELECT user_no AS userNo, password, nickname, user_id AS userId, profile_pic AS profilePic, first_login AS firstLogin, status_message AS userStatusMessage FROM user WHERE user_id = ?
+[2024-12-30 15:49:33 DEBUGhttp-nio-8080-exec-9] [com.green.firstproject.user.UserMapper.userSignIn] ==> Parameters: 미니공주님test2(String)
+[2024-12-30 15:49:33 DEBUGhttp-nio-8080-exec-9] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        user_no AS userNo,
+        password,
+        nickname,
+        user_id AS userId,
+        profile_pic AS profilePic,
+        first_login AS firstLogin,
+        status_message AS userStatusMessage
+        FROM user
+        WHERE user_id = '미니공주님test2'
+ {executed in 0 msec}
+[2024-12-30 15:49:33 INFO http-nio-8080-exec-9] [jdbc.resultsettable] 
+|--------|-------------------------------------------------------------|------------|-----------|------------|------------|---------------|
+|user_no |password                                                     |nickname    |user_id    |profile_pic |first_login |status_message |
+|--------|-------------------------------------------------------------|------------|-----------|------------|------------|---------------|
+|23      |$2a$10$BGd5IzN0/0ZkmTm97AeV.O7qplig2CLgFM2M.2jVRdgyvjndUY.U2 |둔둔한다람쥐#1752 |미니공주님test2 |null        |false       |null           |
+|--------|-------------------------------------------------------------|------------|-----------|------------|------------|---------------|
+
+[2024-12-30 15:49:33 DEBUGhttp-nio-8080-exec-9] [com.green.firstproject.user.UserMapper.userSignIn] <==      Total: 1
+[2024-12-30 16:27:55 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 16:27:55 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-30 16:53:39 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 16:53:39 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 12560 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-30 16:53:39 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-30 16:53:39 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-30 16:53:39 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-30 16:53:40 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 748 ms
+[2024-12-30 16:53:40 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-30 16:53:40 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-30 16:53:40 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.618 seconds (process running for 1.939)
+[2024-12-30 16:54:46 INFO http-nio-8080-exec-3] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-30 16:54:46 INFO http-nio-8080-exec-3] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 0 ms
+[2024-12-30 16:54:46 INFO http-nio-8080-exec-3] [com.green.firstproject.user.UserController] Received Request: com.green.firstproject.user.model.UserSignUpReq@54430291
+[2024-12-30 16:54:46 INFO http-nio-8080-exec-3] [com.green.firstproject.user.UserService] Validating email format for email: minprincesstest4@naver.com
+[2024-12-30 16:54:46 INFO http-nio-8080-exec-3] [com.green.firstproject.user.UserService] Validating password format for userId: 미니공주님test4
+[2024-12-30 16:54:46 INFO http-nio-8080-exec-3] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 16:54:46 INFO http-nio-8080-exec-3] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@76547217
+[2024-12-30 16:54:46 INFO http-nio-8080-exec-3] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 16:54:46 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.checkDuplicates] ==>  Preparing: SELECT SUM(email = ?) AS emailCount, SUM(user_id = ?) AS userIdCount FROM user
+[2024-12-30 16:54:46 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.checkDuplicates] ==> Parameters: minprincesstest4@naver.com(String), 미니공주님test4(String)
+[2024-12-30 16:54:46 DEBUGhttp-nio-8080-exec-3] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        SUM(email = 'minprincesstest4@naver.com') AS emailCount,
+        SUM(user_id = '미니공주님test4') AS userIdCount
+        FROM user
+ {executed in 0 msec}
+[2024-12-30 16:54:46 INFO http-nio-8080-exec-3] [jdbc.resultsettable] 
+|-----------|------------|
+|emailcount |useridcount |
+|-----------|------------|
+|0          |0           |
+|-----------|------------|
+
+[2024-12-30 16:54:46 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.checkDuplicates] <==      Total: 1
+[2024-12-30 16:54:46 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.checkNicknameDuplicate] ==>  Preparing: SELECT COUNT(1) AS nicknameCount FROM user WHERE nickname = ?
+[2024-12-30 16:54:46 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.checkNicknameDuplicate] ==> Parameters: null
+[2024-12-30 16:54:46 DEBUGhttp-nio-8080-exec-3] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT COUNT(1) AS nicknameCount
+        FROM user
+        WHERE nickname = NULL
+ {executed in 0 msec}
+[2024-12-30 16:54:46 INFO http-nio-8080-exec-3] [jdbc.resultsettable] 
+|--------------|
+|nicknamecount |
+|--------------|
+|0             |
+|--------------|
+
+[2024-12-30 16:54:46 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.checkNicknameDuplicate] <==      Total: 1
+[2024-12-30 16:54:46 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.insertUser] ==>  Preparing: INSERT INTO user (password, nickname, user_id, email, first_login) VALUES (?, ?, ?, ?, 1)
+[2024-12-30 16:54:46 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.insertUser] ==> Parameters: $2a$10$PeYzbFWnPFxUWfhTiO40dOpUoOjcNP0gGePGFFBICqe81S3UJHRjO(String), 고양이(String), 미니공주님test4(String), minprincesstest4@naver.com(String)
+[2024-12-30 16:54:46 DEBUGhttp-nio-8080-exec-3] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO user (password, nickname, user_id, email, first_login)
+        VALUES ('$2a$10$PeYzbFWnPFxUWfhTiO40dOpUoOjcNP0gGePGFFBICqe81S3UJHRjO', '고양이', '미니공주님test4', 'minprincesstest4@naver.com', 1)
+ {executed in 0 msec}
+[2024-12-30 16:54:46 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.insertUser] <==    Updates: 1
+[2024-12-30 17:03:08 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 17:03:08 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-30 17:03:29 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 17:03:29 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 12408 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-30 17:03:29 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-30 17:03:29 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-30 17:03:30 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-30 17:03:30 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 740 ms
+[2024-12-30 17:03:30 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-30 17:03:30 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-30 17:03:30 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.63 seconds (process running for 1.955)
+[2024-12-30 17:03:38 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-30 17:03:38 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 0 ms
+[2024-12-30 17:03:38 INFO http-nio-8080-exec-1] [com.green.firstproject.user.UserController] Received Request: com.green.firstproject.user.model.UserSignUpReq@4880ebd
+[2024-12-30 17:03:38 INFO http-nio-8080-exec-1] [com.green.firstproject.user.UserService] Validating email format for email: minprincesstest4@naver.com
+[2024-12-30 17:03:38 INFO http-nio-8080-exec-1] [com.green.firstproject.user.UserService] Validating password format for userId: 미니공주님test4
+[2024-12-30 17:03:38 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 17:03:39 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@8719133
+[2024-12-30 17:03:39 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 17:03:39 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.checkDuplicates] ==>  Preparing: SELECT SUM(email = ?) AS emailCount, SUM(user_id = ?) AS userIdCount FROM user
+[2024-12-30 17:03:39 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.checkDuplicates] ==> Parameters: minprincesstest4@naver.com(String), 미니공주님test4(String)
+[2024-12-30 17:03:39 DEBUGhttp-nio-8080-exec-1] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        SUM(email = 'minprincesstest4@naver.com') AS emailCount,
+        SUM(user_id = '미니공주님test4') AS userIdCount
+        FROM user
+ {executed in 0 msec}
+[2024-12-30 17:03:39 INFO http-nio-8080-exec-1] [jdbc.resultsettable] 
+|-----------|------------|
+|emailcount |useridcount |
+|-----------|------------|
+|0          |0           |
+|-----------|------------|
+
+[2024-12-30 17:03:39 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.checkDuplicates] <==      Total: 1
+[2024-12-30 17:03:39 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.checkNicknameDuplicate] ==>  Preparing: SELECT COUNT(1) AS nicknameCount FROM user WHERE nickname = ?
+[2024-12-30 17:03:39 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.checkNicknameDuplicate] ==> Parameters: 고양이(String)
+[2024-12-30 17:03:39 DEBUGhttp-nio-8080-exec-1] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT COUNT(1) AS nicknameCount
+        FROM user
+        WHERE nickname = '고양이'
+ {executed in 0 msec}
+[2024-12-30 17:03:39 INFO http-nio-8080-exec-1] [jdbc.resultsettable] 
+|--------------|
+|nicknamecount |
+|--------------|
+|1             |
+|--------------|
+
+[2024-12-30 17:03:39 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.checkNicknameDuplicate] <==      Total: 1
+[2024-12-30 17:03:52 INFO http-nio-8080-exec-6] [com.green.firstproject.user.UserController] Received Request: com.green.firstproject.user.model.UserSignUpReq@5320b79d
+[2024-12-30 17:03:52 INFO http-nio-8080-exec-6] [com.green.firstproject.user.UserService] Validating email format for email: minprincesstest4@naver.com
+[2024-12-30 17:03:52 INFO http-nio-8080-exec-6] [com.green.firstproject.user.UserService] Validating password format for userId: 미니공주님test4
+[2024-12-30 17:03:52 DEBUGhttp-nio-8080-exec-6] [com.green.firstproject.user.UserMapper.checkDuplicates] ==>  Preparing: SELECT SUM(email = ?) AS emailCount, SUM(user_id = ?) AS userIdCount FROM user
+[2024-12-30 17:03:52 DEBUGhttp-nio-8080-exec-6] [com.green.firstproject.user.UserMapper.checkDuplicates] ==> Parameters: minprincesstest4@naver.com(String), 미니공주님test4(String)
+[2024-12-30 17:03:52 DEBUGhttp-nio-8080-exec-6] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        SUM(email = 'minprincesstest4@naver.com') AS emailCount,
+        SUM(user_id = '미니공주님test4') AS userIdCount
+        FROM user
+ {executed in 1 msec}
+[2024-12-30 17:03:52 INFO http-nio-8080-exec-6] [jdbc.resultsettable] 
+|-----------|------------|
+|emailcount |useridcount |
+|-----------|------------|
+|0          |0           |
+|-----------|------------|
+
+[2024-12-30 17:03:52 DEBUGhttp-nio-8080-exec-6] [com.green.firstproject.user.UserMapper.checkDuplicates] <==      Total: 1
+[2024-12-30 17:03:52 DEBUGhttp-nio-8080-exec-6] [com.green.firstproject.user.UserMapper.checkNicknameDuplicate] ==>  Preparing: SELECT COUNT(1) AS nicknameCount FROM user WHERE nickname = ?
+[2024-12-30 17:03:52 DEBUGhttp-nio-8080-exec-6] [com.green.firstproject.user.UserMapper.checkNicknameDuplicate] ==> Parameters: 고양이2(String)
+[2024-12-30 17:03:52 DEBUGhttp-nio-8080-exec-6] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT COUNT(1) AS nicknameCount
+        FROM user
+        WHERE nickname = '고양이2'
+ {executed in 1 msec}
+[2024-12-30 17:03:52 INFO http-nio-8080-exec-6] [jdbc.resultsettable] 
+|--------------|
+|nicknamecount |
+|--------------|
+|0             |
+|--------------|
+
+[2024-12-30 17:03:52 DEBUGhttp-nio-8080-exec-6] [com.green.firstproject.user.UserMapper.checkNicknameDuplicate] <==      Total: 1
+[2024-12-30 17:03:52 DEBUGhttp-nio-8080-exec-6] [com.green.firstproject.user.UserMapper.insertUser] ==>  Preparing: INSERT INTO user (password, nickname, user_id, email, first_login) VALUES (?, ?, ?, ?, 1)
+[2024-12-30 17:03:52 DEBUGhttp-nio-8080-exec-6] [com.green.firstproject.user.UserMapper.insertUser] ==> Parameters: $2a$10$OrRX7rplBJzRqlX.7iBJo.nuC9clarEcywM2MtD2y1EY9y50Rcko.(String), 고양이2(String), 미니공주님test4(String), minprincesstest4@naver.com(String)
+[2024-12-30 17:03:52 DEBUGhttp-nio-8080-exec-6] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO user (password, nickname, user_id, email, first_login)
+        VALUES ('$2a$10$OrRX7rplBJzRqlX.7iBJo.nuC9clarEcywM2MtD2y1EY9y50Rcko.', '고양이2', '미니공주님test4', 'minprincesstest4@naver.com', 1)
+ {executed in 2 msec}
+[2024-12-30 17:03:52 DEBUGhttp-nio-8080-exec-6] [com.green.firstproject.user.UserMapper.insertUser] <==    Updates: 1
+[2024-12-30 17:50:45 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 17:50:45 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-30 17:50:47 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 17:50:47 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 11444 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-30 17:50:47 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-30 17:50:47 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-30 17:50:48 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-30 17:50:48 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 741 ms
+[2024-12-30 17:50:48 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-30 17:50:48 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-30 17:50:48 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.627 seconds (process running for 1.928)
+[2024-12-30 17:52:41 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 17:52:41 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 6888 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-30 17:52:41 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-30 17:52:41 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-30 17:52:42 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-30 17:52:42 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 802 ms
+[2024-12-30 17:52:42 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-30 17:52:42 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-30 17:52:42 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.689 seconds (process running for 1.989)
+[2024-12-30 17:52:45 INFO http-nio-8080-exec-3] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-30 17:52:45 INFO http-nio-8080-exec-3] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+[2024-12-30 17:52:45 INFO http-nio-8080-exec-3] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 17:52:45 INFO http-nio-8080-exec-3] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@7464f211
+[2024-12-30 17:52:45 INFO http-nio-8080-exec-3] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 17:52:45 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.findUserIdByEmail] ==>  Preparing: SELECT user_id AS userId FROM user WHERE email = ?
+[2024-12-30 17:52:45 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.findUserIdByEmail] ==> Parameters: minprincesstest3@naver.com(String)
+[2024-12-30 17:52:45 DEBUGhttp-nio-8080-exec-3] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT user_id AS userId
+        FROM user
+        WHERE email = 'minprincesstest3@naver.com'
+ {executed in 1 msec}
+[2024-12-30 17:52:45 INFO http-nio-8080-exec-3] [jdbc.resultsettable] 
+|-----------|
+|user_id    |
+|-----------|
+|미니공주님test3 |
+|-----------|
+
+[2024-12-30 17:52:45 DEBUGhttp-nio-8080-exec-3] [com.green.firstproject.user.UserMapper.findUserIdByEmail] <==      Total: 1
+[2024-12-30 17:55:55 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 17:55:55 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-30 17:55:57 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 17:55:57 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 11912 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-30 17:55:57 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-30 17:55:57 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-30 17:55:58 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-30 17:55:58 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 744 ms
+[2024-12-30 17:55:58 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-30 17:55:58 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-30 17:55:58 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.626 seconds (process running for 1.92)
+[2024-12-30 17:56:02 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+[2024-12-30 17:56:02 INFO http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+[2024-12-30 17:56:02 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 17:56:02 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@563540ad
+[2024-12-30 17:56:02 INFO http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 17:56:02 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserService] Service Request: UserInfoGetReq(targetUserNo=2, signedUserNo=4)
+[2024-12-30 17:56:02 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.selUserInfo] ==>  Preparing: SELECT u2.email, u2.nickname, u2.status_message AS userStatusMessage, u2.profile_pic AS profilePic FROM user u1 JOIN user u2 ON u1.user_no = ? WHERE u2.user_no = ?;
+[2024-12-30 17:56:02 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.selUserInfo] ==> Parameters: 4(Long), 2(Long)
+[2024-12-30 17:56:02 DEBUGhttp-nio-8080-exec-1] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        u2.email,
+        u2.nickname,
+        u2.status_message AS userStatusMessage,
+        u2.profile_pic AS profilePic
+        FROM user u1
+        JOIN user u2
+        ON u1.user_no = 4
+        WHERE u2.user_no = 2;
+ {executed in 2 msec}
+[2024-12-30 17:56:02 INFO http-nio-8080-exec-1] [jdbc.resultsettable] 
+|-----------------|---------|---------------|-----------------------------------------|
+|email            |nickname |status_message |profile_pic                              |
+|-----------------|---------|---------------|-----------------------------------------|
+|mini@example.com |미닝       |[null]         |6928faf1-c940-4b13-8c87-ecd293e1d13e.jpg |
+|-----------------|---------|---------------|-----------------------------------------|
+
+[2024-12-30 17:56:02 DEBUGhttp-nio-8080-exec-1] [com.green.firstproject.user.UserMapper.selUserInfo] <==      Total: 1
+[2024-12-30 17:56:12 DEBUGhttp-nio-8080-exec-7] [com.green.firstproject.user.UserService] Service Request: UserInfoGetReq(targetUserNo=2, signedUserNo=2)
+[2024-12-30 17:56:12 DEBUGhttp-nio-8080-exec-7] [com.green.firstproject.user.UserMapper.selUserInfo] ==>  Preparing: SELECT u2.email, u2.nickname, u2.status_message AS userStatusMessage, u2.profile_pic AS profilePic FROM user u1 JOIN user u2 ON u1.user_no = ? WHERE u2.user_no = ?;
+[2024-12-30 17:56:12 DEBUGhttp-nio-8080-exec-7] [com.green.firstproject.user.UserMapper.selUserInfo] ==> Parameters: 2(Long), 2(Long)
+[2024-12-30 17:56:12 DEBUGhttp-nio-8080-exec-7] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        u2.email,
+        u2.nickname,
+        u2.status_message AS userStatusMessage,
+        u2.profile_pic AS profilePic
+        FROM user u1
+        JOIN user u2
+        ON u1.user_no = 2
+        WHERE u2.user_no = 2;
+ {executed in 0 msec}
+[2024-12-30 17:56:12 INFO http-nio-8080-exec-7] [jdbc.resultsettable] 
+|-----------------|---------|---------------|-----------------------------------------|
+|email            |nickname |status_message |profile_pic                              |
+|-----------------|---------|---------------|-----------------------------------------|
+|mini@example.com |미닝       |[null]         |6928faf1-c940-4b13-8c87-ecd293e1d13e.jpg |
+|-----------------|---------|---------------|-----------------------------------------|
+
+[2024-12-30 17:56:12 DEBUGhttp-nio-8080-exec-7] [com.green.firstproject.user.UserMapper.selUserInfo] <==      Total: 1
+[2024-12-30 17:56:17 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserService] Service Request: UserInfoGetReq(targetUserNo=2, signedUserNo=5)
+[2024-12-30 17:56:17 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserMapper.selUserInfo] ==>  Preparing: SELECT u2.email, u2.nickname, u2.status_message AS userStatusMessage, u2.profile_pic AS profilePic FROM user u1 JOIN user u2 ON u1.user_no = ? WHERE u2.user_no = ?;
+[2024-12-30 17:56:17 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserMapper.selUserInfo] ==> Parameters: 5(Long), 2(Long)
+[2024-12-30 17:56:17 DEBUGhttp-nio-8080-exec-10] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        u2.email,
+        u2.nickname,
+        u2.status_message AS userStatusMessage,
+        u2.profile_pic AS profilePic
+        FROM user u1
+        JOIN user u2
+        ON u1.user_no = 5
+        WHERE u2.user_no = 2;
+ {executed in 0 msec}
+[2024-12-30 17:56:17 INFO http-nio-8080-exec-10] [jdbc.resultsettable] 
+|-----------------|---------|---------------|-----------------------------------------|
+|email            |nickname |status_message |profile_pic                              |
+|-----------------|---------|---------------|-----------------------------------------|
+|mini@example.com |미닝       |[null]         |6928faf1-c940-4b13-8c87-ecd293e1d13e.jpg |
+|-----------------|---------|---------------|-----------------------------------------|
+
+[2024-12-30 17:56:17 DEBUGhttp-nio-8080-exec-10] [com.green.firstproject.user.UserMapper.selUserInfo] <==      Total: 1
+[2024-12-30 17:56:22 DEBUGhttp-nio-8080-exec-5] [com.green.firstproject.user.UserService] Service Request: UserInfoGetReq(targetUserNo=2, signedUserNo=10)
+[2024-12-30 17:56:22 DEBUGhttp-nio-8080-exec-5] [com.green.firstproject.user.UserMapper.selUserInfo] ==>  Preparing: SELECT u2.email, u2.nickname, u2.status_message AS userStatusMessage, u2.profile_pic AS profilePic FROM user u1 JOIN user u2 ON u1.user_no = ? WHERE u2.user_no = ?;
+[2024-12-30 17:56:22 DEBUGhttp-nio-8080-exec-5] [com.green.firstproject.user.UserMapper.selUserInfo] ==> Parameters: 10(Long), 2(Long)
+[2024-12-30 17:56:22 DEBUGhttp-nio-8080-exec-5] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        u2.email,
+        u2.nickname,
+        u2.status_message AS userStatusMessage,
+        u2.profile_pic AS profilePic
+        FROM user u1
+        JOIN user u2
+        ON u1.user_no = 10
+        WHERE u2.user_no = 2;
+ {executed in 1 msec}
+[2024-12-30 17:56:22 INFO http-nio-8080-exec-5] [jdbc.resultsettable] 
+|------|---------|---------------|------------|
+|email |nickname |status_message |profile_pic |
+|------|---------|---------------|------------|
+|------|---------|---------------|------------|
+
+[2024-12-30 17:56:22 DEBUGhttp-nio-8080-exec-5] [com.green.firstproject.user.UserMapper.selUserInfo] <==      Total: 0
+[2024-12-30 17:56:26 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 17:56:26 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-30 17:56:28 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 17:56:28 INFO main] [com.green.firstproject.FirstProjectApplication] Starting FirstProjectApplication using Java 17.0.12 with PID 11688 (D:\LJM\FirstProject\build\classes\java\main started by Administrator in D:\LJM\FirstProject)
+[2024-12-30 17:56:28 DEBUGmain] [com.green.firstproject.FirstProjectApplication] Running with Spring Boot v3.3.6, Spring v6.1.15
+[2024-12-30 17:56:28 INFO main] [com.green.firstproject.FirstProjectApplication] No active profile set, falling back to 1 default profile: "default"
+[2024-12-30 17:56:29 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 8080 (http)
+[2024-12-30 17:56:29 INFO main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 764 ms
+[2024-12-30 17:56:29 INFO main] [com.green.firstproject.common.exception.MyFileUtils] MyFileUtils - 생성자: D:/2024-02/download/FirstProject
+[2024-12-30 17:56:29 INFO main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 8080 (http) with context path '/'
+[2024-12-30 17:56:29 INFO main] [com.green.firstproject.FirstProjectApplication] Started FirstProjectApplication in 1.62 seconds (process running for 1.922)

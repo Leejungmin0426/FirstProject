@@ -5,17 +5,29 @@
 
     <!-- 사용자 회원가입 -->
     <insert id="insertUser">
-        INSERT INTO user (email, user_id, password, nickname)
-        VALUES (#{email}, #{userId}, #{password}, #{nickname})
+        INSERT INTO user (password, nickname, user_id, email, first_login)
+        VALUES (#{password}, #{nickname}, #{userId}, #{email}, 1)
     </insert>
 
-    <!-- 중복체크 -->
-    <select id="checkDuplicates">
-        SELECT
-        SUM(email = #{email}) AS emailCount,
-        SUM(user_id = #{userId}) AS userIdCount,
-        SUM(nickname = #{nickname}) AS nicknameCount
+    <!--  이메일 중복체크 -->
+    <select id="checkEmailDuplicates">
+        SELECT COUNT(1) AS emailCount
         FROM user
+        WHERE email = #{email}
+    </select>
+
+    <!--  유저 아이디 중복체크 -->
+    <select id="checkUserIdDuplicates">
+        SELECT COUNT(1) AS userIdCount
+        FROM user
+        WHERE user_id = #{userId}
+    </select>
+
+    <!-- 닉네임 중복체크 -->
+    <select id="checkNicknameDuplicate">
+        SELECT COUNT(1) AS nicknameCount
+        FROM user
+        WHERE nickname = #{nickname}
     </select>
 
 
@@ -32,9 +44,20 @@
         FROM user
         WHERE user_id = #{userId}
     </select>
+    <!-- 2. 첫 로그인 여부 -->
+    <update id="updateFirstLogin">
+        UPDATE user SET first_login = false WHERE user_id = #{userId}
+    </update>
 
 
-    <!-- 2. 사용자 정보 조회 -->
+    <select id="findUserIdByEmail">
+        SELECT user_id AS userId
+        FROM user
+        WHERE email = #{email}
+    </select>
+
+
+    <!-- 사용자 정보 조회 -->
     <select id="selUserInfo">
         SELECT
         u2.email,
@@ -54,6 +77,8 @@
         SET password = #{password}
         WHERE email = #{email}
     </update>
+
+
 
     <select id="findUserByEmail">
         SELECT *
